@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+  :root {
+    --color-text-base: #000000;
+    --color-bg-base: #ffffff;
+  }
+
+
+  .theme-light {
+    --color-text-base: #000000;
+    --color-bg-base: #ffffff;
+  }
+
+  .theme-dark {
+    --color-text-base: #ffffff;
+    --color-bg-base: #1f2937;
+  }
+}
