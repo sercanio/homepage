@@ -13,8 +13,8 @@ const Layout = ({ children }: LayoutChildrenProps): JSX.Element => {
     'theme-light': theme.theme === 'light'
   })
   return (
-    <div className={`${layoutClass} bg-skin-base w-screen h-screen`}>
-      <div className="max-w-7xl mx-auto">
+    <div className={`${layoutClass} bg-skin-base w-screen h-full`}>
+      <div className="max-w-7xl mx-auto h-screen">
         <Header />
         {children}
       </div>
