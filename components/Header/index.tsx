@@ -14,6 +14,8 @@ const Header = () => {
                 src="/images/logo.svg"
                 alt="Logo"
                 className="h-8 w-8 mr-2"
+                width={64}
+                height={64}
               />
             </Link>
             <h1 className="text-2xl font-bold text-skin-base">
