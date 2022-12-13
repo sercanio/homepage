@@ -1,17 +1,35 @@
-import { Dispatch, useState } from 'react'
+import { Dispatch, useEffect, useState } from 'react'
 import { Switch } from '@headlessui/react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setTheme } from '../../lib/store/themeSlice'
 import { ToggleTypes } from '../../types'
+import { RootState } from '../../lib/store/store'
+import useLocalStorage from '../../hooks/use-localstorage'
 
 export default function Toggle(props: ToggleTypes) {
-  const [enabled, setEnabled] = useState(props.enabled ?? false)
+  const [enabled, setEnabled] = useState(props.enabled ?? true)
+  const [lsItem, setLsItem] = useLocalStorage('theme', 'light')
+  const theme = useSelector((state: RootState) => state.theme)
   const dispatch: Dispatch<any> = useDispatch()
 
   const toggleHandler = () => {
-    dispatch(setTheme())
+    dispatch(setTheme(enabled ? 'dark' : 'light'))
+    setLsItem(enabled ? 'dark' : 'light')
     setEnabled(!enabled)
   }
+
+  useEffect(() => {
+    ;(async () => {
+      const theme = await JSON.parse(localStorage.getItem('theme')!)
+      if (theme === 'dark') {
+        dispatch(setTheme(theme))
+        setEnabled(false)
+      } else {
+        dispatch(setTheme('light'))
+        setEnabled(true)
+      }
+    })()
+  }, [setTheme])
 
   return (
     <Switch
@@ -19,7 +37,7 @@ export default function Toggle(props: ToggleTypes) {
       onChange={toggleHandler}
       className={`${
         enabled ? 'bg-skin-secondary' : 'bg-gray-200'
-      } relative inline-flex h-6 w-11 items-center rounded-full`}
+      } relative inline-flex h-6 w-11 items-center rounded-full mt-px`}
     >
       <span className="sr-only">Enable notifications</span>
       <span
