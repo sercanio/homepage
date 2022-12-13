@@ -2,6 +2,8 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { within, userEvent } from '@storybook/testing-library'
 import Home from '../pages'
+import { Provider } from 'react-redux'
+import { configureStore, createSlice } from '@reduxjs/toolkit'
 
 export default {
   /**
@@ -21,19 +23,50 @@ const Template: ComponentStory<typeof Home> = args => <Home {...args} />
 export const Dark = Template.bind({})
 export const Light = Template.bind({})
 
-Dark.argTypes = {
-  /**Theme options */
-  Theme: {
-    options: ['dark', 'light'],
-    control: { type: 'radio' },
-    defaultValue: 'dark'
-  }
-}
+Dark.decorators = [
+  Story => (
+    <Provider
+      store={configureStore({
+        reducer: {
+          theme: createSlice({
+            name: 'theme',
+            initialState: {
+              theme: 'dark'
+            },
+            reducers: {
+              setTheme: (state, action) => {
+                state.theme = state.theme === 'light' ? 'dark' : 'light'
+              }
+            }
+          }).reducer
+        }
+      })}
+    >
+      <Story />
+    </Provider>
+  )
+]
 
-Light.argTypes = {
-  Theme: {
-    options: ['dark', 'light'],
-    control: { type: 'radio' },
-    defaultValue: 'light'
-  }
-}
+Light.decorators = [
+  Story => (
+    <Provider
+      store={configureStore({
+        reducer: {
+          theme: createSlice({
+            name: 'theme',
+            initialState: {
+              theme: 'light'
+            },
+            reducers: {
+              setTheme: (state, action) => {
+                state.theme = state.theme === 'light' ? 'dark' : 'light'
+              }
+            }
+          }).reducer
+        }
+      })}
+    >
+      <Story />
+    </Provider>
+  )
+]
