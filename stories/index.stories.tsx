@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Layout from './layout'
-import Home from './index'
+import Layout from '../pages/layout'
+import Home from '../pages/index'
 import { Provider } from 'react-redux'
 import { configureStore, createSlice } from '@reduxjs/toolkit'
 

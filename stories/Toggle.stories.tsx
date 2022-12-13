@@ -2,7 +2,7 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { Provider } from 'react-redux'
 import { configureStore, createSlice } from '@reduxjs/toolkit'
-import Toggle from './Toggle'
+import Toggle from '../components/Button/Toggle'
 
 export default {
   title: 'Components/Buttons/Toggle',

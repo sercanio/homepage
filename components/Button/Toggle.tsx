@@ -29,7 +29,7 @@ export default function Toggle(props: ToggleTypes) {
         setEnabled(true)
       }
     })()
-  }, [setTheme])
+  }, [dispatch])
 
   return (
     <Switch
