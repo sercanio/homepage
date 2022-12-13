@@ -4,6 +4,10 @@ import { within, userEvent } from '@storybook/testing-library'
 import Home from '../pages'
 
 export default {
+  /**
+   * Fix Storybook issue with PostCSS@8
+   * @see https://github.com/storybookjs/storybook/issues/12668#issuecomment-773958085
+   */
   title: 'Pages/Home',
   component: Home,
   parameters: {
@@ -14,11 +18,22 @@ export default {
 
 const Template: ComponentStory<typeof Home> = args => <Home {...args} />
 
-export const HomePage = Template.bind({})
+export const Dark = Template.bind({})
+export const Light = Template.bind({})
 
-HomePage.argTypes = {
+Dark.argTypes = {
+  /**Theme options */
   Theme: {
     options: ['dark', 'light'],
-    control: { type: 'radio', defaultValue: 'dark' }
+    control: { type: 'radio' },
+    defaultValue: 'dark'
+  }
+}
+
+Light.argTypes = {
+  Theme: {
+    options: ['dark', 'light'],
+    control: { type: 'radio' },
+    defaultValue: 'light'
   }
 }
