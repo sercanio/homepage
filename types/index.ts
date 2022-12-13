@@ -6,3 +6,7 @@ export interface HomeProps {
 export interface LayoutChildrenProps {
   children: React.ReactNode
 }
+
+export type ToggleTypes = {
+  enabled?: boolean
+}

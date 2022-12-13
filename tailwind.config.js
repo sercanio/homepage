@@ -13,7 +13,8 @@ module.exports = {
       },
       backgroundColor: {
         skin: {
-          base: 'var(--color-bg-base)'
+          base: 'var(--color-bg-base)',
+          secondary: 'var(--color-bg-secondary)'
         }
       }
     }

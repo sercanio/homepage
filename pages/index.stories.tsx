@@ -1,7 +1,7 @@
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { within, userEvent } from '@storybook/testing-library'
-import Home from '../pages'
+import Layout from './layout'
+import Home from './index'
 import { Provider } from 'react-redux'
 import { configureStore, createSlice } from '@reduxjs/toolkit'
 
@@ -18,7 +18,11 @@ export default {
   }
 } as ComponentMeta<typeof Home>
 
-const Template: ComponentStory<typeof Home> = args => <Home {...args} />
+const Template: ComponentStory<typeof Home> = args => (
+  <Layout>
+    <Home {...args} />
+  </Layout>
+)
 
 export const Dark = Template.bind({})
 export const Light = Template.bind({})

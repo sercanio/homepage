@@ -13,10 +13,12 @@
   .theme-light {
     --color-text-base: #000000;
     --color-bg-base: #ffffff;
+    --color-bg-secondary: #1f2937;
   }
 
   .theme-dark {
     --color-text-base: #ffffff;
     --color-bg-base: #1f2937;
+    --color-bg-secondary: #ffffff;
   }
 }
