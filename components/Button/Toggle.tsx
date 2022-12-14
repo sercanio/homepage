@@ -5,6 +5,8 @@ import { setTheme } from '../../lib/store/themeSlice'
 import { ToggleTypes } from '../../types'
 import { RootState } from '../../lib/store/store'
 import useLocalStorage from '../../hooks/use-localstorage'
+import { FaMoon } from 'react-icons/fa'
+import { FiSun } from 'react-icons/fi'
 
 export default function Toggle(props: ToggleTypes) {
   const [enabled, setEnabled] = useState(props.enabled ?? true)
@@ -32,19 +34,29 @@ export default function Toggle(props: ToggleTypes) {
   }, [dispatch])
 
   return (
-    <Switch
-      checked={enabled}
-      onChange={toggleHandler}
-      className={`${
-        enabled ? 'bg-skin-secondary' : 'bg-gray-200'
-      } relative inline-flex h-6 w-11 items-center rounded-full mt-1`}
-    >
-      <span className="sr-only">Enable notifications</span>
-      <span
-        className={`${
-          enabled ? 'translate-x-6' : 'translate-x-1'
-        } inline-block h-4 w-4 transform rounded-full bg-skin-base transition`}
-      />
+    <Switch checked={enabled} onChange={toggleHandler}>
+      {({ checked }) =>
+        /* Use the `checked` state to conditionally style the div. */
+        checked ? (
+          <div
+            role="button"
+            className="bg-skin-base
+            relative inline-flex h-6 w-11 items-center rounded-full mt-[2px] border"
+          >
+            <span className="sr-only">Enable notifications</span>
+            <FiSun className="bg-transparent text-skin-base translate-x-5" />
+          </div>
+        ) : (
+          <div
+            role="button"
+            className="bg-skin-base
+             relative inline-flex h-6 w-11 items-center rounded-full mt-[2px] border"
+          >
+            <span className="sr-only">Enable notifications</span>
+            <FaMoon className="bg-transparent text-skin-base translate-x-1 " />
+          </div>
+        )
+      }
     </Switch>
   )
 }

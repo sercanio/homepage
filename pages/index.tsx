@@ -16,7 +16,7 @@ export default function Home(props: HomeProps) {
       <main className="w-screen h-screen bg-skin-base">
         {/* <main className={`w-screen h-screen ${pageClass || 'theme-dark'}`}> */}
 
-        <h1 className="text-4xl text-skin-base">Hello World</h1>
+        <h1 className="text-4xl text-skin-bas">Hello World</h1>
       </main>
 
       <footer></footer>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,20 +7,36 @@
 
 @layer base {
   :root {
-    --color-text-base: #000000;
+    --color-text-base: #1f2937;
+    --color-text-secondary: #ffffff;
     --color-bg-base: #ffffff;
+    --color-bg-secondary: #1f2937;
+    --color-fill: #1f2937;
   }
 
 
   .theme-light {
-    --color-text-base: #000000;
+    --color-text-base: #1f2937;
+    --color-text-secondary: #ffffff;
     --color-bg-base: #ffffff;
     --color-bg-secondary: #1f2937;
+    --color-fill: #1f2937;
   }
 
   .theme-dark {
     --color-text-base: #ffffff;
+    --color-text-secondary: #1f2937;
     --color-bg-base: #1f2937;
     --color-bg-secondary: #ffffff;
+    --color-fill: #ffffff;
   }
+}
+
+/* add transition to all properties */
+@layer utilities {
+  * {
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.1s linear;
+  }
+
 }

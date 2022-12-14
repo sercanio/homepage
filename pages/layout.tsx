@@ -15,7 +15,9 @@ const Layout = ({ children }: LayoutChildrenProps): JSX.Element => {
   })
 
   return (
-    <div className={`${layoutClass} bg-skin-base w-screen h-full`}>
+    <div
+      className={`${layoutClass} bg-skin-base text-skin-base w-screen h-full`}
+    >
       <div className="max-w-7xl mx-auto h-screen">
         <Header />
         {children}
