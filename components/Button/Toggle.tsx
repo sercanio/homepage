@@ -37,7 +37,7 @@ export default function Toggle(props: ToggleTypes) {
       onChange={toggleHandler}
       className={`${
         enabled ? 'bg-skin-secondary' : 'bg-gray-200'
-      } relative inline-flex h-6 w-11 items-center rounded-full mt-px`}
+      } relative inline-flex h-6 w-11 items-center rounded-full mt-1`}
     >
       <span className="sr-only">Enable notifications</span>
       <span
