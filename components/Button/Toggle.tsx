@@ -36,24 +36,23 @@ export default function Toggle(props: ToggleTypes) {
   return (
     <Switch checked={enabled} onChange={toggleHandler}>
       {({ checked }) =>
-        /* Use the `checked` state to conditionally style the div. */
         checked ? (
           <div
             role="button"
             className="bg-skin-base
-            relative inline-flex h-6 w-11 items-center rounded-full mt-[2px] border"
+            relative flex h-8 items-center rounded-md sm:rounded-full"
           >
             <span className="sr-only">Enable notifications</span>
-            <FiSun className="bg-transparent text-skin-base translate-x-5" />
+            <FiSun className="bg-transparent text-skin-base" />
           </div>
         ) : (
           <div
             role="button"
             className="bg-skin-base
-             relative inline-flex h-6 w-11 items-center rounded-full mt-[2px] border"
+             relative flex items-center rounded-md sm:rounded-full"
           >
             <span className="sr-only">Enable notifications</span>
-            <FaMoon className="bg-transparent text-skin-base translate-x-1 " />
+            <FaMoon className="bg-transparent text-skin-base" />
           </div>
         )
       }

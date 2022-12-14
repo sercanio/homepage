@@ -8,12 +8,14 @@
 @layer base {
   :root {
     --color-text-base: #1f2937;
+    --color-text-primary: #4E9A06;
     --color-text-secondary: #ffffff;
     --color-bg-base: #ffffff;
     --color-bg-secondary: #1f2937;
     --color-fill: #1f2937;
+    --color-bg-border: #4E9A06;
+    --color-tilde: #22d3ee;
   }
-
 
   .theme-light {
     --color-text-base: #1f2937;
@@ -21,6 +23,7 @@
     --color-bg-base: #ffffff;
     --color-bg-secondary: #1f2937;
     --color-fill: #1f2937;
+    --color-tilde: #167a8a; /* tilde color for commant prompt effect */
   }
 
   .theme-dark {
@@ -29,14 +32,18 @@
     --color-bg-base: #1f2937;
     --color-bg-secondary: #ffffff;
     --color-fill: #ffffff;
+    --color-tilde: #22d3ee; /* tilde color for commant prompt effect */
   }
 }
 
-/* add transition to all properties */
+/* add transition-property-bg all properties */
 @layer utilities {
   * {
     font-family: 'Roboto', sans-serif;
-    transition: all 0.1s linear;
+    transition: background-color 0.15s ease;
   }
 
+  .font-mono {
+    font-family: monospace;
+  }
 }
