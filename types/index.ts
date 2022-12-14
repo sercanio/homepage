@@ -10,3 +10,7 @@ export interface LayoutChildrenProps {
 export type ToggleTypes = {
   enabled?: boolean
 }
+
+export type HeaderTypes = {
+  theme?: string
+}

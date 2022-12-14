@@ -35,7 +35,7 @@ Dark.decorators = [
           theme: createSlice({
             name: 'theme',
             initialState: {
-              theme: 'dark'
+              theme: 'light'
             },
             reducers: {
               setTheme: (state, action) => {
@@ -59,7 +59,7 @@ Light.decorators = [
           theme: createSlice({
             name: 'theme',
             initialState: {
-              theme: 'light'
+              theme: 'dark'
             },
             reducers: {
               setTheme: (state, action) => {

@@ -4,11 +4,19 @@ import Link from 'next/link'
 import { Popover } from '@headlessui/react'
 import Typewriter from 'typewriter-effect'
 import { FiChevronDown } from 'react-icons/fi'
+import { HeaderTypes } from '../../types'
+import classNames from 'classnames'
 
-const Header = () => {
-  // Redux dispatch
+// Styorybook styling
+const Header = (props: HeaderTypes) => {
+  const headerClass = classNames({
+    'theme-dark': props.theme === 'dark',
+    'theme-light': props.theme === 'light'
+  })
   return (
-    <header className="bg-skin-base color-transition py-4 px-4">
+    <header
+      className={`${headerClass} bg-skin-base color-transition py-4 px-4`}
+    >
       <nav className="flex justify-between items-baseline">
         <div className="flex items-center">
           <div className="flex items-center">

@@ -7,8 +7,6 @@ import { LayoutChildrenProps } from '../types'
 
 const Layout = ({ children }: LayoutChildrenProps): JSX.Element => {
   const theme = useSelector((state: RootState) => state.theme) // Redux state
-  const dispatch: Dispatch<any> = useDispatch()
-
   const layoutClass = classNames({
     'theme-dark': theme.theme === 'dark',
     'theme-light': theme.theme === 'light'
