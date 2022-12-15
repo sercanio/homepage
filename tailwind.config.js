@@ -14,7 +14,8 @@ module.exports = {
         skin: {
           base: 'var(--color-text-base)',
           primary: 'var(--color-text-primary)',
-          tilde: 'var(--color-tilde)'
+          tilde: 'var(--color-tilde)',
+          cursor: 'var(--color-cursor)'
         }
       },
       backgroundColor: {

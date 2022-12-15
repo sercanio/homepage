@@ -64,17 +64,17 @@ const Header = (props: HeaderTypes) => {
                         loop: false,
                         delay: 30,
                         cursorClassName:
-                          'font-mono text-cyan-800 animate-cursorBlink mb-1',
+                          'font-mono text-skin-cursor animate-cursorBlink mb-1',
                         wrapperClassName: 'font-mono text-skin-base text-2xl'
                       }}
                     />
                   ) : (
-                    <span className="font-mono animate-cursorBlink mb-1 text-cyan-800">
+                    <span className="font-mono animate-cursorBlink mb-1 text-skin-cursor">
                       |
                     </span>
                   )}
                 </span>
-                <span className="font-mono animate-cursorBlink mb-1 sm:hidden">
+                <span className="font-mono animate-cursorBlink mb-1 sm:hidden text-skin-cursor">
                   |
                 </span>
               </Link>
