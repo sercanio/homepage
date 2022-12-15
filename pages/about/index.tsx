@@ -1,25 +1,24 @@
 import React from 'react'
 import Image from 'next/image'
 import Main from '../../components/Main'
-import ProfilePicture from '../../assets/images/author.jpg'
 import Head from 'next/head'
+import Typewriter from 'typewriter-effect'
 
 const index: React.FC<any> = () => {
   return (
     <>
       <Head>
-        <title>Sercan Ateş | Personal Blog & Portfolio</title>
+        <title>Sercan Ateş | About Me</title>
         <meta
           name="description"
           content="Sercan Ateş's personal blog & portfolio website"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Main className="flex pt-12 sm:pt-32">
         <div className="flex flex-col justify-center gap-4 w-full">
-          <div className="flex flex-col gap-4 sm:gap-44 sm:flex-row justify-center items-center w-full">
+          <div className="flex flex-col gap-4 sm:gap-44 sm:flex-row justify-center items-center sm:items-start w-full">
             <Image
-              src={ProfilePicture}
+              src="/images/author.jpg"
               width={240}
               height={240}
               quality={90}
@@ -30,10 +29,31 @@ const index: React.FC<any> = () => {
               <h1 className="text-3xl font-bold font-mono tracking-wider">
                 Sercan Ateş
               </h1>
-              <h2 className="text-sm font-mono tracking-tight">
+              <h2 className="text-sm font-mono tracking-tight mb-8">
                 Frontend web developer based in Turkey
               </h2>
-              <p className="text-lg mt-8 pl-[10px] sm:pl-0 sm:w-96">
+              <Typewriter
+                onInit={typewriter => {
+                  typewriter
+                    .typeString(
+                      `I develop web applications, webpages and complite websites using
+                React, Next.js, and TypeScript. I also have experience with
+                Node.js, Express.js, and MongoDB. I am currently working as a
+                freelancer and I am open to new opportunities.`
+                    )
+                    .start()
+                }}
+                options={{
+                  autoStart: true,
+                  loop: false,
+                  delay: 25,
+                  cursorClassName:
+                    'font-mono text-cyan-800 animate-cursorBlink mb-1',
+                  wrapperClassName:
+                    'font-mono text-base mt-8 pl-[10px] sm:pl-0 sm:w-96 text-skin-secondary'
+                }}
+              />
+              <p className="sr-only">
                 I develop web applications, webpages and complite websites using
                 React, Next.js, and TypeScript. I also have experience with
                 Node.js, Express.js, and MongoDB. I am currently working as a
