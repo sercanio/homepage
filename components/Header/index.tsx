@@ -1,7 +1,6 @@
 import React from 'react'
 import { Toggle } from '../Button'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { RootState } from '../../lib/store/store'
@@ -23,9 +22,6 @@ const Header = (props: HeaderTypes) => {
   const welcome = useSelector((state: RootState) => state.welcome.welcomed)
   const dispatch: Dispatch<any> = useDispatch()
 
-  const router = useRouter()
-  const { pathname } = router
-
   return (
     <header
       className={`${headerClass} bg-skin-base color-transition py-4 px-4 `}
@@ -43,7 +39,7 @@ const Header = (props: HeaderTypes) => {
                   &nbsp;
                 </span>
                 <span className=" font-mono hidden sm:flex items-center text-skin-secondary text-2xl ">
-                  {pathname === '/' && !welcome ? (
+                  {!welcome ? (
                     <Typewriter
                       onInit={typewriter => {
                         typewriter
