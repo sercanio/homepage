@@ -2,6 +2,9 @@ export interface ThemeState {
   theme: string
 }
 
+export interface WelcomeState {
+  welcomed: boolean
+}
 export interface HomeProps {
   Theme?: string
   backgroundColor?: string
