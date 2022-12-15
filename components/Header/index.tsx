@@ -1,6 +1,7 @@
 import React from 'react'
 import { Toggle } from '../Button'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Popover } from '@headlessui/react'
 import Typewriter from 'typewriter-effect'
 import { FiChevronDown } from 'react-icons/fi'
@@ -13,6 +14,9 @@ const Header = (props: HeaderTypes) => {
     'theme-dark': props.theme === 'dark',
     'theme-light': props.theme === 'light'
   })
+  const router = useRouter()
+  const { pathname } = router
+
   return (
     <header
       className={`${headerClass} bg-skin-base color-transition py-4 px-4 `}
@@ -30,31 +34,37 @@ const Header = (props: HeaderTypes) => {
                   &nbsp;
                 </span>
                 <span className=" font-mono hidden sm:flex items-center text-skin-secondary text-2xl ">
-                  <Typewriter
-                    onInit={typewriter => {
-                      typewriter
-                        .typeString(' node ./well')
-                        .pauseFor(1000)
-                        .deleteChars(1)
-                        .pauseFor(500)
-                        .typeString('comm')
-                        .pauseFor(1000)
-                        .deleteChars(1)
-                        .pauseFor(500)
-                        .typeString('e.js  ')
-                        .pauseFor(3000)
-                        .deleteAll()
-                        .start()
-                    }}
-                    options={{
-                      autoStart: true,
-                      loop: false,
-                      delay: 150,
-                      cursorClassName:
-                        'font-mono text-cyan-800 animate-cursorBlink mb-1',
-                      wrapperClassName: 'font-mono text-skin-secondary'
-                    }}
-                  />
+                  {pathname === '/' ? (
+                    <Typewriter
+                      onInit={typewriter => {
+                        typewriter
+                          .typeString(' node ./well')
+                          .pauseFor(300)
+                          .deleteChars(1)
+                          .pauseFor(200)
+                          .typeString('comm')
+                          .pauseFor(300)
+                          .deleteChars(1)
+                          .pauseFor(200)
+                          .typeString('e.js')
+                          .pauseFor(3000)
+                          .deleteAll()
+                          .start()
+                      }}
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        delay: 100,
+                        cursorClassName:
+                          'font-mono text-cyan-800 animate-cursorBlink mb-1',
+                        wrapperClassName: 'font-mono text-skin-base text-2xl'
+                      }}
+                    />
+                  ) : (
+                    <span className="font-mono animate-cursorBlink mb-1 text-cyan-800">
+                      |
+                    </span>
+                  )}
                 </span>
                 <span className="font-mono animate-cursorBlink mb-1 sm:hidden">
                   |
