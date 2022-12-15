@@ -2,6 +2,11 @@ import React from 'react'
 import { Toggle } from '../Button'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
+import { RootState } from '../../lib/store/store'
+import { Dispatch } from '@reduxjs/toolkit'
+import { setWelcome } from '../../lib/store/welcomeSlice'
 import { Popover } from '@headlessui/react'
 import Typewriter from 'typewriter-effect'
 import { FiChevronDown } from 'react-icons/fi'
@@ -14,6 +19,10 @@ const Header = (props: HeaderTypes) => {
     'theme-dark': props.theme === 'dark',
     'theme-light': props.theme === 'light'
   })
+
+  const welcome = useSelector((state: RootState) => state.welcome.welcomed)
+  const dispatch: Dispatch<any> = useDispatch()
+
   const router = useRouter()
   const { pathname } = router
 
@@ -34,27 +43,30 @@ const Header = (props: HeaderTypes) => {
                   &nbsp;
                 </span>
                 <span className=" font-mono hidden sm:flex items-center text-skin-secondary text-2xl ">
-                  {pathname === '/' ? (
+                  {pathname === '/' && !welcome ? (
                     <Typewriter
                       onInit={typewriter => {
                         typewriter
                           .typeString(' node ./well')
-                          .pauseFor(300)
+                          .pauseFor(150)
                           .deleteChars(1)
-                          .pauseFor(200)
+                          .pauseFor(100)
                           .typeString('comm')
-                          .pauseFor(300)
+                          .pauseFor(150)
                           .deleteChars(1)
-                          .pauseFor(200)
+                          .pauseFor(100)
                           .typeString('e.js')
-                          .pauseFor(3000)
+                          .pauseFor(1000)
                           .deleteAll()
                           .start()
+                          .callFunction(() => {
+                            dispatch(setWelcome(true))
+                          })
                       }}
                       options={{
                         autoStart: true,
                         loop: false,
-                        delay: 100,
+                        delay: 30,
                         cursorClassName:
                           'font-mono text-cyan-800 animate-cursorBlink mb-1',
                         wrapperClassName: 'font-mono text-skin-base text-2xl'
