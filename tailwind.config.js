@@ -21,11 +21,15 @@ module.exports = {
       backgroundColor: {
         skin: {
           base: 'var(--color-bg-base)',
-          secondary: 'var(--color-bg-secondary)',
-          border: 'var(--color-bg-border)'
+          primary: 'var(--color-bg-primary)',
+          secondary: 'var(--color-bg-secondary)'
         }
       },
-
+      borderColor: {
+        skin: {
+          base: 'var(--color-border)'
+        }
+      },
       keyframes: {
         cursorBlink: {
           '0%, 5%, 10%, 15%, 85%, 90%, 95%, 100%': { opacity: 1 },

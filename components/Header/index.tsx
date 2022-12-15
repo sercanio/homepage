@@ -1,6 +1,7 @@
 import React from 'react'
 import { Toggle } from '../Button'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { RootState } from '../../lib/store/store'
@@ -21,6 +22,9 @@ const Header = (props: HeaderTypes) => {
 
   const welcome = useSelector((state: RootState) => state.welcome.welcomed)
   const dispatch: Dispatch<any> = useDispatch()
+
+  const router = useRouter()
+  const { pathname } = router
 
   return (
     <header
@@ -83,21 +87,36 @@ const Header = (props: HeaderTypes) => {
         </div>
         <div className="flex gap-6 items-center">
           <Toggle />
-          <ul className="hidden sm:flex gap-4 justify-end items-center text-skin-base text-xl">
-            <li className="hover:bg-opacity-90">
+          <ul className="hidden sm:flex gap-4 justify-end items-center text-skin-base text-xl mt-[10px]">
+            <li className="w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150">
               <Link href="/">Blog</Link>
+              {pathname === '/' ? (
+                <span className="mt-px bg-skin-primary w-2 h-2 rounded-full" />
+              ) : (
+                <span className="mt-px bg-skin-transparent border-transparent w-2 h-2 rounded-full" />
+              )}
             </li>
-            <li>
+            <li className="w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150">
               <Link href="/portfolio">Portfolio</Link>
+              {pathname === '/portfolio' ? (
+                <span className="mt-px bg-skin-primary w-2 h-2 rounded-full" />
+              ) : (
+                <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+              )}
             </li>
-            <li>
+            <li className="w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150">
               <Link href="/about">About</Link>
+              {pathname === '/about' ? (
+                <span className="mt-px bg-skin-primary w-2 h-2 rounded-full" />
+              ) : (
+                <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+              )}
             </li>
           </ul>
           <Popover className="relative sm:hidden">
             {({ open }) => (
               <>
-                <Popover.Button className="flex items-center gap-1 px-2 py-1 border-[1px] h-8 rounded-md ">
+                <Popover.Button className="flex items-center gap-1 px-2 py-1 bg-skin-base h-8 rounded-md ">
                   <span>Menu</span>
                   <FiChevronDown
                     className={open ? 'rotate-180 transform' : ''}
@@ -108,8 +127,13 @@ const Header = (props: HeaderTypes) => {
                   <ul className="flex flex-col text-left gap-4 text-skin-base w-full h-full">
                     <li className="w-full">
                       <Popover.Button as={Link} href="/" className="w-32">
-                        <div className="leading-10 w-full text-2xl py-2">
+                        <div className="relative leading-10 w-full text-2xl py-2">
                           Blog
+                          {pathname === '/' ? (
+                            <span className="absolute right-3 top-5 mt-1 bg-skin-primary w-2 h-2 rounded-full" />
+                          ) : (
+                            <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+                          )}
                         </div>
                       </Popover.Button>
                     </li>
@@ -119,8 +143,13 @@ const Header = (props: HeaderTypes) => {
                         href="/portfolio"
                         className="w-full"
                       >
-                        <div className="leading-10 w-full text-2xl py-2">
+                        <div className="relative leading-10 w-full text-2xl py-2">
                           Portfolio
+                          {pathname === '/portfolio' ? (
+                            <span className="absolute right-3 top-5 mt-1 bg-skin-primary w-2 h-2 rounded-full" />
+                          ) : (
+                            <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+                          )}
                         </div>
                       </Popover.Button>
                     </li>
@@ -130,8 +159,13 @@ const Header = (props: HeaderTypes) => {
                         href="/about"
                         className="w-full"
                       >
-                        <div className="leading-10 w-full text-2xl py-2">
+                        <div className="relative leading-10 w-full text-2xl py-2">
                           About
+                          {pathname === '/about' ? (
+                            <span className="absolute right-3 top-5 mt-1 bg-skin-primary w-2 h-2 rounded-full" />
+                          ) : (
+                            <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+                          )}
                         </div>
                       </Popover.Button>
                     </li>
