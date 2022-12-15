@@ -15,7 +15,7 @@ const Header = (props: HeaderTypes) => {
   })
   return (
     <header
-      className={`${headerClass} bg-skin-base color-transition py-4 px-4`}
+      className={`${headerClass} bg-skin-base color-transition py-4 px-4 `}
     >
       <nav className="flex justify-between items-baseline">
         <div className="flex items-center">
@@ -79,28 +79,42 @@ const Header = (props: HeaderTypes) => {
           <Popover className="relative sm:hidden">
             {({ open }) => (
               <>
-                <Popover.Button className="flex items-center gap-1 px-2 py-1 border-[1px] h-8 rounded-md">
+                <Popover.Button className="flex items-center gap-1 px-2 py-1 border-[1px] h-8 rounded-md ">
                   <span>Menu</span>
                   <FiChevronDown
                     className={open ? 'rotate-180 transform' : ''}
                   />
                 </Popover.Button>
-                <Popover.Overlay className="fixed inset-0 bg-black opacity-30 h-screen w-screen" />
-                <Popover.Panel className="absolute top-12 left-0 ">
+                <Popover.Overlay className="fixed z-40 inset-0 bg-skin-base opacity-70 h-screen w-screen" />
+                <Popover.Panel className="absolute top-12 right-0 z-50 pl-4 py-6 border bg-skin-base">
                   <ul className="flex flex-col text-left gap-4 text-skin-base w-full h-full">
-                    <li>
-                      <Popover.Button as={Link} href="/">
-                        Blog
+                    <li className="w-full">
+                      <Popover.Button as={Link} href="/" className="w-32">
+                        <div className="leading-10 w-full text-2xl py-2">
+                          Blog
+                        </div>
                       </Popover.Button>
                     </li>
-                    <li>
-                      <Popover.Button as={Link} href="/portfolio">
-                        Portfolio
+                    <li className="w-32">
+                      <Popover.Button
+                        as={Link}
+                        href="/portfolio"
+                        className="w-full"
+                      >
+                        <div className="leading-10 w-full text-2xl py-2">
+                          Portfolio
+                        </div>
                       </Popover.Button>
                     </li>
-                    <li>
-                      <Popover.Button as={Link} href="/about">
-                        About
+                    <li className="w-32">
+                      <Popover.Button
+                        as={Link}
+                        href="/about"
+                        className="w-full"
+                      >
+                        <div className="leading-10 w-full text-2xl py-2">
+                          About
+                        </div>
                       </Popover.Button>
                     </li>
                   </ul>
