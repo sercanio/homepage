@@ -9,11 +9,11 @@ export const themeSlice = createSlice({
   name: 'welcomed',
   initialState,
   reducers: {
-    setTheme: (state, action) => {
+    setWelcome: (state, action) => {
       state.welcomed = action.payload
     }
   }
 })
 
-export const { setTheme } = themeSlice.actions
+export const { setWelcome } = themeSlice.actions
 export default themeSlice.reducer
