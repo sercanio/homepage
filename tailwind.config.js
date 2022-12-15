@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en'
+  },
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}'
@@ -31,18 +35,18 @@ module.exports = {
           '100%': { width: '100%' }
         },
         slideFromLeft: {
-          '0%': { transform: 'translateX(-5%)' },
+          '0%': { transform: 'translateX(-4%)' },
           '100%': { transform: 'translateX(0)' }
         },
         slideFromRight: {
-          '0%': { transform: 'translateX(-5%)' },
+          '0%': { transform: 'translateX(-4%)' },
           '100%': { transform: 'translateX(0)' }
         }
       },
       animation: {
         cursorBlink: 'cursorBlink 1.3s linear infinite',
-        slideFromRight: 'slideFromRight .5s steps(144, end) .1s 1 normal both',
-        slideFromLeft: 'slideFromLeft .5s steps(144, end) .1s 1 reverse both'
+        slideFromRight: 'slideFromRight .5s steps(60, end) .1s 1 normal both',
+        slideFromLeft: 'slideFromLeft .5s steps(60, end) .1s 1 reverse both'
       }
     }
   },
