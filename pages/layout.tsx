@@ -15,9 +15,9 @@ const Layout = ({ children }: LayoutChildrenProps): JSX.Element => {
   return (
     <React.Fragment>
       <div
-        className={`${layoutClass} bg-skin-base text-skin-base w-full h-full color-transition`}
+        className={`${layoutClass} bg-skin-base text-skin-base w-full color-transition`}
       >
-        <div className="max-w-7xl mx-auto h-screen">
+        <div className="max-w-7xl mx-auto h-full">
           <Header />
           {children}
         </div>

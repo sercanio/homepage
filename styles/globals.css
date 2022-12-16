@@ -5,17 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --color-text-base: #1f2937;
-    --color-text-primary: #4E9A06;
+    --color-text-primary: #4e9a06;
     --color-text-secondary: #ffffff;
     --color-bg-base: #ffffff;
-    --color-bg-primary: #4E9A06;
+    --color-bg-primary: #4e9a06;
     --color-bg-secondary: #1f2937;
     --color-fill: #1f2937;
-    --color-border: #4E9A06;
+    --color-border: #4e9a06;
     --color-tilde: #22d3ee;
     --color-cursor: #155e75;
   }

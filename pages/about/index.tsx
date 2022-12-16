@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Main from '../../components/Main'
 import Head from 'next/head'
 import Typewriter from 'typewriter-effect'
+import Contact from '../../components/Contact'
 
 const index: React.FC<any> = () => {
   return (
@@ -14,8 +15,8 @@ const index: React.FC<any> = () => {
           content="Sercan Ateş's personal blog & portfolio website"
         />
       </Head>
-      <Main className="flex pt-12 sm:pt-32">
-        <div className="flex flex-col justify-center gap-4 w-full">
+      <Main className="flex flex-col gap-52 sm:gap-16 h-full">
+        <section className="flex flex-col justify-start gap-4 w-full h-96 mt-20 sm:mt-36">
           <div className="flex flex-col gap-4 sm:gap-44 sm:flex-row justify-center items-center sm:items-start w-full">
             <Image
               src="/images/author.jpg"
@@ -61,7 +62,8 @@ const index: React.FC<any> = () => {
               </p>
             </div>
           </div>
-        </div>
+        </section>
+        <Contact />
       </Main>
     </>
   )
