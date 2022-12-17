@@ -22,7 +22,8 @@ module.exports = {
         skin: {
           base: 'var(--color-bg-base)',
           primary: 'var(--color-bg-primary)',
-          secondary: 'var(--color-bg-secondary)'
+          secondary: 'var(--color-bg-secondary)',
+          console: 'var(--color-bg-console)'
         }
       },
       borderColor: {
@@ -46,14 +47,20 @@ module.exports = {
         slideFromRight: {
           '0%': { transform: 'translateX(-4%)' },
           '100%': { transform: 'translateX(0)' }
+        },
+        slideFromBottom: {
+          '0%': { transform: 'translateY(10%)' },
+          '100%': { transform: 'translateY(0)' }
         }
       },
       animation: {
         cursorBlink: 'cursorBlink 1.3s linear infinite',
         slideFromRight: 'slideFromRight .5s steps(60, end) .1s 1 normal both',
-        slideFromLeft: 'slideFromLeft .5s steps(60, end) .1s 1 reverse both'
+        slideFromLeft: 'slideFromLeft .5s steps(60, end) .1s 1 reverse both',
+        slideFromBottom: 'slideFromBottom .5s steps(60, end) .1s 1 normal'
       }
     }
   },
-  plugins: []
+  plugins: [],
+  mode: 'jit'
 }

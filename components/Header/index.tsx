@@ -87,29 +87,29 @@ const Header = (props: HeaderTypes) => {
         </div>
         <div className="flex gap-6 items-center">
           <Toggle />
-          <ul className="hidden sm:flex gap-4 justify-end items-center text-skin-base text-xl mt-[10px]">
+          <ul className="hidden sm:flex gap-4 justify-end items-center text-skin-base text-xl mt-[10px] [&>li>*:nth-child(2)]:rounded-full">
             <li className="w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150">
               <Link href="/">Blog</Link>
               {pathname === '/' ? (
-                <span className="mt-px bg-skin-primary w-2 h-2 rounded-full" />
+                <span className="mt-px bg-skin-primary w-2 h-2" />
               ) : (
-                <span className="mt-px bg-skin-transparent border-transparent w-2 h-2 rounded-full" />
+                <span className="mt-px bg-skin-transparent border-transparent w-2 h-2" />
               )}
             </li>
             <li className="w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150">
               <Link href="/portfolio">Portfolio</Link>
               {pathname === '/portfolio' ? (
-                <span className="mt-px bg-skin-primary w-2 h-2 rounded-full" />
+                <span className="mt-px bg-skin-primary w-2 h-2" />
               ) : (
-                <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+                <span className="mt-px bg-transparent border-transparent w-2 h-2" />
               )}
             </li>
             <li className="w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150">
               <Link href="/about">About</Link>
               {pathname === '/about' ? (
-                <span className="mt-px bg-skin-primary w-2 h-2 rounded-full" />
+                <span className="mt-px bg-skin-primary w-2 h-2" />
               ) : (
-                <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+                <span className="mt-px bg-transparent border-transparent w-2 h-2" />
               )}
             </li>
           </ul>

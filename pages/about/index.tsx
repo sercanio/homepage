@@ -15,8 +15,8 @@ const index: React.FC<any> = () => {
           content="Sercan Ateş's personal blog & portfolio website"
         />
       </Head>
-      <Main className="flex flex-col gap-52 sm:gap-16 h-full">
-        <section className="flex flex-col justify-start gap-4 w-full h-96 mt-20 sm:mt-36">
+      <Main className="flex flex-col gap-64 sm:gap-4 h-full">
+        <section className="flex flex-col justify-start gap-4 w-full h-80 mt-20 sm:mt-28">
           <div className="flex flex-col gap-4 sm:gap-44 sm:flex-row justify-center items-center sm:items-start w-full">
             <Image
               src="/images/author.jpg"
@@ -47,7 +47,7 @@ const index: React.FC<any> = () => {
                 options={{
                   autoStart: true,
                   loop: false,
-                  delay: 25,
+                  delay: 10,
                   cursorClassName:
                     'font-mono text-cyan-800 animate-cursorBlink mb-1',
                   wrapperClassName:

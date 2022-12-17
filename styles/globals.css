@@ -9,13 +9,9 @@
   :root {
     --color-text-base: #1f2937;
     --color-text-primary: #4e9a06;
-    --color-text-secondary: #ffffff;
-    --color-bg-base: #ffffff;
     --color-bg-primary: #4e9a06;
-    --color-bg-secondary: #1f2937;
     --color-fill: #1f2937;
     --color-border: #4e9a06;
-    --color-tilde: #22d3ee;
     --color-cursor: #155e75;
   }
 
@@ -24,6 +20,7 @@
     --color-text-secondary: #ffffff;
     --color-bg-base: #ffffff;
     --color-bg-secondary: #1f2937;
+    --color-bg-console: #041113;
     --color-fill: #1f2937;
     --color-tilde: #167a8a; /* tilde color for commant prompt effect */
   }
@@ -33,6 +30,7 @@
     --color-text-secondary: #1f2937;
     --color-bg-base: #1f2937;
     --color-bg-secondary: #ffffff;
+    --color-bg-console: #0d363b;
     --color-fill: #ffffff;
     --color-tilde: #22d3ee; /* tilde color for commant prompt effect */
   }
@@ -47,5 +45,9 @@
 
   .font-mono {
     font-family: 'Roboto Mono', monospace;
+  }
+
+  .console__title--buttons {
+    @apply w-4 h-4 rounded-full
   }
 }
