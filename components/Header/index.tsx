@@ -28,9 +28,9 @@ const Header = (props: HeaderTypes) => {
 
   return (
     <header
-      className={`${headerClass} bg-skin-base color-transition py-4 px-4 `}
+      className={`${headerClass} bg-skin-base color-transition py-4 px-4 sm:px-14 relative`}
     >
-      <nav className="flex justify-between items-baseline">
+      <nav className="flex justify-between items-baseline relative z-10">
         <div className="flex items-center">
           <div className="flex items-center">
             <h1 className="text-2xl sm:text-3xl font-bold text-skin-base -ml-2">
@@ -176,6 +176,22 @@ const Header = (props: HeaderTypes) => {
           </Popover>
         </div>
       </nav>
+      <hr className="absolute left-0 border-skin-base border-[1px] w-full mt-4" />
+      <svg
+        className="absolute top-0 left-0 opacity-10 z-0"
+        width="100%"
+        height="100%"
+      >
+        <filter id="noisybg">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.80"
+            numOctaves="5"
+            stitchTiles="stitch"
+          ></feTurbulence>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noisybg)"></rect>
+      </svg>
     </header>
   )
 }
