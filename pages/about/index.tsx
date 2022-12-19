@@ -24,6 +24,7 @@ const index: React.FC<any> = () => {
               height={240}
               quality={90}
               alt="My picture"
+              priority
               className="rounded-full order-1 sm:order-2 animate-slideFromRight sm:animate-slideFromLeft"
             />
             <div className="flex flex-col order-2 sm:order-1 w-full sm:w-96 px-6 sm:px-0 text-center sm:text-start animate-slideFromLeft sm:animate-slideFromRight -mr-[7%]">

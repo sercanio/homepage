@@ -15,7 +15,7 @@ module.exports = {
           base: 'var(--color-text-base)',
           primary: 'var(--color-text-primary)',
           tilde: 'var(--color-tilde)',
-          cursor: 'var(--color-cursor)'
+          caret: 'var(--color-caret)'
         }
       },
       backgroundColor: {
@@ -29,6 +29,11 @@ module.exports = {
       borderColor: {
         skin: {
           base: 'var(--color-border)'
+        }
+      },
+      caretColor: {
+        skin: {
+          base: 'var(--color-caret)'
         }
       },
       keyframes: {

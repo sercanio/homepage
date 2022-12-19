@@ -12,7 +12,7 @@
     --color-bg-primary: #4e9a06;
     --color-fill: #1f2937;
     --color-border: #4e9a06;
-    --color-cursor: #155e75;
+    --color-caret: #155e75;
   }
 
   .theme-light {
@@ -33,6 +33,11 @@
     --color-bg-console: #0d363b;
     --color-fill: #ffffff;
     --color-tilde: #22d3ee; /* tilde color for commant prompt effect */
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: red, black;
   }
 }
 

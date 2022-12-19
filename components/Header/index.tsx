@@ -60,17 +60,17 @@ const Header = () => {
                         loop: false,
                         delay: 30,
                         cursorClassName:
-                          'font-mono text-skin-cursor animate-cursorBlink mb-1',
+                          'font-mono text-skin-caret animate-cursorBlink mb-1',
                         wrapperClassName: 'font-mono text-skin-base text-2xl'
                       }}
                     />
                   ) : (
-                    <span className="font-mono animate-cursorBlink mb-1 text-skin-cursor">
+                    <span className="font-mono animate-cursorBlink mb-1 text-skin-caret">
                       |
                     </span>
                   )}
                 </span>
-                <span className="font-mono animate-cursorBlink mb-1 sm:hidden text-skin-cursor">
+                <span className="font-mono animate-cursorBlink mb-1 sm:hidden text-skin-caret">
                   |
                 </span>
                 <h1 className="sr-only">
