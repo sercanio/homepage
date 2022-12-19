@@ -10,16 +10,10 @@ import { setWelcome } from '../../lib/store/welcomeSlice'
 import { Popover } from '@headlessui/react'
 import Typewriter from 'typewriter-effect'
 import { FiChevronDown } from 'react-icons/fi'
-import { HeaderTypes } from '../../types'
-import classNames from 'classnames'
+import { pages } from '../../constants'
 
 // Styorybook styling
-const Header = (props: HeaderTypes) => {
-  const headerClass = classNames({
-    'theme-dark': props.theme === 'dark',
-    'theme-light': props.theme === 'light'
-  })
-
+const Header = () => {
   const welcome = useSelector((state: RootState) => state.welcome.welcomed)
   const dispatch: Dispatch<any> = useDispatch()
 
@@ -27,9 +21,7 @@ const Header = (props: HeaderTypes) => {
   const { pathname } = router
 
   return (
-    <header
-      className={`${headerClass} bg-skin-base color-transition py-4 px-4 sm:px-14 relative`}
-    >
+    <header className="bg-skin-base color-transition py-4 px-4 sm:px-14 relative">
       <nav className="flex justify-between items-baseline relative z-10">
         <div className="flex items-center">
           <div className="flex items-center">
@@ -81,37 +73,29 @@ const Header = (props: HeaderTypes) => {
                 <span className="font-mono animate-cursorBlink mb-1 sm:hidden text-skin-cursor">
                   |
                 </span>
+                <h1 className="sr-only">
+                  {/* eslint-disable-next-line react/no-unescaped-entities*/}
+                  Sercan Ateş's personal web blog & portfolio
+                </h1>
               </Link>
             </h1>
           </div>
         </div>
         <div className="flex gap-6 items-center">
           <Toggle />
-          <ul className="hidden sm:flex gap-4 justify-end items-center text-skin-base text-xl mt-[10px] [&>li]:nav__link [&>li>*:nth-child(2)]:nav__link--active">
-            <li>
-              <Link href="/">Blog</Link>
-              {pathname === '/' ? (
-                <span className="bg-skin-primary" />
-              ) : (
-                <span className="bg-skin-transparent border-transparent" />
-              )}
-            </li>
-            <li>
-              <Link href="/portfolio">Portfolio</Link>
-              {pathname === '/portfolio' ? (
-                <span className="bg-skin-primary" />
-              ) : (
-                <span className="bg-transparent border-transparent" />
-              )}
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-              {pathname === '/about' ? (
-                <span className="bg-skin-primary" />
-              ) : (
-                <span className="bg-transparent border-transparent" />
-              )}
-            </li>
+          <ul className="hidden sm:flex gap-4 sm:gap-6 justify-end items-center text-skin-base text-xl mt-[10px] [&>li]:nav__link [&>li>*:nth-child(2)]:nav__link--active">
+            {pages.map((page, index) => {
+              return (
+                <li key={index}>
+                  <Link href={page.link}>{page.title}</Link>
+                  {pathname === page.link ? (
+                    <span className="bg-skin-primary" />
+                  ) : (
+                    <span className="bg-skin-transparent border-transparent" />
+                  )}
+                </li>
+              )
+            })}
           </ul>
           <Popover className="relative sm:hidden">
             {({ open }) => (
@@ -125,50 +109,20 @@ const Header = (props: HeaderTypes) => {
                 <Popover.Overlay className="fixed z-40 inset-0 bg-skin-base opacity-70 h-screen w-screen" />
                 <Popover.Panel className="absolute top-12 right-0 z-50 pl-4 py-6 border bg-skin-base">
                   <ul className="flex flex-col text-left gap-4 text-skin-base w-full h-full [&>*]:w-32">
-                    <li>
-                      <Popover.Button as={Link} href="/" className="w-full">
-                        <div className="relative leading-10 w-full text-2xl py-2 [&>*]:nav__link--active">
-                          Blog
-                          {pathname === '/' ? (
-                            <span className="absolute right-3 top-5  bg-skin-primary" />
-                          ) : (
-                            <span className=" bg-transparent border-transparent" />
-                          )}
-                        </div>
-                      </Popover.Button>
-                    </li>
-                    <li>
-                      <Popover.Button
-                        as={Link}
-                        href="/portfolio"
-                        className="w-full"
-                      >
-                        <div className="relative leading-10 w-full text-2xl py-2 [&>*]:nav__link--active">
-                          Portfolio
-                          {pathname === '/portfolio' ? (
-                            <span className="absolute right-3 top-5  bg-skin-primary" />
-                          ) : (
-                            <span className=" bg-transparent border-transparent" />
-                          )}
-                        </div>
-                      </Popover.Button>
-                    </li>
-                    <li>
-                      <Popover.Button
-                        as={Link}
-                        href="/about"
-                        className="w-full"
-                      >
-                        <div className="relative leading-10 w-full text-2xl py-2 [&>*]:nav__link--active">
-                          About
-                          {pathname === '/about' ? (
-                            <span className="absolute right-3 top-5  bg-skin-primary" />
-                          ) : (
-                            <span className=" bg-transparent border-transparent" />
-                          )}
-                        </div>
-                      </Popover.Button>
-                    </li>
+                    {pages.map((page, index) => {
+                      return (
+                        <Popover.Button key={index} as={Link} href={page.link}>
+                          <div className="relative leading-10 w-full text-2xl py-2 [&>*]:nav__link--active">
+                            {page.title}
+                            {pathname === page.link ? (
+                              <span className="absolute right-3 top-5 bg-skin-primary" />
+                            ) : (
+                              <span className=" bg-transparent border-transparent" />
+                            )}
+                          </div>
+                        </Popover.Button>
+                      )
+                    })}
                   </ul>
                 </Popover.Panel>
               </>

@@ -48,12 +48,12 @@
   }
 
   .nav__link {
-    @apply w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150
+    @apply w-full flex flex-col items-center hover:text-skin-primary transition-colors duration-150;
   }
   .nav__link--active {
-    @apply mt-1 sm:pt-px w-2 h-2 rounded-full
+    @apply mt-1 sm:pt-px w-2 h-2 rounded-full;
   }
   .console__title--buttons {
-    @apply w-4 h-4 rounded-full
+    @apply w-4 h-4 rounded-full;
   }
 }

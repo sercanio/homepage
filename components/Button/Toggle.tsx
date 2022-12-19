@@ -1,17 +1,15 @@
-import { Dispatch, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Switch } from '@headlessui/react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Dispatch } from '@reduxjs/toolkit'
 import { setTheme } from '../../lib/store/themeSlice'
-import { ToggleTypes } from '../../types'
-import { RootState } from '../../lib/store/store'
 import useLocalStorage from '../../hooks/use-localstorage'
 import { FaMoon } from 'react-icons/fa'
 import { FiSun } from 'react-icons/fi'
 
-export default function Toggle(props: ToggleTypes) {
-  const [enabled, setEnabled] = useState(props.enabled ?? true)
-  const [lsItem, setLsItem] = useLocalStorage('theme', 'light')
-  const theme = useSelector((state: RootState) => state.theme)
+export default function Toggle() {
+  const [enabled, setEnabled] = useState(true)
+  const [, setLsItem] = useLocalStorage('theme', 'light')
   const dispatch: Dispatch<any> = useDispatch()
 
   const toggleHandler = () => {
