@@ -87,29 +87,29 @@ const Header = (props: HeaderTypes) => {
         </div>
         <div className="flex gap-6 items-center">
           <Toggle />
-          <ul className="hidden sm:flex gap-4 justify-end items-center text-skin-base text-xl mt-[10px] [&>li>*:nth-child(2)]:rounded-full">
-            <li className="w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150">
+          <ul className="hidden sm:flex gap-4 justify-end items-center text-skin-base text-xl mt-[10px] [&>li]:nav__link [&>li>*:nth-child(2)]:nav__link--active">
+            <li>
               <Link href="/">Blog</Link>
               {pathname === '/' ? (
-                <span className="mt-px bg-skin-primary w-2 h-2" />
+                <span className="bg-skin-primary" />
               ) : (
-                <span className="mt-px bg-skin-transparent border-transparent w-2 h-2" />
+                <span className="bg-skin-transparent border-transparent" />
               )}
             </li>
-            <li className="w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150">
+            <li>
               <Link href="/portfolio">Portfolio</Link>
               {pathname === '/portfolio' ? (
-                <span className="mt-px bg-skin-primary w-2 h-2" />
+                <span className="bg-skin-primary" />
               ) : (
-                <span className="mt-px bg-transparent border-transparent w-2 h-2" />
+                <span className="bg-transparent border-transparent" />
               )}
             </li>
-            <li className="w-16 flex flex-col items-center hover:text-skin-primary transition-colors duration-150">
+            <li>
               <Link href="/about">About</Link>
               {pathname === '/about' ? (
-                <span className="mt-px bg-skin-primary w-2 h-2" />
+                <span className="bg-skin-primary" />
               ) : (
-                <span className="mt-px bg-transparent border-transparent w-2 h-2" />
+                <span className="bg-transparent border-transparent" />
               )}
             </li>
           </ul>
@@ -124,47 +124,47 @@ const Header = (props: HeaderTypes) => {
                 </Popover.Button>
                 <Popover.Overlay className="fixed z-40 inset-0 bg-skin-base opacity-70 h-screen w-screen" />
                 <Popover.Panel className="absolute top-12 right-0 z-50 pl-4 py-6 border bg-skin-base">
-                  <ul className="flex flex-col text-left gap-4 text-skin-base w-full h-full">
-                    <li className="w-full">
-                      <Popover.Button as={Link} href="/" className="w-32">
-                        <div className="relative leading-10 w-full text-2xl py-2">
+                  <ul className="flex flex-col text-left gap-4 text-skin-base w-full h-full [&>*]:w-32">
+                    <li>
+                      <Popover.Button as={Link} href="/" className="w-full">
+                        <div className="relative leading-10 w-full text-2xl py-2 [&>*]:nav__link--active">
                           Blog
                           {pathname === '/' ? (
-                            <span className="absolute right-3 top-5 mt-1 bg-skin-primary w-2 h-2 rounded-full" />
+                            <span className="absolute right-3 top-5  bg-skin-primary" />
                           ) : (
-                            <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+                            <span className=" bg-transparent border-transparent" />
                           )}
                         </div>
                       </Popover.Button>
                     </li>
-                    <li className="w-32">
+                    <li>
                       <Popover.Button
                         as={Link}
                         href="/portfolio"
                         className="w-full"
                       >
-                        <div className="relative leading-10 w-full text-2xl py-2">
+                        <div className="relative leading-10 w-full text-2xl py-2 [&>*]:nav__link--active">
                           Portfolio
                           {pathname === '/portfolio' ? (
-                            <span className="absolute right-3 top-5 mt-1 bg-skin-primary w-2 h-2 rounded-full" />
+                            <span className="absolute right-3 top-5  bg-skin-primary" />
                           ) : (
-                            <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+                            <span className=" bg-transparent border-transparent" />
                           )}
                         </div>
                       </Popover.Button>
                     </li>
-                    <li className="w-32">
+                    <li>
                       <Popover.Button
                         as={Link}
                         href="/about"
                         className="w-full"
                       >
-                        <div className="relative leading-10 w-full text-2xl py-2">
+                        <div className="relative leading-10 w-full text-2xl py-2 [&>*]:nav__link--active">
                           About
                           {pathname === '/about' ? (
-                            <span className="absolute right-3 top-5 mt-1 bg-skin-primary w-2 h-2 rounded-full" />
+                            <span className="absolute right-3 top-5  bg-skin-primary" />
                           ) : (
-                            <span className="mt-px bg-transparent border-transparent w-2 h-2 rounded-full" />
+                            <span className=" bg-transparent border-transparent" />
                           )}
                         </div>
                       </Popover.Button>
