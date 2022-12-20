@@ -1,12 +1,40 @@
-import React from 'react'
-import { AiOutlineEnter } from 'react-icons/ai'
+import React, { useEffect } from 'react'
+import { InputProps } from '../../types'
+import Input from './Input'
 const Contact = () => {
-  const [cursorBlink, setcursorBlink] = React.useState(true)
-  const nameRef = React.useRef<HTMLInputElement>(null)
+  const inputRef = React.useRef<HTMLInputElement>(null)
+
+  const [inputGroup, setInputGroup] = React.useState<InputProps[]>([
+    { placeholder: 'Name', type: 'text', user: 'guest' }
+  ])
+
+  const [contactInfo, setContactInfo] = React.useState({})
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    console.log("You've submitted the form")
   }
+
+  const newLine = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const user = inputRef.current?.value.split(' ')[0]
+    if (inputGroup.length == 1) {
+      setInputGroup(prev => [
+        ...prev,
+        {
+          placeholder: 'E-mail',
+          type: 'email',
+          user: user?.toLowerCase()
+        }
+      ])
+    }
+    if (inputGroup.length == 2) {
+      setInputGroup(prev => [
+        ...prev,
+        { placeholder: 'Your Message', type: 'text', user: user?.toLowerCase() }
+      ])
+    }
+  }
+
   return (
     <section className="flex flex-col justify-center items-center gap-4 w-full px-2 mb-12 animate-slideFromBottom ">
       <div className="flex flex-col w-full sm:w-[913px] h-[400px] border-2 border-black rounded-lg">
@@ -22,47 +50,27 @@ const Contact = () => {
             <div className=" bg-yellow-500"></div>
           </div>
         </div>
-        <div className="relative h-full w-full">
+        <div
+          className="relative h-full w-full"
+          onClick={() => inputRef.current?.focus()}
+        >
           <div className="absolute z-10 w-full p-2">
-            <form onSubmit={submitHandler}>
-              <label className="flex flex-nowrap gap-1 items-center w-full h-6">
-                <span className="font-mono text-skin-primary">
-                  <span className="font-mono text-skin-primary">guest</span>
-                  @sercan.io{':'}
-                  <span className="font-mono text-skin-tilde">~</span>
-                  {'$'}
-                  &nbsp;
-                </span>
-                {cursorBlink ? (
-                  <span className="relative font-mono animate-cursorBlink text-skin-caret">
-                    |
-                  </span>
-                ) : (
-                  <span className="font-mono text-transparent">|</span>
-                )}
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  ref={nameRef}
-                  className="w-full bg-inherit placeholder:opacity-60 font-mono focus:outline-none caret-skin-base -ml-2"
-                  onFocus={() => setcursorBlink(false)}
-                  onBlur={() => setcursorBlink(true)}
+            <form>
+              {inputGroup.map((input, index) => (
+                <Input
+                  key={index}
+                  inputRef={inputRef}
+                  placeholder={input.placeholder}
+                  type={input.type}
+                  user={input.user}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' && inputGroup.length !== 3) {
+                      newLine(e)
+                    } else if (e.key === 'Enter' && inputGroup.length == 3)
+                      submitHandler(e)
+                  }}
                 />
-                <span className="text-skin-tilde">Enter</span>
-                <svg
-                  stroke="currentColor"
-                  fill="currentColor"
-                  strokeWidth="0"
-                  viewBox="0 0 1024 1024"
-                  className="text-skin-primary"
-                  height="1.5rem"
-                  width="1.5rem"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M864 170h-60c-4.4 0-8 3.6-8 8v518H310v-73c0-6.7-7.8-10.5-13-6.3l-141.9 112a8 8 0 0 0 0 12.6l141.9 112c5.3 4.2 13 .4 13-6.3v-75h498c35.3 0 64-28.7 64-64V178c0-4.4-3.6-8-8-8z"></path>
-                </svg>
-              </label>
+              ))}
             </form>
           </div>
           <div className=" opacity-30">
