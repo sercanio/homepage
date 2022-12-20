@@ -49,10 +49,9 @@ const index: React.FC<any> = () => {
                   autoStart: true,
                   loop: false,
                   delay: 10,
-                  cursorClassName:
-                    'font-mono text-cyan-800 animate-cursorBlink mb-1',
+                  cursorClassName: 'hidden',
                   wrapperClassName:
-                    'font-mono text-base mt-8 pl-[10px] sm:pl-0 sm:w-96 text-skin-secondary'
+                    'font-mono text-base mt-8 pl-[10px] sm:pl-0 sm:w-96'
                 }}
               />
               <p className="sr-only">

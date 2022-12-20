@@ -1,5 +1,4 @@
 import React from 'react'
-import { Toggle } from '../Button'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
@@ -10,7 +9,7 @@ import { setWelcome } from '../../lib/store/welcomeSlice'
 import { Popover } from '@headlessui/react'
 import Typewriter from 'typewriter-effect'
 import { FiChevronDown } from 'react-icons/fi'
-import { pages } from '../../constants'
+import { pages } from '../../lib/constants'
 
 // Styorybook styling
 const Header = () => {
@@ -34,7 +33,7 @@ const Header = () => {
                   {'$'}
                   &nbsp;
                 </span>
-                <span className=" font-mono hidden sm:flex items-center text-skin-secondary text-2xl ">
+                <span className=" font-mono hidden sm:flex items-center text-2xl ">
                   {!welcome ? (
                     <Typewriter
                       onInit={typewriter => {
@@ -82,7 +81,6 @@ const Header = () => {
           </div>
         </div>
         <div className="flex gap-6 items-center">
-          <Toggle />
           <ul className="hidden sm:flex gap-4 sm:gap-6 justify-end items-center text-skin-base text-xl mt-[10px] [&>li]:nav__link [&>li>*:nth-child(2)]:nav__link--active">
             {pages.map((page, index) => {
               return (
