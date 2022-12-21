@@ -27,3 +27,16 @@ export interface InputProps {
     | ((e: React.KeyboardEvent<HTMLInputElement>) => void)
     | ((e: React.FormEvent<HTMLInputElement>) => void)
 }
+
+export interface Post {
+  content: string
+  meta: PostMeta
+}
+
+export interface PostMeta {
+  excerpt: string
+  slug: string
+  title: string
+  tags: string[]
+  date: string
+}

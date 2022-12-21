@@ -1,9 +1,11 @@
 import Head from 'next/head'
-import { HomeProps } from '../types'
+import { HomeProps, PostMeta } from '../types'
 import Main from '../src/components/Main'
-export default function Home(props: HomeProps) {
+import { getAllPosts } from '../src/components/api'
+import Articles from '../src/components/Articles'
+export default function Home({ posts }: { posts: PostMeta[] }) {
   return (
-    <div style={{ background: props.backgroundColor }}>
+    <div>
       <Head>
         <title>Sercan Ateş | Personal Blog & Portfolio</title>
         <meta
@@ -13,11 +15,23 @@ export default function Home(props: HomeProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Main>
-        <h1 className="text-4xl text-skin-bas">Hello World</h1>
+      <Main className="p-12 h-screen">
+        <Articles posts={posts} />
       </Main>
 
       <footer></footer>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const posts = getAllPosts()
+    .slice(0, 9) // Get the first 9 posts
+    .map(posts => posts.meta) // Get the meta data of the posts
+
+  return {
+    props: {
+      posts
+    }
+  }
 }

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { InputProps } from '../../types'
+import { InputProps } from '../../../types'
 import Input from './Input'
 const Contact = () => {
   const inputRef = React.useRef<HTMLInputElement>(null)
@@ -63,7 +63,7 @@ const Contact = () => {
                   placeholder={input.placeholder}
                   type={input.type}
                   user={input.user}
-                  onKeyDown={e => {
+                  onKeyDown={(e: any) => {
                     if (e.key === 'Enter' && inputGroup.length !== 3) {
                       newLine(e)
                     } else if (e.key === 'Enter' && inputGroup.length == 3)
