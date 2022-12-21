@@ -1,4 +1,4 @@
-import { MainTypes } from '../../types'
+import { MainTypes } from '../../../types'
 
 const Main: React.FC<MainTypes> = ({ children, className }): JSX.Element => {
   return (

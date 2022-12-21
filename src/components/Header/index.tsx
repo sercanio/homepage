@@ -3,13 +3,13 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { RootState } from '../../lib/store/store'
+import { RootState } from '../../../lib/store'
 import { Dispatch } from '@reduxjs/toolkit'
-import { setWelcome } from '../../lib/store/welcomeSlice'
+import { setWelcome } from '../../../lib/store/welcomeSlice'
 import { Popover } from '@headlessui/react'
 import Typewriter from 'typewriter-effect'
 import { FiChevronDown } from 'react-icons/fi'
-import { pages } from '../../lib/constants'
+import { pages } from '../../../lib/constants'
 
 // Styorybook styling
 const Header = () => {

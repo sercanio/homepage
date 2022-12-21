@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { HomeProps } from '../types'
-import Main from '../components/Main'
+import Main from '../src/components/Main'
 export default function Home(props: HomeProps) {
   return (
     <div style={{ background: props.backgroundColor }}>

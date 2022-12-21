@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import Main from '../../components/Main'
+import Main from '../../src/components/Main'
 import Head from 'next/head'
 import Typewriter from 'typewriter-effect'
-import Contact from '../../components/Contact'
+import Contact from '../../src/components/Contact'
 
 const index: React.FC<any> = () => {
   return (
