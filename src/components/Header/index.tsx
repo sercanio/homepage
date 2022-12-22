@@ -19,7 +19,7 @@ const Header = () => {
   const { pathname } = router
 
   return (
-    <header className="bg-skin-base color-transition py-4 px-4 sm:px-14 relative">
+    <header className="bg-skin-base color-transition py-3 px-4 sm:px-14 relative">
       <nav className="flex justify-between items-baseline relative z-10">
         <div className="flex items-center">
           <div className="flex items-center">
@@ -63,10 +63,7 @@ const Header = () => {
                       }}
                     />
                   ) : (
-                    <span
-                      className="animate-cursorBlink mb-1 text-skin-caret "
-                      style={{ contentVisibility: 'auto' }}
-                    >
+                    <span className="animate-cursorBlink mb-1 text-skin-caret ">
                       |
                     </span>
                   )}
@@ -88,11 +85,11 @@ const Header = () => {
               return (
                 <li key={index}>
                   <Link href={page.link}>{page.title}</Link>
-                  {pathname === page.link ? (
+                  {/* {pathname === page.link ? (
                     <span className="bg-skin-primary" />
                   ) : (
                     <span className="bg-skin-transparent border-transparent" />
-                  )}
+                  )} */}
                 </li>
               )
             })}
@@ -114,11 +111,11 @@ const Header = () => {
                         <Popover.Button key={index} as={Link} href={page.link}>
                           <div className="relative leading-10 w-full text-2xl py-2 [&>*]:nav__link--active">
                             {page.title}
-                            {pathname === page.link ? (
+                            {/* {pathname === page.link ? (
                               <span className="absolute right-3 top-5 bg-skin-primary" />
                             ) : (
                               <span className=" bg-transparent border-transparent" />
-                            )}
+                            )} */}
                           </div>
                         </Popover.Button>
                       )
@@ -130,9 +127,9 @@ const Header = () => {
           </Popover>
         </div>
       </nav>
-      <hr className="absolute left-0 border-skin-base border-[1px] w-full mt-4" />
+      <hr className="absolute left-0 border-skin-base border-[1px] w-full mt-3" />
       <svg
-        className="absolute top-0 left-0 opacity-10 z-0"
+        className="absolute top-0 left-0 opacity-20 z-0"
         width="100%"
         height="100%"
       >

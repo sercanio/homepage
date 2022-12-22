@@ -11,6 +11,7 @@ import { PostMeta } from '../../types'
 import YouTube from '../../src/components/YouTube/YouTube'
 
 import 'highlight.js/styles/atom-one-dark.css'
+import Main from '../../src/components/Main'
 
 interface MDXPost {
   source: MDXRemoteSerializeResult<Record<string, unknown>>
@@ -21,11 +22,29 @@ export default function PostPage({ post }: { post: MDXPost }) {
   return (
     <>
       <Head>
-        <title>sercan.io {post.meta.title}</title>
+        <title>{post.meta.title}</title>
         <meta name="description" content={post.meta.title} />
       </Head>
-      <h1>{post.meta.title}</h1>
-      <MDXRemote {...post.source} components={{ YouTube, Image }} />
+      <article className="px-4 py-16 sm:px-9 sm:py-20 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4">{post.meta.title}</h2>
+        <p className="leading-10 text-sm text-gray-500">{post.meta.date}</p>
+        <hr className="py-4 border-t-2" />
+        <MDXRemote {...post.source} components={{ YouTube, Image }} />
+        <hr className="py-4 border-t-2 mt-14 -mb-2" />
+        {post.meta.tags && (
+          <div className="flex flex-wrap gap-2 px-2">
+            Tags:
+            {post.meta.tags.map(tag => (
+              <span
+                key={tag}
+                className="flex items-center text-sm text-gray-500 bg-gray-200 px-2 rounded"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </article>
     </>
   )
 }
