@@ -21,7 +21,8 @@ export default function PostPage({ post }: { post: MDXPost }) {
   return (
     <>
       <Head>
-        <title>{post.meta.title}</title>
+        <title>sercan.io {post.meta.title}</title>
+        <meta name="description" content={post.meta.title} />
       </Head>
       <h1>{post.meta.title}</h1>
       <MDXRemote {...post.source} components={{ YouTube, Image }} />

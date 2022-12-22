@@ -7,25 +7,23 @@ const Input = (props: InputProps) => {
   const { inputRef, placeholder, type, user = 'guest', onKeyDown } = props
   return (
     <label className="flex flex-nowrap gap-1 items-center w-full h-6">
-      <span className="font-mono text-skin-primary">
-        <span className="font-mono text-skin-primary">{user}</span>
+      <span className="text-skin-primary">
+        <span className="text-skin-primary">{user}</span>
         @sercan.io{':'}
-        <span className="font-mono text-skin-tilde">~</span>
+        <span className=" text-skin-tilde">~</span>
         {'$'}
         &nbsp;
       </span>
       {cursorBlink ? (
-        <span className="relative font-mono animate-cursorBlink text-skin-caret">
-          |
-        </span>
+        <span className="relative animate-cursorBlink text-skin-caret">|</span>
       ) : (
-        <span className="font-mono text-transparent">|</span>
+        <span className="text-transparent">|</span>
       )}
       <input
         ref={inputRef}
         placeholder={placeholder}
         type={type}
-        className="w-full bg-inherit placeholder:opacity-60 font-mono focus:outline-none caret-skin-base -ml-2"
+        className="w-full bg-inherit placeholder:opacity-60  focus:outline-none caret-skin-base -ml-2"
         onFocus={() => setcursorBlink(false)}
         onBlur={() => setcursorBlink(true)}
         onKeyDown={onKeyDown}

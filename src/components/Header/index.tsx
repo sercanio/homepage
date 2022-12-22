@@ -24,15 +24,15 @@ const Header = () => {
         <div className="flex items-center">
           <div className="flex items-center">
             <h1 className="text-2xl sm:text-3xl font-bold text-skin-base -ml-2">
-              <Link href="/" className="font-mono flex items-center">
-                <span className="font-mono text-skin-primary">
-                  <span className="font-mono text-skin-primary">sercan</span>
+              <Link href="/" className="flex items-center">
+                <span className="text-skin-primary">
+                  <span className="text-skin-primary">sercan</span>
                   @web{':'}
-                  <span className="font-mono text-skin-tilde">~</span>
+                  <span className="text-skin-tilde">~</span>
                   {'$'}
                   &nbsp;
                 </span>
-                <span className=" font-mono hidden sm:flex items-center text-2xl ">
+                <span className=" hidden sm:flex items-center text-2xl ">
                   {!welcome ? (
                     <Typewriter
                       onInit={typewriter => {
@@ -58,17 +58,20 @@ const Header = () => {
                         loop: false,
                         delay: 30,
                         cursorClassName:
-                          'font-mono text-skin-caret animate-cursorBlink mb-1',
-                        wrapperClassName: 'font-mono text-skin-base text-2xl'
+                          'text-skin-caret animate-cursorBlink mb-1',
+                        wrapperClassName: 'text-skin-base text-2xl'
                       }}
                     />
                   ) : (
-                    <span className="font-mono animate-cursorBlink mb-1 text-skin-caret">
+                    <span
+                      className="animate-cursorBlink mb-1 text-skin-caret "
+                      style={{ contentVisibility: 'auto' }}
+                    >
                       |
                     </span>
                   )}
                 </span>
-                <span className="font-mono animate-cursorBlink mb-1 sm:hidden text-skin-caret">
+                <span className="animate-cursorBlink mb-1 sm:hidden text-skin-caret">
                   |
                 </span>
                 <h1 className="sr-only">

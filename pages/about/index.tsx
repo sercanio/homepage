@@ -28,10 +28,10 @@ const index: React.FC<any> = () => {
               className="rounded-full order-1 sm:order-2 animate-slideFromRight sm:animate-slideFromLeft"
             />
             <div className="flex flex-col order-2 sm:order-1 w-full sm:w-96 px-6 sm:px-0 text-center sm:text-start animate-slideFromLeft sm:animate-slideFromRight -mr-[7%]">
-              <h1 className="text-3xl font-bold font-mono tracking-wider">
+              <h1 className="text-3xl font-bold  tracking-wider">
                 Sercan Ateş
               </h1>
-              <h2 className="text-sm font-mono tracking-tight mb-8">
+              <h2 className="text-sm  tracking-tight mb-8">
                 Frontend web developer based in Turkey
               </h2>
               <Typewriter
@@ -50,8 +50,7 @@ const index: React.FC<any> = () => {
                   loop: false,
                   delay: 10,
                   cursorClassName: 'hidden',
-                  wrapperClassName:
-                    'font-mono text-base mt-8 pl-[10px] sm:pl-0 sm:w-96'
+                  wrapperClassName: 'text-base mt-8 pl-[10px] sm:pl-0 sm:w-96'
                 }}
               />
               <p className="sr-only">

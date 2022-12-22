@@ -12,6 +12,7 @@ export interface HomeProps {
 
 export interface LayoutChildrenProps {
   children: React.ReactNode
+  className?: string
 }
 export interface MainTypes {
   children: React.ReactNode

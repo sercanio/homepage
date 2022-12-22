@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,16 +17,13 @@
 }
 
 /* add transition-property-bg all properties */
-@layer utilities {
+
+@layer base {
   * {
-    font-family: 'Roboto', sans-serif;
     transition: background-color 0.15s ease;
   }
-
-  .font-mono {
-    font-family: 'Roboto Mono', monospace;
-  }
-
+}
+@layer components {
   .nav__link {
     @apply w-full flex flex-col items-center hover:text-skin-primary transition-colors duration-150;
   }
@@ -38,5 +32,10 @@
   }
   .console__title--buttons {
     @apply w-4 h-4 rounded-full;
+  }
+}
+@layer utilities {
+  .content-visibility-auto {
+    content-visibility: auto;
   }
 }
