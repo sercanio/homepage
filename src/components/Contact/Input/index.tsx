@@ -1,7 +1,7 @@
 import React from 'react'
 import { InputProps } from '../../../../types'
 
-const Input = (props: InputProps) => {
+const Input: React.FC<InputProps> = props => {
   const [cursorBlink, setcursorBlink] = React.useState(true)
 
   const { inputRef, placeholder, type, user = 'guest', onKeyDown } = props

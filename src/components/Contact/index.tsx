@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { InputProps } from '../../../types'
 import Input from './Input'
-const Contact = () => {
+const Contact: React.FC = () => {
   const inputRef = React.useRef<HTMLInputElement>(null)
 
   const [inputGroup, setInputGroup] = React.useState<InputProps[]>([
@@ -12,7 +12,7 @@ const Contact = () => {
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log("You've submitted the form")
+    // console.log("You've submitted the form")
   }
 
   const newLine = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -36,9 +36,9 @@ const Contact = () => {
   }
 
   return (
-    <section className="flex flex-col justify-center items-center gap-4 w-full px-2 mb-12 animate-slideFromBottom ">
-      <div className="flex flex-col w-full sm:w-[913px] h-[400px] border-2 border-black rounded-lg">
-        <div className="grid grid-cols-12 h-8 w-full px-2 bg-black">
+    <section className="flex flex-col justify-center items-center gap-4 px-2 mb-12 animate-slideFromBottom ">
+      <div className="flex flex-col sm:w-[913px] h-[400px] border-2 border-black rounded-lg">
+        <div className="grid grid-cols-12 h-8 px-2 bg-black">
           <div className="col-start-4 col-span-6">
             <h1 className="text-center text-lg font-bold tracking-widest">
               Contact
@@ -51,7 +51,7 @@ const Contact = () => {
           </div>
         </div>
         <div
-          className="relative h-full w-full"
+          className="relative h-full"
           onClick={() => inputRef.current?.focus()}
         >
           <div className="absolute z-10 w-full p-2">

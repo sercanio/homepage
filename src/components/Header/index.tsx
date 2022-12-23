@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../../../lib/store/store'
 import { Dispatch } from '@reduxjs/toolkit'
@@ -14,9 +13,6 @@ import { pages } from '../../../lib/constants'
 const Header: React.FC = () => {
   const welcome = useSelector((state: RootState) => state.welcome.welcomed)
   const dispatch: Dispatch<any> = useDispatch()
-
-  const router = useRouter()
-  const { pathname } = router
 
   return (
     <header className="bg-skin-base dark:bg-black color-transition py-3 px-4 relative">
@@ -85,11 +81,6 @@ const Header: React.FC = () => {
               return (
                 <li key={index}>
                   <Link href={page.link}>{page.title}</Link>
-                  {/* {pathname === page.link ? (
-                    <span className="bg-skin-primary" />
-                  ) : (
-                    <span className="bg-skin-transparent border-transparent" />
-                  )} */}
                 </li>
               )
             })}
@@ -105,17 +96,12 @@ const Header: React.FC = () => {
                 </Popover.Button>
                 <Popover.Overlay className="fixed z-40 inset-0 bg-skin-base opacity-70 h-screen w-screen" />
                 <Popover.Panel className="absolute top-12 right-0 z-50 pl-4 py-6 border bg-skin-base">
-                  <ul className="flex flex-col text-left gap-4   w-full h-full [&>*]:w-32">
+                  <ul className="flex flex-col text-left gap-4 h-full [&>*]:w-32">
                     {pages.map((page, index) => {
                       return (
                         <Popover.Button key={index} as={Link} href={page.link}>
-                          <div className="relative leading-10 w-full text-2xl py-2 [&>*]:nav__link--active">
+                          <div className="relative leading-10 text-2xl py-2 [&>*]:nav__link--active">
                             {page.title}
-                            {/* {pathname === page.link ? (
-                              <span className="absolute right-3 top-5 bg-skin-primary" />
-                            ) : (
-                              <span className=" bg-transparent border-transparent" />
-                            )} */}
                           </div>
                         </Popover.Button>
                       )
