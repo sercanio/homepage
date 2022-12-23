@@ -7,11 +7,11 @@
     --color-text-base: #1f2937;
     --color-text-dark: #e0e0e0;
     --color-bg-base: #ffffff;
-    --color-bg-primary: #1f2937;
+    --color-bg-dark: #06090c;
     --color-bg-console: #0d363b;
     --color-fill: #1f2937;
     --color-border: #1f2937;
-    --color-caret: #155e75;
+    --color-caret: #b4b4b4;
     --color-tilde: #137e8f; /* tilde color for commant prompt effect */
   }
   * {
@@ -50,8 +50,11 @@
     @apply w-4 h-4 rounded-full;
   }
 
-  .link__text--decoration {
+  .link__text--decoration-dark {
     text-decoration-color: rgba(255, 255, 255, 1);
+  }
+  .link__text--decoration-light {
+    text-decoration-color: rgba(0, 0, 0, 1);
   }
 }
 @layer utilities {

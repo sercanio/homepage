@@ -15,7 +15,7 @@ const Header: React.FC = () => {
   const dispatch: Dispatch<any> = useDispatch()
 
   return (
-    <header className="bg-skin-base dark:bg-black color-transition py-3 px-4 relative">
+    <header className="bg-skin-base dark:bg-black color-transition py-4 px-4 relative">
       <nav className="flex justify-between items-baseline relative z-10 mb-1 max-w-5xl lg:px-4 mx-auto">
         <div className="flex items-center">
           <div className="flex items-center">
@@ -89,13 +89,14 @@ const Header: React.FC = () => {
             {({ open }) => (
               <>
                 <Popover.Button className="flex items-center gap-1 px-2 py-1 bg-skin-base h-8 rounded-md ">
-                  <span>Menu</span>
+                  <span className="text-skin-base ">Menu</span>
                   <FiChevronDown
-                    className={open ? 'rotate-180 transform' : ''}
+                    color="black"
+                    className={open ? ' rotate-180 transform' : ''}
                   />
                 </Popover.Button>
-                <Popover.Overlay className="fixed z-40 inset-0 bg-skin-base opacity-70 h-screen w-screen" />
-                <Popover.Panel className="absolute top-12 right-0 z-50 pl-4 py-6 border bg-skin-base">
+                <Popover.Overlay className="fixed z-40 inset-0 bg-skin-base dark:bg-skin-dark opacity-70 dark:opacity-50 h-screen w-screen" />
+                <Popover.Panel className="absolute top-12 right-0 z-50 pl-4 py-6 border bg-skin-base dark:bg-skin-dark">
                   <ul className="flex flex-col text-left gap-4 h-full [&>*]:w-32">
                     {pages.map((page, index) => {
                       return (

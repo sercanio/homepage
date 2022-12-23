@@ -22,7 +22,7 @@ module.exports = {
       backgroundColor: {
         skin: {
           base: 'var(--color-bg-base)',
-          primary: 'var(--color-bg-primary)',
+          dark: 'var(--color-bg-dark)',
           secondary: 'var(--color-bg-secondary)',
           console: 'var(--color-bg-console)'
         }
