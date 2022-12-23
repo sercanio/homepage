@@ -75,7 +75,7 @@ const Header: React.FC = () => {
             </h1>
           </div>
         </div>
-        <div className="flex gap-6 items-center">
+        {/* <div className="flex gap-6 items-center">
           <ul className="hidden sm:flex gap-4 sm:gap-6 justify-end items-center  text-skin-primary text-xl mt-[10px] [&>li]:nav__link [&>li>*:nth-child(2)]:nav__link--active">
             {pages.map((page, index) => {
               return (
@@ -112,7 +112,7 @@ const Header: React.FC = () => {
               </>
             )}
           </Popover>
-        </div>
+        </div> */}
       </nav>
     </header>
   )
