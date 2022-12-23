@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import { PostMeta } from '../types'
-import { getAllPosts } from '../src/components/api'
-import Articles from '../src/components/Articles'
+import { PostMeta } from '@/types'
+import { getAllPosts } from '@/components/api'
+import Articles from '@/components/Articles'
 export default function Home({ posts }: { posts: PostMeta[] }) {
   return (
     <>

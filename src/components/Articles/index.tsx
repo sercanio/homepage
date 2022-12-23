@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PostMeta } from '../../../types'
+import { PostMeta } from '@/types'
 import { AiOutlineTags, AiOutlineCalendar } from 'react-icons/ai'
 const Articles = ({ posts }: { posts: PostMeta[] }) => {
   return (

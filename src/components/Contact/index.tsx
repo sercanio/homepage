@@ -1,5 +1,5 @@
 import React from 'react'
-import { InputProps } from '../../../types'
+import { InputProps } from '@/types'
 import Input from './Input'
 const Contact: React.FC = () => {
   const inputRef = React.useRef<HTMLInputElement>(null)

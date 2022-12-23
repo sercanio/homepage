@@ -1,8 +1,8 @@
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
-import { getAllPosts } from '../../src/components/api'
-import { PostMeta } from '../../types'
-import Articles from '../../src/components/Articles'
+import { getAllPosts } from '@/components/api'
+import { PostMeta } from '@/types'
+import Articles from '@/components/Articles'
 
 export default function TagPage({
   slug,

@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { store } from '../lib/store/store'
+import { store } from '@/lib/store/store'
 import { Provider } from 'react-redux'
 import { Roboto } from '@next/font/google'
 import Layout from './layout'
