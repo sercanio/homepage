@@ -35,21 +35,6 @@ const Articles = ({ posts }: { posts: PostMeta[] }) => {
               </p>
             </div>
           </div>
-          <svg
-            className="absolute top-0 left-0 opacity-30 dark:opacity-[0.15] z-0 rounded-md"
-            width="100%"
-            height="100%"
-          >
-            <filter id="noisybg">
-              <feTurbulence
-                type="fractalNoise"
-                baseFrequency="0.80"
-                numOctaves="5"
-                stitchTiles="stitch"
-              ></feTurbulence>
-            </filter>
-            <rect width="100%" height="100%" filter="url(#noisybg)"></rect>
-          </svg>
         </li>
       ))}
     </ul>
