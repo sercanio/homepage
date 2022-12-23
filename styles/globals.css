@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --color-text-base: #1f2937;
-    --color-text-primary: #1f2937;
+    --color-text-dark: #e0e0e0;
     --color-bg-base: #ffffff;
     --color-bg-primary: #1f2937;
     --color-bg-console: #0d363b;
@@ -14,27 +14,44 @@
     --color-caret: #155e75;
     --color-tilde: #137e8f; /* tilde color for commant prompt effect */
   }
-}
-
-/* add transition-property-bg all properties */
-
-@layer base {
   * {
     transition: background-color 0.15s ease;
   }
+  h2 {
+    color: inherit;
+    text-decoration: underline 0.12em rgba(255, 255, 255, 0);
+    transition: text-decoration-color text-decoration-width 100ms;
+  }
   code {
-    @apply my-3
+    @apply my-3 rounded-md;
+    counter-reset: line;
+  }
+  code > .line::before {
+    counter-increment: line;
+    content: counter(line);
+
+    /* Other styling */
+    display: inline-block;
+    width: 1rem;
+    margin-right: 2rem;
+    text-align: right;
+    color: gray;
   }
 }
+
 @layer components {
   .nav__link {
-    @apply w-full flex flex-col items-center hover:text-skin-primary transition-colors duration-150;
+    @apply w-full flex flex-col items-center dark:hover:opacity-80 transition-colors duration-150;
   }
   .nav__link--active {
     @apply mt-1 sm:pt-px w-2 h-2 rounded-full;
   }
   .console__title--buttons {
     @apply w-4 h-4 rounded-full;
+  }
+
+  .link__text--decoration {
+    text-decoration-color: rgba(255, 255, 255, 1);
   }
 }
 @layer utilities {

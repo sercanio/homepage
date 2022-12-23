@@ -47,7 +47,8 @@ export const getPostFromSlug = (slug: string): Post => {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
-      })
+      }),
+      image: data.image ?? ''
     }
   }
 }

@@ -19,16 +19,18 @@ const Header = () => {
   const { pathname } = router
 
   return (
-    <header className="bg-skin-base color-transition py-3 px-4 sm:px-14 relative">
-      <nav className="flex justify-between items-baseline relative z-10">
+    <header className="bg-skin-base dark:bg-black color-transition py-3 px-4 relative">
+      <nav className="flex justify-between items-baseline relative z-10 mb-1 max-w-5xl lg:px-4 mx-auto">
         <div className="flex items-center">
           <div className="flex items-center">
-            <h1 className="text-2xl sm:text-3xl font-bold text-skin-base -ml-2">
+            <h1 className="text-2xl sm:text-3xl font-bold dark:text-skin-dark text-skin-base -ml-2">
               <Link href="/" className="flex items-center">
-                <span className="text-skin-primary">
-                  <span className="text-skin-primary">sercan</span>
+                <span className="dark:text-skin-dark text-skin-primary">
+                  <span className="dark:text-skin-dark text-skin-primary">
+                    sercan
+                  </span>
                   @web{':'}
-                  <span className="text-skin-tilde">~</span>
+                  <span className="dark:text-skin-dark text-skin-tilde">~</span>
                   {'$'}
                   &nbsp;
                 </span>
@@ -58,17 +60,18 @@ const Header = () => {
                         loop: false,
                         delay: 30,
                         cursorClassName:
-                          'text-skin-caret animate-cursorBlink mb-1',
-                        wrapperClassName: 'text-skin-base text-2xl'
+                          'dark:text-skin-dark text-skin-caret animate-cursorBlink mb-1',
+                        wrapperClassName:
+                          'dark:text-skin-dark text-skin-primary text-2xl'
                       }}
                     />
                   ) : (
-                    <span className="animate-cursorBlink mb-1 text-skin-caret ">
+                    <span className="animate-cursorBlink mb-1 dark:text-skin-dark text-skin-caret ">
                       |
                     </span>
                   )}
                 </span>
-                <span className="animate-cursorBlink mb-1 sm:hidden text-skin-caret">
+                <span className="animate-cursorBlink mb-1 sm:hidden dark:text-skin-dark text-skin-caret">
                   |
                 </span>
                 <h1 className="sr-only">
@@ -80,7 +83,7 @@ const Header = () => {
           </div>
         </div>
         <div className="flex gap-6 items-center">
-          <ul className="hidden sm:flex gap-4 sm:gap-6 justify-end items-center text-skin-base text-xl mt-[10px] [&>li]:nav__link [&>li>*:nth-child(2)]:nav__link--active">
+          <ul className="hidden sm:flex gap-4 sm:gap-6 justify-end items-center dark:text-skin-dark text-skin-primary text-xl mt-[10px] [&>li]:nav__link [&>li>*:nth-child(2)]:nav__link--active">
             {pages.map((page, index) => {
               return (
                 <li key={index}>
@@ -105,7 +108,7 @@ const Header = () => {
                 </Popover.Button>
                 <Popover.Overlay className="fixed z-40 inset-0 bg-skin-base opacity-70 h-screen w-screen" />
                 <Popover.Panel className="absolute top-12 right-0 z-50 pl-4 py-6 border bg-skin-base">
-                  <ul className="flex flex-col text-left gap-4 text-skin-base w-full h-full [&>*]:w-32">
+                  <ul className="flex flex-col text-left gap-4 dark:text-skin-dark text-skin-base w-full h-full [&>*]:w-32">
                     {pages.map((page, index) => {
                       return (
                         <Popover.Button key={index} as={Link} href={page.link}>
@@ -127,7 +130,6 @@ const Header = () => {
           </Popover>
         </div>
       </nav>
-      <hr className="absolute left-0 border-skin-base border-[1px] w-full mt-3" />
       <svg
         className="absolute top-0 left-0 opacity-20 z-0"
         width="100%"

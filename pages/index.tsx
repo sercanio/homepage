@@ -15,7 +15,7 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Main className="p-12 h-screen">
+      <Main className="py-16 h-full">
         <Articles posts={posts} />
       </Main>
 
@@ -26,7 +26,7 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
 
 export async function getStaticProps() {
   const posts = getAllPosts()
-    .slice(0, 9) // Get the first 9 posts
+    // .slice(0, 9) // Get the first 9 posts
     .map(posts => posts.meta) // Get the meta data of the posts
 
   return {

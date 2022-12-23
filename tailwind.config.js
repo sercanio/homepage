@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'media',
   i18n: {
     locales: ['en'],
     defaultLocale: 'en'
@@ -13,7 +14,7 @@ module.exports = {
       textColor: {
         skin: {
           base: 'var(--color-text-base)',
-          primary: 'var(--color-text-primary)',
+          dark: 'var(--color-text-dark)',
           tilde: 'var(--color-tilde)',
           caret: 'var(--color-caret)'
         }

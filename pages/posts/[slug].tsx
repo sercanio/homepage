@@ -25,26 +25,45 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <title>{post.meta.title}</title>
         <meta name="description" content={post.meta.title} />
       </Head>
-      <article className="px-4 py-16 sm:px-9 sm:py-20 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">{post.meta.title}</h2>
-        <p className="leading-10 text-sm text-gray-500">{post.meta.date}</p>
-        <hr className="py-4 border-t-2" />
-        <MDXRemote {...post.source} components={{ YouTube, Image }} />
-        <hr className="py-4 border-t-2 mt-14 -mb-2" />
-        {post.meta.tags && (
-          <div className="flex flex-wrap gap-2 px-2">
-            Tags:
-            {post.meta.tags.map(tag => (
-              <span
-                key={tag}
-                className="flex items-center text-sm text-gray-500 bg-gray-200 px-2 rounded"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </article>
+      <div className="relative max-w-5xl mx-auto mt-12 py-6 px-4">
+        <article className="relative text-skin-primary dark:text-skin-dark z-10">
+          <h2 className="text-3xl font-bold mb-4">{post.meta.title}</h2>
+          <p className="leading-10 text-sm text-gray-500 dark:text-gray-300">
+            {post.meta.date}
+          </p>
+          <hr className="py-4 border-t-2" />
+          <MDXRemote {...post.source} components={{ YouTube, Image }} />
+          <hr className="py-4 border-t-2 mt-14 -mb-2" />
+          {post.meta.tags && (
+            <div className="flex flex-wrap gap-2 px-2">
+              Tags:
+              {post.meta.tags.map(tag => (
+                <span
+                  key={tag}
+                  className="flex items-center text-sm text-gray-500 dark:text-gray-900 bg-gray-200 px-2 rounded"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </article>
+        <svg
+          className="absolute top-0 left-0 opacity-20 z-0 rounded-md"
+          width="100%"
+          height="100%"
+        >
+          <filter id="noisybg">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.80"
+              numOctaves="5"
+              stitchTiles="stitch"
+            ></feTurbulence>
+          </filter>
+          <rect width="100%" height="100%" filter="url(#noisybg)"></rect>
+        </svg>
+      </div>
     </>
   )
 }

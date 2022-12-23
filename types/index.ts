@@ -40,4 +40,5 @@ export interface PostMeta {
   title: string
   tags: string[]
   date: string
+  image: string
 }
