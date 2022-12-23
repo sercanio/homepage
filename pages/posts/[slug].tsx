@@ -9,9 +9,7 @@ import rehypeHighlight from 'rehype-highlight'
 import { getPostFromSlug, getSlugs } from '../../src/components/api'
 import { PostMeta } from '../../types'
 import YouTube from '../../src/components/YouTube/YouTube'
-
 import 'highlight.js/styles/atom-one-dark.css'
-import Main from '../../src/components/Main'
 
 interface MDXPost {
   source: MDXRemoteSerializeResult<Record<string, unknown>>
@@ -25,8 +23,8 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <title>{post.meta.title}</title>
         <meta name="description" content={post.meta.title} />
       </Head>
-      <div className="relative max-w-5xl mx-auto mt-12 py-6 px-4">
-        <article className="relative text-skin-primary dark:text-skin-dark z-10">
+      <article className="relative p-3 max-w-5xl h-full mx-auto">
+        <div className="relative z-10">
           <h2 className="text-3xl font-bold mb-4">{post.meta.title}</h2>
           <p className="leading-10 text-sm text-gray-500 dark:text-gray-300">
             {post.meta.date}
@@ -47,9 +45,9 @@ export default function PostPage({ post }: { post: MDXPost }) {
               ))}
             </div>
           )}
-        </article>
+        </div>
         <svg
-          className="absolute top-0 left-0 opacity-20 z-0 rounded-md"
+          className="absolute top-0 left-0 opacity-20 dark:opacity-10 z-0 rounded-md"
           width="100%"
           height="100%"
         >
@@ -63,7 +61,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
           </filter>
           <rect width="100%" height="100%" filter="url(#noisybg)"></rect>
         </svg>
-      </div>
+      </article>
     </>
   )
 }

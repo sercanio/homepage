@@ -8,7 +8,7 @@ const Articles = ({ posts }: { posts: PostMeta[] }) => {
       {posts.map((post, index) => (
         <li
           key={post.slug}
-          className="relative flex flex-col p-3 hover:bg-gray-100 dark:hover:bg-gray-900 [&>div>h2>a]:hover:link__text--decoration text-skin-primary rounded-md"
+          className="relative flex flex-col p-3 hover:bg-gray-100 dark:hover:bg-gray-900 [&>div>h2>a]:hover:link__text--decoration rounded-md"
         >
           <div className="z-10 flex flex-col gap-3">
             <h2 className="font-bold text-2xl">
@@ -34,7 +34,7 @@ const Articles = ({ posts }: { posts: PostMeta[] }) => {
             </p>
           </div>
           <svg
-            className="absolute top-0 left-0 opacity-20 z-0 rounded-md"
+            className="absolute top-0 left-0 opacity-20 dark:opacity-10 z-0 rounded-md"
             width="100%"
             height="100%"
           >

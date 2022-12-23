@@ -31,7 +31,7 @@ const index: React.FC<any> = () => {
               <h1 className="text-3xl font-bold  tracking-wider">
                 Sercan Ateş
               </h1>
-              <h2 className="text-sm  tracking-tight mb-8">
+              <h2 className="text-sm tracking-tight mb-8">
                 Frontend web developer based in Turkey
               </h2>
               <Typewriter

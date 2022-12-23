@@ -15,15 +15,15 @@ module.exports = withMDX({
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx']
 })
 
-module.exports = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-        port: '',
-        pathname: '/random/**'
-      }
-    ]
-  }
-}
+// module.exports = {
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: 'https',
+//         hostname: 'source.unsplash.com',
+//         port: '',
+//         pathname: '/random/**'
+//       }
+//     ]
+//   }
+// }

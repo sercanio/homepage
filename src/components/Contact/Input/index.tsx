@@ -36,7 +36,6 @@ const Input = (props: InputProps) => {
           fill="currentColor"
           strokeWidth="0"
           viewBox="0 0 1024 1024"
-          className="text-skin-primary"
           height="1.2rem"
           width="1.2rem"
           xmlns="http://www.w3.org/2000/svg"

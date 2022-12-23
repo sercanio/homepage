@@ -40,7 +40,7 @@ const Contact = () => {
       <div className="flex flex-col w-full sm:w-[913px] h-[400px] border-2 border-black rounded-lg">
         <div className="grid grid-cols-12 h-8 w-full px-2 bg-black">
           <div className="col-start-4 col-span-6">
-            <h1 className="text-center text-lg text-skin-primary font-bold tracking-widest">
+            <h1 className="text-center text-lg font-bold tracking-widest">
               Contact
             </h1>
           </div>

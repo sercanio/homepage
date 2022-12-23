@@ -1,11 +1,10 @@
 import Head from 'next/head'
-import { HomeProps, PostMeta } from '../types'
-import Main from '../src/components/Main'
+import { PostMeta } from '../types'
 import { getAllPosts } from '../src/components/api'
 import Articles from '../src/components/Articles'
 export default function Home({ posts }: { posts: PostMeta[] }) {
   return (
-    <div>
+    <>
       <Head>
         <title>Sercan Ateş | Personal Blog & Portfolio</title>
         <meta
@@ -14,13 +13,8 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Main className="py-16 h-full">
-        <Articles posts={posts} />
-      </Main>
-
-      <footer></footer>
-    </div>
+      <Articles posts={posts} />
+    </>
   )
 }
 

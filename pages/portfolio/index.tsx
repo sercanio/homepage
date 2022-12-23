@@ -1,7 +1,7 @@
 import React from 'react'
 
 const index = () => {
-  return <div className="text-skin-base">Portfolio</div>
+  return <div>Portfolio</div>
 }
 
 export default index

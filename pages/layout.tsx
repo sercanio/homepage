@@ -1,17 +1,18 @@
 import React from 'react'
+import Footer from '../src/components/Footer'
 import Header from '../src/components/Header'
+import Main from '../src/components/Main'
 import { LayoutChildrenProps } from '../types'
 
 const Layout = ({ children, className }: LayoutChildrenProps): JSX.Element => {
   return (
     <React.Fragment>
       <div
-        className={`${className} bg-skin-base dark:bg-black text-skin-base w-full color-transition`}
+        className={`${className} flex flex-col gap-12 bg-skin-base dark:bg-black text-skin-base dark:text-skin-dark w-full color-transition`}
       >
-        <div className="max-w-full mx-auto h-full">
-          <Header />
-          {children}
-        </div>
+        <Header />
+        <Main>{children}</Main>
+        <Footer />
       </div>
     </React.Fragment>
   )

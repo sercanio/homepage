@@ -11,7 +11,7 @@ import { FiChevronDown } from 'react-icons/fi'
 import { pages } from '../../../lib/constants'
 
 // Styorybook styling
-const Header = () => {
+const Header: React.FC = () => {
   const welcome = useSelector((state: RootState) => state.welcome.welcomed)
   const dispatch: Dispatch<any> = useDispatch()
 
@@ -23,14 +23,12 @@ const Header = () => {
       <nav className="flex justify-between items-baseline relative z-10 mb-1 max-w-5xl lg:px-4 mx-auto">
         <div className="flex items-center">
           <div className="flex items-center">
-            <h1 className="text-2xl sm:text-3xl font-bold dark:text-skin-dark text-skin-base -ml-2">
+            <h1 className="text-2xl sm:text-3xl font-bold   -ml-2">
               <Link href="/" className="flex items-center">
-                <span className="dark:text-skin-dark text-skin-primary">
-                  <span className="dark:text-skin-dark text-skin-primary">
-                    sercan
-                  </span>
+                <span className=" text-skin-primary">
+                  <span className=" text-skin-primary">sercan</span>
                   @web{':'}
-                  <span className="dark:text-skin-dark text-skin-tilde">~</span>
+                  <span className=" text-skin-tilde">~</span>
                   {'$'}
                   &nbsp;
                 </span>
@@ -60,18 +58,17 @@ const Header = () => {
                         loop: false,
                         delay: 30,
                         cursorClassName:
-                          'dark:text-skin-dark text-skin-caret animate-cursorBlink mb-1',
-                        wrapperClassName:
-                          'dark:text-skin-dark text-skin-primary text-2xl'
+                          ' text-skin-caret animate-cursorBlink mb-1',
+                        wrapperClassName: ' text-skin-primary text-2xl'
                       }}
                     />
                   ) : (
-                    <span className="animate-cursorBlink mb-1 dark:text-skin-dark text-skin-caret ">
+                    <span className="animate-cursorBlink mb-1  text-skin-caret ">
                       |
                     </span>
                   )}
                 </span>
-                <span className="animate-cursorBlink mb-1 sm:hidden dark:text-skin-dark text-skin-caret">
+                <span className="animate-cursorBlink mb-1 sm:hidden  text-skin-caret">
                   |
                 </span>
                 <h1 className="sr-only">
@@ -83,7 +80,7 @@ const Header = () => {
           </div>
         </div>
         <div className="flex gap-6 items-center">
-          <ul className="hidden sm:flex gap-4 sm:gap-6 justify-end items-center dark:text-skin-dark text-skin-primary text-xl mt-[10px] [&>li]:nav__link [&>li>*:nth-child(2)]:nav__link--active">
+          <ul className="hidden sm:flex gap-4 sm:gap-6 justify-end items-center  text-skin-primary text-xl mt-[10px] [&>li]:nav__link [&>li>*:nth-child(2)]:nav__link--active">
             {pages.map((page, index) => {
               return (
                 <li key={index}>
@@ -108,7 +105,7 @@ const Header = () => {
                 </Popover.Button>
                 <Popover.Overlay className="fixed z-40 inset-0 bg-skin-base opacity-70 h-screen w-screen" />
                 <Popover.Panel className="absolute top-12 right-0 z-50 pl-4 py-6 border bg-skin-base">
-                  <ul className="flex flex-col text-left gap-4 dark:text-skin-dark text-skin-base w-full h-full [&>*]:w-32">
+                  <ul className="flex flex-col text-left gap-4   w-full h-full [&>*]:w-32">
                     {pages.map((page, index) => {
                       return (
                         <Popover.Button key={index} as={Link} href={page.link}>
@@ -130,21 +127,6 @@ const Header = () => {
           </Popover>
         </div>
       </nav>
-      <svg
-        className="absolute top-0 left-0 opacity-20 z-0"
-        width="100%"
-        height="100%"
-      >
-        <filter id="noisybg">
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency="0.80"
-            numOctaves="5"
-            stitchTiles="stitch"
-          ></feTurbulence>
-        </filter>
-        <rect width="100%" height="100%" filter="url(#noisybg)"></rect>
-      </svg>
     </header>
   )
 }
