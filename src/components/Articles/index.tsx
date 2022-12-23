@@ -4,7 +4,7 @@ import { AiOutlineTags, AiOutlineCalendar } from 'react-icons/ai'
 const Articles = ({ posts }: { posts: PostMeta[] }) => {
   return (
     <ul className="relative z-0 flex flex-col gap-6 max-w-5xl mx-auto px-2">
-      {posts.map((post, index) => (
+      {posts.map(post => (
         <li
           key={post.slug}
           className="relative flex flex-col p-3 hover:bg-gray-100 dark:hover:bg-gray-900 [&>div>h2>a]:hover:link__text--decoration-light dark:[&>div>h2>a]:hover:link__text--decoration-dark rounded-md"

@@ -4,10 +4,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '@/lib/store/store'
 import { Dispatch } from '@reduxjs/toolkit'
 import { setWelcome } from '@/lib/store/welcomeSlice'
-import { Popover } from '@headlessui/react'
+// import { Popover } from '@headlessui/react'
 import Typewriter from 'typewriter-effect'
-import { FiChevronDown } from 'react-icons/fi'
-import { pages } from '@/lib/constants'
+// import { FiChevronDown } from 'react-icons/fi'
+// import { pages } from '@/lib/constants'
 
 // Styorybook styling
 const Header: React.FC = () => {

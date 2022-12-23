@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Main from '@/components/Main'
 import { LayoutChildrenProps } from '@/types'
 
-const Layout = ({ children, className }: LayoutChildrenProps): JSX.Element => {
+const Layout = ({ children, className }: LayoutChildrenProps) => {
   return (
     <React.Fragment>
       <div
