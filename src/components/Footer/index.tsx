@@ -5,7 +5,6 @@ const Footer: React.FC = () => {
     <footer className="max-w-5xl mx-auto px-4">
       <div className="opacity-70 text-center">
         <p>Sercan Ateş © {new Date().getFullYear()}</p>
-        <p>Built with Nextjs, Powered by Vercel</p>
       </div>
     </footer>
   )
