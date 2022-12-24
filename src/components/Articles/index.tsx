@@ -7,7 +7,7 @@ const Articles = ({ posts }: { posts: PostMeta[] }) => {
       {posts.map(post => (
         <li
           key={post.slug}
-          className="relative flex flex-col p-3 hover:bg-gray-100 dark:hover:bg-gray-900 [&>div>h2>a]:hover:link__text--decoration-light dark:[&>div>h2>a]:hover:link__text--decoration-dark rounded-md"
+          className="relative flex flex-col p-3 hover:bg-neutral-100 dark:hover:bg-neutral-900 [&>div>h2>a]:hover:link__text--decoration-light dark:[&>div>h2>a]:hover:link__text--decoration-dark rounded-md"
         >
           <div className="z-10 flex flex-col gap-3">
             <h2 className="font-bold text-xl sm:text-2xl">
