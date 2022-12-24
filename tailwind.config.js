@@ -23,8 +23,7 @@ module.exports = {
         skin: {
           base: 'var(--color-bg-base)',
           dark: 'var(--color-bg-dark)',
-          secondary: 'var(--color-bg-secondary)',
-          console: 'var(--color-bg-console)'
+          secondary: 'var(--color-bg-secondary)'
         }
       },
       borderColor: {
@@ -45,25 +44,10 @@ module.exports = {
         typing: {
           '0%': { width: '0' },
           '100%': { width: '100%' }
-        },
-        slideFromLeft: {
-          '0%': { transform: 'translateX(-4%)' },
-          '100%': { transform: 'translateX(0)' }
-        },
-        slideFromRight: {
-          '0%': { transform: 'translateX(-4%)' },
-          '100%': { transform: 'translateX(0)' }
-        },
-        slideFromBottom: {
-          '0%': { transform: 'translateY(10%)' },
-          '100%': { transform: 'translateY(0)' }
         }
       },
       animation: {
-        cursorBlink: 'cursorBlink 1.3s linear infinite',
-        slideFromRight: 'slideFromRight .5s steps(60, end) .1s 1 normal both',
-        slideFromLeft: 'slideFromLeft .5s steps(60, end) .1s 1 reverse both',
-        slideFromBottom: 'slideFromBottom .5s steps(60, end) .1s 1 normal'
+        cursorBlink: 'cursorBlink 1.3s linear infinite'
       }
     }
   },
