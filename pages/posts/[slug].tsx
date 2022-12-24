@@ -38,8 +38,8 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <title>{post.meta.title}</title>
         <meta name="description" content={post.meta.title} />
       </Head>
-      <article className="relative p-3 max-w-5xl h-full mx-auto z-0">
-        <div className="relative z-10">
+      <article className="relative flex gap-20 p-3 max-w-5xl h-full mx-auto z-0">
+        <div className="relative z-10 flex-5">
           <h2 className="text-3xl font-bold mb-4">{post.meta.title}</h2>
           {post.meta.tags && (
             <div className="flex flex-wrap gap-2 my-4">
@@ -76,7 +76,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
             <EmailShareButton
               url={`https://sercan.io/posts/${post.meta.slug}`}
               subject={`Blog Post: ${post.meta.title} - Sercan Ateş`}
-              body="body"
+              body="Check out this blog post:"
             >
               <EmailIcon size={32} round />
             </EmailShareButton>
@@ -99,6 +99,9 @@ export default function PostPage({ post }: { post: MDXPost }) {
             </TelegramShareButton>
           </div>
           <hr className="pb-4 border-t-1 mt-3 -mb-2" />
+        </div>
+        <div className="hidden sm:block w-64 flex-1">
+          <h2>Sections</h2>
         </div>
       </article>
     </>
