@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: localhost
+Host: https://www.sercan.io
 
 # Sitemaps
-Sitemap: localhost/sitemap.xml
+Sitemap: https://www.sercan.io/sitemap.xml

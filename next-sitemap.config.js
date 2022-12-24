@@ -1,4 +1,4 @@
-const siteUrl = 'localhost'
+const siteUrl = 'https://www.sercan.io'
 module.exports = {
   siteUrl,
   generateRobotsTxt: true,
