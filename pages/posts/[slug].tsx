@@ -52,21 +52,6 @@ export default function PostPage({ post }: { post: MDXPost }) {
           <MDXRemote {...post.source} components={{ YouTube, Image }} />
           <hr className="py-4 border-t-1 mt-14 -mb-2" />
         </div>
-        <svg
-          className="absolute top-0 left-0 opacity-20 dark:opacity-10 z-0 rounded-md"
-          width="100%"
-          height="100%"
-        >
-          <filter id="noisybg">
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency="0.80"
-              numOctaves="5"
-              stitchTiles="stitch"
-            ></feTurbulence>
-          </filter>
-          <rect width="100%" height="100%" filter="url(#noisybg)"></rect>
-        </svg>
       </article>
     </>
   )
