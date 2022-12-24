@@ -1,6 +1,7 @@
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
+import Link from 'next/link'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import rehypeSlug from 'rehype-slug'
@@ -10,7 +11,6 @@ import { getPostFromSlug, getSlugs } from '@/components/api'
 import { PostMeta } from '@/types'
 import YouTube from '@/components/YouTube/YouTube'
 import 'highlight.js/styles/atom-one-dark.css'
-import Link from 'next/link'
 
 interface MDXPost {
   source: MDXRemoteSerializeResult<Record<string, unknown>>
