@@ -9,6 +9,20 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeHighlight from 'rehype-highlight'
 import { getPostFromSlug, getSlugs } from '@/components/api'
 import { PostMeta } from '@/types'
+import {
+  EmailShareButton,
+  EmailIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  PocketShareButton,
+  PocketIcon,
+  TelegramShareButton,
+  TelegramIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon
+} from 'next-share'
 import YouTube from '@/components/YouTube/YouTube'
 import 'highlight.js/styles/a11y-dark.css'
 
@@ -51,7 +65,40 @@ export default function PostPage({ post }: { post: MDXPost }) {
           </p>
           <hr className="pt-4 border-t-2" />
           <MDXRemote {...post.source} components={{ YouTube, Image }} />
-          <hr className="py-4 border-t-1 mt-14 -mb-2" />
+          <div className="flex gap-3 items-center mt-20">
+            <p>Share :</p>
+            <PocketShareButton
+              url={`https://sercan.io/posts/${post.meta.slug}`}
+              title={post.meta.title}
+            >
+              <PocketIcon size={32} round />
+            </PocketShareButton>
+            <EmailShareButton
+              url={`https://sercan.io/posts/${post.meta.slug}`}
+              subject={`Blog Post: ${post.meta.title} - Sercan Ateş`}
+              body="body"
+            >
+              <EmailIcon size={32} round />
+            </EmailShareButton>
+            <LinkedinShareButton
+              url={`https://sercan.io/posts/${post.meta.slug}`}
+            >
+              <LinkedinIcon size={32} round />
+            </LinkedinShareButton>
+            <TwitterShareButton
+              url={`https://sercan.io/posts/${post.meta.slug}`}
+              title={post.meta.title}
+            >
+              <TwitterIcon size={32} round />
+            </TwitterShareButton>
+            <TelegramShareButton
+              url={`https://sercan.io/posts/${post.meta.slug}`}
+              title={post.meta.title}
+            >
+              <TelegramIcon size={32} round />
+            </TelegramShareButton>
+          </div>
+          <hr className="pb-4 border-t-1 mt-3 -mb-2" />
         </div>
       </article>
     </>
