@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 
-// Styorybook styling
 const Header: React.FC = () => {
   return (
     <header className="bg-skin-base dark:bg-black color-transition pb-4 pt-5">
