@@ -1,16 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { useSelector, useDispatch } from 'react-redux'
-import { RootState } from '@/lib/store/store'
-import { Dispatch } from '@reduxjs/toolkit'
-import { setWelcome } from '@/lib/store/welcomeSlice'
-// import { Popover } from '@headlessui/react'
 
 // Styorybook styling
 const Header: React.FC = () => {
-  const welcome = useSelector((state: RootState) => state.welcome.welcomed)
-  const dispatch: Dispatch<any> = useDispatch()
-
   return (
     <header className="bg-skin-base dark:bg-black color-transition py-4 px-4 relative">
       <nav className="flex justify-between items-baseline relative z-10 mb-1 max-w-5xl lg:px-4 mx-auto">
