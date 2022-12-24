@@ -16,7 +16,11 @@ export default function TagPage({
       <Head>
         <title>{`Articles Tagged "${slug}"`}</title>
       </Head>
-      <h2 className="relative max-w-5xl mx-auto px-5 mb-4">{`Articles tagged with "${slug}" :`}</h2>
+      <h2 className="relative max-w-5xl mx-auto px-3 mb-4">
+        <p>
+          Posts tagged with <span className="font-bold">{slug}</span> :
+        </p>{' '}
+      </h2>
       <Articles posts={posts} />
     </>
   )
