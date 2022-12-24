@@ -10,7 +10,7 @@ import rehypeHighlight from 'rehype-highlight'
 import { getPostFromSlug, getSlugs } from '@/components/api'
 import { PostMeta } from '@/types'
 import YouTube from '@/components/YouTube/YouTube'
-import 'highlight.js/styles/atom-one-dark.css'
+import 'highlight.js/styles/a11y-dark.css'
 
 interface MDXPost {
   source: MDXRemoteSerializeResult<Record<string, unknown>>
