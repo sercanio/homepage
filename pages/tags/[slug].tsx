@@ -11,14 +11,28 @@ export default function TagPage({
   slug: string
   posts: PostMeta[]
 }) {
+  const capitalize = (str: string) => {
+    const strArr = str.split(' ')
+    const newStr = strArr
+      .map(word => {
+        return word.charAt(0).toUpperCase() + word.slice(1)
+      })
+      .join(' ')
+    return newStr
+  }
+
   return (
     <>
       <Head>
-        <title>{`Articles Tagged "${slug}"`}</title>
+        <title>{`Articles About ${capitalize(slug)}`}</title>
       </Head>
       <h2 className="relative max-w-5xl mx-auto px-3 mb-4">
         <p>
-          Posts tagged with <span className="font-bold">{slug}</span> :
+          Articles about
+          <span className="inline-flex items-center font-bold text-sm max-w-max text-gray-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900 px-2 rounded">
+            {slug}
+          </span>{' '}
+          :
         </p>{' '}
       </h2>
       <Articles posts={posts} />

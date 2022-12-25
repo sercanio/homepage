@@ -16,13 +16,13 @@ const Articles = ({ posts }: { posts: PostMeta[] }) => {
             <p>
               <Link href={`/posts/${post.slug}`}>{post.excerpt}</Link>
             </p>
-            <div className="flex items-center gap-[10px] text-sm font-bold mt-2">
+            <div className="flex flex-wrap items-center gap-[10px] text-sm mt-2">
               <AiOutlineTags />
               {post.tags.map(tag => (
                 <Link
                   href={`/tags/${tag}`}
                   key={tag}
-                  className="inline mr-2 dark:hover:opacity-80"
+                  className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900 px-2 rounded hover:underline"
                 >
                   {tag}
                 </Link>

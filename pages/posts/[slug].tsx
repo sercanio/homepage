@@ -51,7 +51,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 >
                   <span
                     key={tag}
-                    className="flex items-center text-sm text-gray-700 dark:text-gray-100 bg-gray-200 dark:bg-gray-900 px-2 rounded"
+                    className="flex items-center text-sm text-gray-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900 px-2 rounded hover:underline"
                   >
                     {tag}
                   </span>
