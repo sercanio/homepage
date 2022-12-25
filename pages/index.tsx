@@ -6,11 +6,8 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
   return (
     <>
       <Head>
-        <title>Sercan Ateş | Personal Blog & Portfolio</title>
-        <meta
-          name="description"
-          content="Sercan Ateş's personal blog & portfolio website"
-        />
+        <title>Sercan Ateş | Web Logs</title>
+        <meta name="description" content="Sercan Ateş's personal web logs." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Articles posts={posts} />
