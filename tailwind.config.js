@@ -28,7 +28,8 @@ module.exports = {
       },
       borderColor: {
         skin: {
-          base: 'var(--color-border)'
+          base: 'var(--color-border-base)',
+          dark: 'var(--color-border-dark)'
         }
       },
       caretColor: {

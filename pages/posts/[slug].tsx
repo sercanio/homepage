@@ -24,6 +24,7 @@ import {
 import YouTube from '@/components/YouTube/YouTube'
 import 'highlight.js/styles/a11y-dark.css'
 import CreateSections from '@/components/CreateSections'
+import CreateRelatedArticles from '@/components/CreateRelatedArticles'
 
 export default function PostPage({ post }: { post: MDXPost }) {
   return (
@@ -96,7 +97,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
             <hr className="pb-4 border-t-1 mt-3 -mb-2" />
           </div>
         </article>
-        <CreateSections post={post} />
+        <div className="sticky top-0 flex flex-col gap-1 h-max w-max">
+          <CreateSections post={post} />
+          <CreateRelatedArticles post={post} />
+        </div>
       </div>
     </>
   )

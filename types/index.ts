@@ -36,6 +36,11 @@ export interface Post {
   meta: PostMeta
 }
 
+export interface Related {
+  title: string
+  url: string
+}
+
 export interface Headings {
   text: string
   level: number
@@ -49,6 +54,7 @@ export interface PostMeta {
   date: string
   image: string
   headings: Headings[]
+  related: Related[]
 }
 
 export interface MDXPost {

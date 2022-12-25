@@ -8,12 +8,13 @@
     --color-text-dark: #e0e0e0;
     --color-bg-base: #ffffff;
     --color-bg-dark: #06090c;
-    --color-border: #1f2937;
+    --color-border-base: #1f2937;
+    --color-border-dark: #e0e0e0;
     --color-caret: #b4b4b4;
     --color-tilde: #137e8f; /* tilde color for commant prompt effect */
   }
   * {
-    transition: background-color 0.15s ease;
+    transition: all 0.1s linear;
   }
 
   h1,
@@ -23,7 +24,6 @@
   h5,
   h6 {
     font-weight: 600;
-    margin-top: 1.5rem;
   }
   h1 {
     font-size: 2.5rem;
@@ -43,7 +43,6 @@
   h6 {
     font-size: 0.875rem;
   }
-
   code {
     @apply my-3 rounded-md;
     counter-reset: line;

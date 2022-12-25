@@ -19,7 +19,7 @@ All headings should start with 3 three #'s. The '###' is top level of heading in
 
 ### Meta
 
-Every MDX document should have this meta section on the top of document. only 'image' is optional.
+Every MDX document should have this meta section on the top of document. only 'image' is optional. When you add related articles, it is simple, the title of the article, and the url. The url is simply name of mdx file: /name-of-mdx-file/
 
 ```text
 ---
@@ -33,5 +33,14 @@ tags:
   - object oriented javascript
 date: 2020-05-09
 excerpt: The reduce function of an array is one of the most versatile functions in JavaScript. With it you can accomplish a lot of the functions from array and math objects.
+related:
+  - title: How Does SWR Work?
+    url: /swr-copy-1/
+  - title: How Does SWR Work?
+    url: /swr-copy-2/
+  - title: How Does SWR Work?
+    url: /swr-copy-2-copy/
+  - title: How Does SWR Work?
+    url: /swr-copy-2-copy-10/
 ---
 ```
