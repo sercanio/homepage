@@ -33,7 +33,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <title>{post.meta.title}</title>
         <meta name="description" content={post.meta.title} />
       </Head>
-      <div className="flex gap-4 justify-center h-full scroll-smooth">
+      <div className="flex flex-col xl:flex-row w-full xl:gap-4 justify-center h-full scroll-smooth">
         <article className="relative p-3 max-w-5xl h-full w-full mx-auto xl:mx-0 z-0">
           <div className="relative z-10 flex-5">
             <h2 className="text-3xl font-bold mb-4">{post.meta.title}</h2>
@@ -94,10 +94,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 <TelegramIcon size={32} round />
               </TelegramShareButton>
             </div>
-            <hr className="pb-4 border-t-1 mt-3 -mb-2" />
+            <hr className="pb-4 border-t-1 mt-3 -mb-2 hidden xl:block" />
           </div>
         </article>
-        <div className="sticky top-0 flex flex-col gap-1 h-max w-max">
+        <div className="sticky top-0 flex flex-col gap-1 h-max w-full xl:w-max">
           <CreateSections post={post} />
           <CreateRelatedArticles post={post} />
         </div>

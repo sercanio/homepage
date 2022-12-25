@@ -4,7 +4,7 @@ import { MDXPost } from '@/types'
 
 const CreateRelatedArticles = ({ post }: { post: MDXPost }) => {
   return (
-    <section className="px-4 pt-4 pb-8 hidden xl:block h-max">
+    <section className="px-4 pt-4 pb-8 xl:block h-max w-full">
       {post.meta.related.length !== 0 && (
         <>
           <div className="bg-gray-200 dark:bg-gray-800 p-2">
