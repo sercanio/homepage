@@ -24,26 +24,11 @@
   h5,
   h6 {
     font-weight: 600;
-  }
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
     font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 2.25rem;
   }
-  h4 {
-    font-size: 1.25rem;
-  }
-  h5 {
-    font-size: 1rem;
-  }
-  h6 {
-    font-size: 0.875rem;
-  }
-  code {
+    code {
     @apply my-3 rounded-md;
     counter-reset: line;
   }

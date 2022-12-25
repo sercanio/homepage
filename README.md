@@ -15,7 +15,7 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 ## Adding Content
 
 ### Headings
-All headings should start with 3 three #'s. The '###' is top level of heading inside body of the MDX document. Because, site title has already h1 element, document title is h2 and rest of the text context should have at least h3 level heading for SEO optimization.
+All headings should start with two #'s. The '##' is top level of heading inside body of the MDX document. Because, site title has already h1 element, document title is h2 and rest of the text context should have at least h2 level heading for SEO optimization. Do not use single #, which means h1 tag.
 
 ### Meta
 

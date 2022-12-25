@@ -36,7 +36,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
       <div className="flex flex-col xl:flex-row w-full xl:gap-4 justify-center h-full scroll-smooth">
         <article className="relative p-3 max-w-5xl h-full w-full mx-auto xl:mx-0 z-0">
           <div className="relative z-10 flex-5">
-            <h2 className="text-3xl font-bold mb-4">{post.meta.title}</h2>
+            <h2 className="text-3xl font-bold mb-4 mt-0">{post.meta.title}</h2>
             {post.meta.tags && (
               <div className="flex flex-wrap gap-2 my-4">
                 {post.meta.tags.map(tag => (

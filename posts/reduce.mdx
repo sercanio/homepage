@@ -35,7 +35,7 @@ A few of the Math/Array functions we will cover in this article:
 - [Array.prototype.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 - [Array.prototype.flat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
 
-### Lets Recreate Reduce
+## Lets Recreate Reduce
 
 Before we see all of reduce's flexibility, let's understand how it works! Reduce's job is to iterate over each element of an array, calling a function (callback), passing both the current element, and what is called an "accumulator" value. The callback's job is to take the accumulator and the array element, and return the new version of that accmulator.
 
@@ -78,7 +78,7 @@ Although `people.length` would be the more performant and better solution, we ca
 result = people.reduce((acc, person) => acc + 1, 0)
 ```
 
-### Sum Numbers
+## Sum Numbers
 
 We can sum numbers using reduce. Much like the length example above, we can start with 0, and instead of adding 1 upon each iteration, we can add the `person.age` property to our accumulated value.
 
@@ -86,7 +86,7 @@ We can sum numbers using reduce. Much like the length example above, we can star
 result = people.reduce((acc, person) => acc + person.age, 0)
 ```
 
-#### Mapping with Reduce
+### Mapping with Reduce
 
 Yup... you can map using reduce! In this case our initial value is an empty array, and upon each iteration we can return an array with its previous value, plus the newest value added to the end of our array.
 
@@ -94,7 +94,7 @@ Yup... you can map using reduce! In this case our initial value is an empty arra
 result = people.reduce((acc, person) => [...acc, person.name], [])
 ```
 
-##### Array to Object
+#### Array to Object
 
 This is a technique I use all the time when I have an array of some object with an `id`, and I want to easily access these objects by their ID, rather than having to find them in an array each time. By having an object with each person's ID as the key, I can access them using the ID's value.
 
@@ -104,7 +104,7 @@ result = people.reduce((acc, person) => {
 }, {})
 ```
 
-###### Find Max Value
+## Find Max Value
 
 The `Math.max()` function can be immitated using reduce by checking if the current element's value is greater than the accumulator. If it is, that becomes (by returning the value) the new max value, otherwise the previous accumulator (current max value) is returned.
 
@@ -115,7 +115,7 @@ result = people.reduce((acc, person) => {
 }, null)
 ```
 
-### Find Min Value
+## Find Min Value
 
 The `Math.min()` function can be immitated using reduce by checking if the current element's value is less than the accumulator. If it is, that becomes (by returning the value) the new min value, otherwise the previous accumulator (current min value) is returned.
 
@@ -126,7 +126,7 @@ result = people.reduce((acc, person) => {
 }, null)
 ```
 
-### Find Matching Element
+## Find Matching Element
 
 The reduce callback function when immitating `Array.prototype.find()` contains three possibilities:
 
@@ -142,7 +142,7 @@ result = people.reduce((acc, person) => {
 }, null)
 ```
 
-### Check If Every Value Matches
+## Check If Every Value Matches
 
 When checking if every value matches a specific criteria, we will start with the assumption that every value will match... very optimistic!! If the accumulator becomes false, our callback will continue to return false, since every value must match, and otherwise will return `true` or `false` for the current element.
 
@@ -153,7 +153,7 @@ result = people.reduce((acc, person) => {
 }, true)
 ```
 
-### Check If Some Value Matches
+## Check If Some Value Matches
 
 Checking if some value matches a condition in our array involves a bit of pessimism. We'll start off with the assumption of `false`, and our callback function will return true as soon as the accumulator is true for the first time, and otherwise will return `true` or `false` on the current element.
 
@@ -164,7 +164,7 @@ result = people.reduce((acc, person) => {
 }, false)
 ```
 
-### Group and Count Occurrences
+## Group and Count Occurrences
 
 As we've seen in the "Array to Object" example above, we can convert an array to an object, but this time we are looking to count the occurrences for a given key, in this case the `status`. Our return value will take the existing accumulated object, adding 1 for the current key's value (or initializing it to 0 if this is the first occurrence).
 
@@ -181,7 +181,7 @@ result = orders.reduce((acc, order) => {
 }, {})
 ```
 
-#### Flatten Nested Arrays
+### Flatten Nested Arrays
 
 In this last example we will start with an array of nested arrays, and reduce it into a flattened array of values. Because we will need to recursively reduce (flatten) arrays, we'll need to give our callback function a name (so it can be called within itself).
 
