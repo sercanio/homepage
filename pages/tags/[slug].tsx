@@ -26,13 +26,12 @@ export default function TagPage({
       <Head>
         <title>{`Articles About ${capitalize(slug)}`}</title>
       </Head>
-      <h2 className="relative max-w-5xl mx-auto px-3 mb-4">
-        <p>
+      <h2 className="relative max-w-5xl xl:max-w-[1310px] mx-auto px-3 mb-4">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
           Articles about
-          <span className="inline-flex items-center font-bold text-sm max-w-max text-gray-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900 px-2 rounded">
+          <span className="inline-flex items-center font-bold  max-w-max text-gray-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl px-2 mr-2 ml-1 rounded">
             {slug}
           </span>{' '}
-          :
         </p>{' '}
       </h2>
       <Articles posts={posts} />

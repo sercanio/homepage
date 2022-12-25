@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { MDXPost } from '@/types'
 
 const CreateSections = ({ post }: { post: MDXPost }) => {
+  const [activeSection, setActiveSection] = React.useState<string | null>(null)
+
   return (
     <section className="sticky top-2 px-4 pt-4 pb-8 hidden xl:block h-max">
       <div className="bg-gray-200 dark:bg-gray-800 p-2">
@@ -13,7 +15,11 @@ const CreateSections = ({ post }: { post: MDXPost }) => {
           return (
             <li
               key={heading.text}
-              className="hover:bg-gray-200 dark:hover:bg-gray-800 leading-7"
+              className={`${
+                activeSection === heading.text
+                  ? 'bg-gray-200 dark:bg-gray-800'
+                  : ''
+              } dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 leading-7 `}
               style={{
                 paddingLeft: heading.level * 8
               }}
@@ -24,7 +30,8 @@ const CreateSections = ({ post }: { post: MDXPost }) => {
                   .replace(/ /g, '-')}
                   `}
                 key={heading.text}
-                className="dark:text-gray-100"
+                className="-ml-2"
+                onClick={() => setActiveSection(heading.text)}
               >
                 {heading.text}
               </Link>
