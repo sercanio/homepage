@@ -1,3 +1,5 @@
+import { MDXRemoteSerializeResult } from 'next-mdx-remote/dist/types'
+
 export interface ThemeState {
   theme: string
 }
@@ -34,6 +36,11 @@ export interface Post {
   meta: PostMeta
 }
 
+export interface Headings {
+  text: string
+  level: number
+}
+
 export interface PostMeta {
   excerpt: string
   slug: string
@@ -41,4 +48,10 @@ export interface PostMeta {
   tags: string[]
   date: string
   image: string
+  headings: Headings[]
+}
+
+export interface MDXPost {
+  source: MDXRemoteSerializeResult<Record<string, unknown>>
+  meta: PostMeta
 }

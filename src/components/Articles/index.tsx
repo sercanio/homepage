@@ -3,7 +3,7 @@ import { PostMeta } from '@/types'
 import { AiOutlineTags, AiOutlineCalendar } from 'react-icons/ai'
 const Articles = ({ posts }: { posts: PostMeta[] }) => {
   return (
-    <ul className="relative z-0 flex flex-col gap-6 max-w-5xl mx-auto">
+    <ul className="relative z-0 flex flex-col gap-6 max-w-5xl xl:max-w-[1306px] mx-auto">
       {posts.map(post => (
         <li
           key={post.slug}

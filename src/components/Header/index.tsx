@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Header: React.FC = () => {
   return (
     <header className="bg-skin-base dark:bg-black color-transition pb-4 pt-5">
-      <nav className="z-10 mb-1 max-w-5xl mx-auto px-3">
+      <nav className="z-10 mb-1 max-w-5xl xl:max-w-[1310px] mx-auto px-3">
         <h1 className="text-2xl sm:text-3xl font-bold">
           <Link href="/" className="flex items-center">
             <span className=" text-skin-primary">
