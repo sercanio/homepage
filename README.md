@@ -44,3 +44,6 @@ related:
     url: /swr-copy-2-copy-10/
 ---
 ```
+
+### Example File
+See /EXAMPLE.mdx for general usage.
