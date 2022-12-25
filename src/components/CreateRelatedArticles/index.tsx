@@ -21,7 +21,7 @@ const CreateRelatedArticles = ({ post }: { post: MDXPost }) => {
               className="dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 leading-7"
             >
               <Link
-                href={`/posts/${related.url}`}
+                href={`/posts${related.url}`}
                 key={related.title}
                 className="ml-4"
               >
