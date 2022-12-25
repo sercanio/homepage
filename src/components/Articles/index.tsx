@@ -22,7 +22,7 @@ const Articles = ({ posts }: { posts: PostMeta[] }) => {
                 <Link
                   href={`/tags/${tag}`}
                   key={tag}
-                  className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900 px-2 rounded hover:underline"
+                  className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900 px-2 py-[2px] rounded hover:underline"
                 >
                   {tag}
                 </Link>
