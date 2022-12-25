@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-text-base: #1f2937;
+    --color-text-dark: #e0e0e0;
+    --color-bg-base: #ffffff;
+    --color-bg-dark: #06090c;
+    --color-border-base: #1f2937;
+    --color-border-dark: #e0e0e0;
+    --color-caret: #b4b4b4;
+    --color-tilde: #137e8f; /* tilde color for commant prompt effect */
+  }
+  * {
+    transition: all 0.1s linear;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 2.25rem;
+  }
+    code {
+    @apply my-3 rounded-md;
+    counter-reset: line;
+  }
+  code > .line::before {
+    counter-increment: line;
+    content: counter(line);
+
+    /* Other styling */
+    display: inline-block;
+    width: 1rem;
+    margin-right: 2rem;
+    text-align: right;
+    color: gray;
+  }
+}
+
+@layer utilities {
+  .content-visibility-auto {
+    content-visibility: auto;
+  }
+}
