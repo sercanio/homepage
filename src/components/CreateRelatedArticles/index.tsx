@@ -7,10 +7,10 @@ const CreateRelatedArticles = ({ post }: { post: MDXPost }) => {
     <section className="px-4 pt-4 pb-8 xl:block h-max w-full">
       {post.meta.related.length !== 0 && (
         <>
-          <div className="bg-gray-200 dark:bg-gray-800 p-2">
+          <div className=" p-2">
             <strong className="uppercase font-bold px-2">Related</strong>
           </div>
-          <hr className="border-t-1 border-skin-base dark:border-skin-dark mb-2" />
+          <hr className="border-t-2 dark:border-skin-dark mb-2" />
         </>
       )}
       <ul className="p2">
