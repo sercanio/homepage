@@ -15,11 +15,34 @@
   * {
     transition: background-color 0.15s ease;
   }
-  h2 {
-    color: inherit;
-    text-decoration: underline 0.12em rgba(255, 255, 255, 0);
-    transition: text-decoration-color text-decoration-width 100ms;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font: bold;
   }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+
   code {
     @apply my-3 rounded-md;
     counter-reset: line;
