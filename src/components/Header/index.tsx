@@ -1,7 +1,6 @@
-import React from 'react'
 import Link from 'next/link'
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <header className="bg-skin-base dark:bg-black color-transition pb-4 pt-5">
       <nav className="z-10 mb-1 max-w-5xl xl:max-w-[1310px] mx-auto px-3">

@@ -34,7 +34,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <meta name="description" content={post.meta.title} />
       </Head>
       <div className="flex flex-col xl:flex-row w-full xl:gap-4 justify-center h-full scroll-smooth">
-        <article className="relative py-3 px-3 xl:px-1 max-w-5xl h-full w-full mx-auto xl:mx-0 z-0">
+        <article className="relative py-3 px-3 xl:px-1  w-full max-w-5xl h-full mx-auto xl:mx-0 z-0">
           <div className="relative z-10 flex-5">
             <h2 className="text-3xl font-bold mb-4 mt-0">{post.meta.title}</h2>
             {post.meta.tags && (

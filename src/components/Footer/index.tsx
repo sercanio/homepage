@@ -1,6 +1,5 @@
-import React from 'react'
 import Link from 'next/link'
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer className="w-full max-w-5xl mx-auto px-4 opacity-70 mb-3">
       <nav>
