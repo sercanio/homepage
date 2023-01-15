@@ -28,11 +28,8 @@ export default function TagPage({
       </Head>
       <h2 className="relative max-w-5xl xl:max-w-[1310px] mx-auto px-3 mb-4">
         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
-          Articles about
-          <span className="inline-flex items-center font-bold  max-w-max text-gray-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl px-2 ml-[10px] rounded">
-            {slug}
-          </span>{' '}
-        </p>{' '}
+          Articles about <q>{slug}</q>
+        </p>
       </h2>
       <Articles posts={posts} />
     </>
