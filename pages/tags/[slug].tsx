@@ -25,6 +25,10 @@ export default function TagPage({
     <>
       <Head>
         <title>{`Articles About ${capitalize(slug)}`}</title>
+        <meta
+          name="description"
+          content={`Sercan Ateş's personal web logs about ${slug}`}
+        />
       </Head>
       <h2 className="relative max-w-5xl xl:max-w-[1310px] mx-auto px-3 mb-4">
         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
