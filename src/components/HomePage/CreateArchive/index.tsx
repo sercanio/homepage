@@ -39,7 +39,7 @@ export const CreateArchive = ({ posts }: { posts: PostMeta[] }) => {
   return (
     <>
       {posts.length > 0 && (
-        <section className="xl:sticky top-72 flex-col justify-center h-max w-full xl:w-max p-5 hover:bg-skin-baseCardHover dark:hover:bg-opacity-5 rounded-md">
+        <section className="flex-col justify-center h-max w-full xl:w-max p-5 hover:bg-skin-baseCardHover dark:hover:bg-opacity-5 rounded-md">
           <div className="p-2">
             <strong className="uppercase font-bold px-2">archive</strong>
           </div>

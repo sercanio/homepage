@@ -10,7 +10,7 @@ export const CreateAllTags = ({ posts }: { posts: PostMeta[] }) => {
   return (
     <>
       {posts.length > 0 && (
-        <section className="xl:sticky top-0 flex-col justify-center h-max w-full xl:w-max hover:bg-skin-baseCardHover dark:hover:bg-opacity-5 rounded-md px-4 pt-4 pb-8">
+        <section className="flex-col justify-center h-max w-full xl:w-max hover:bg-skin-baseCardHover dark:hover:bg-opacity-5 rounded-md px-4 pt-4 pb-8">
           <div className="p-2">
             <strong className="uppercase font-bold px-2">all tags</strong>
           </div>
