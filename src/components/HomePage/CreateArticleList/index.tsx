@@ -10,7 +10,7 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
         {posts.map(post => (
           <li
             key={post.slug}
-            className="relative flex flex-col px-1 hover:bg-neutral-100 dark:hover:bg-opacity-5 [&>div>h2>a] dark:[&>div>h2>a] rounded-md"
+            className="relative flex flex-col px-1 hover:bg-skin-baseCardHover dark:hover:bg-opacity-5 [&>div>h2>a] dark:[&>div>h2>a] rounded-md"
           >
             <div className="z-10 flex flex-col gap-3">
               <h2 className="font-bold text-xl sm:text-2xl">
@@ -25,7 +25,7 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
                   <Link
                     href={`/tags/${tag}`}
                     key={tag}
-                    className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-neutral-100 dark:bg-gray-900 px-2 py-[2px] rounded hover:underline"
+                    className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-gray-900 px-2 py-[2px] rounded hover:underline"
                   >
                     {tag}
                   </Link>

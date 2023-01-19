@@ -10,7 +10,7 @@ export const CreateAllTags = ({ posts }: { posts: PostMeta[] }) => {
   return (
     <>
       {posts.length > 0 && (
-        <section className="xl:sticky top-0 flex-col justify-center h-max w-full xl:w-max hover:bg-neutral-100 dark:hover:bg-opacity-5 rounded-md px-4 pt-4 pb-8">
+        <section className="xl:sticky top-0 flex-col justify-center h-max w-full xl:w-max hover:bg-skin-baseCardHover dark:hover:bg-opacity-5 rounded-md px-4 pt-4 pb-8">
           <div className="p-2">
             <strong className="uppercase font-bold px-2">all tags</strong>
           </div>
@@ -21,7 +21,7 @@ export const CreateAllTags = ({ posts }: { posts: PostMeta[] }) => {
                 <Link
                   href={`/tags/${tag}`}
                   key={tag}
-                  className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-gray-100 dark:bg-gray-900 px-2 py-[2px] rounded hover:underline w-max"
+                  className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-gray-900 px-2 py-[2px] rounded hover:underline w-max"
                 >
                   {tag}
                 </Link>

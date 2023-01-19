@@ -22,6 +22,8 @@ module.exports = {
       backgroundColor: {
         skin: {
           base: 'var(--color-bg-base)',
+          baseCardHover: 'var(--color-bg-base-card-hover)',
+          baseTag: 'var(--color-bg-base-tag)',
           dark: 'var(--color-bg-dark)',
           secondary: 'var(--color-bg-secondary)'
         }
