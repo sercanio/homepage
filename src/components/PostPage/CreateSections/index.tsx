@@ -11,7 +11,7 @@ const CreateSections = ({ post }: { post: MDXPost }) => {
         <strong className="uppercase font-bold px-2">Sections</strong>
       </div>
       <hr className="border-t-2 dark:border-skin-dark mb-2" />
-      <ul className="p2">
+      <ul className="p-2">
         {post.meta.headings.map(heading => {
           return (
             <li

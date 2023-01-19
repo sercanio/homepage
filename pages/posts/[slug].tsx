@@ -23,8 +23,8 @@ import {
 } from 'next-share'
 import YouTube from '@/components/YouTube/YouTube'
 import 'highlight.js/styles/a11y-dark.css'
-import CreateSections from '@/components/CreateSections'
-import CreateRelatedArticles from '@/components/CreateRelatedArticles'
+import CreateSections from '@/components/PostPage/CreateSections'
+import CreateRelatedArticles from '@/components/PostPage/CreateRelatedArticles'
 
 export default function PostPage({ post }: { post: MDXPost }) {
   return (
@@ -33,8 +33,8 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <title>{post.meta.title}</title>
         <meta name="description" content={post.meta.title} />
       </Head>
-      <div className="flex flex-col xl:flex-row w-full xl:gap-4 justify-center h-full scroll-smooth">
-        <article className="relative py-3 px-3 xl:px-1 w-full max-w-5xl h-full mx-auto xl:mx-0 z-0">
+      <div className="flex flex-col xl:flex-row xl:gap-4 justify-center h-full scroll-smooth">
+        <article className="relative py-3 px-3 xl:px-1 h-full mx-auto xl:mx-0 flex-1">
           <div className="relative z-10 flex-5">
             <h2 className="text-3xl font-bold mb-4 mt-0">{post.meta.title}</h2>
             {post.meta.tags && (
@@ -97,13 +97,13 @@ export default function PostPage({ post }: { post: MDXPost }) {
             <hr className="pb-4 border-t-1 mt-3 -mb-2 hidden xl:block" />
           </div>
         </article>
-        <section
-          className="sticky top-0 flex flex-col gap-1 h-max w-full xl:w-max"
+        <aside
+          className="sticky top-0 flex flex-col gap-1 h-max "
           style={{ contentVisibility: 'auto' }}
         >
           <CreateSections post={post} />
           <CreateRelatedArticles post={post} />
-        </section>
+        </aside>
       </div>
     </>
   )
