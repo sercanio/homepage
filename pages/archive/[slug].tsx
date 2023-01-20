@@ -4,15 +4,13 @@ import { getAllPosts } from '@/components/api'
 import { PostMeta } from '@/types'
 import HomePage from '@/components/HomePage'
 
-export default function TagPage({
+export default function ArchivePage({
   slug,
   posts
 }: {
   slug: string
   posts: PostMeta[]
 }) {
-  const filteredPosts = posts.filter(post => post.tags.includes(slug))
-
   const capitalize = (str: string) => {
     const strArr = str.split(' ')
     const newStr = strArr
@@ -22,11 +20,13 @@ export default function TagPage({
       .join(' ')
     return newStr
   }
-
+  const filteredPosts = posts.filter(
+    post => post.date.split(',')[1].trim() === slug.trim()
+  )
   return (
     <>
       <Head>
-        <title>{`Articles About ${capitalize(slug)} | Sercan Ateş`}</title>
+        <title>{`Blog Posts From ${slug} | Sercan Ateş`}</title>
         <meta
           name="description"
           content={`Sercan Ateş's personal web logs about ${slug}`}
@@ -34,7 +34,7 @@ export default function TagPage({
       </Head>
       <h2 className="relative mx-auto px-1 mb-4">
         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
-          Posts about <q>{slug}</q> :
+          Posts from {slug} :
         </p>
       </h2>
       <HomePage posts={posts} filteredPosts={filteredPosts} />
@@ -44,6 +44,10 @@ export default function TagPage({
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as { slug: string }
+
+  // const posts = getAllPosts().filter(
+  //   post => post.meta.date.split(',')[1].trim() === slug.trim()
+  // )
   const posts = getAllPosts()
 
   return {
@@ -56,8 +60,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllPosts()
-  const tags = new Set(posts.map(post => post.meta.tags).flat())
-  const paths = Array.from(tags).map(tag => ({ params: { slug: tag } }))
+  const dates = new Set(posts.map(post => post.meta.date))
+
+  const paths = Array.from(dates).map(date => ({
+    params: { slug: date.split(',')[1].trim() }
+  }))
 
   return {
     paths,

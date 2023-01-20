@@ -12,12 +12,12 @@ const CreateRelatedArticles = ({ post }: { post: MDXPost }) => {
           <hr className="border-t-1 xl:border-t-2 dark:border-skin-dark mb-2" />
         </>
       )}
-      <ul className="p2">
+      <ul className="p-2">
         {post.meta.related.map(related => {
           return (
             <li
               key={related.title}
-              className="dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 leading-7"
+              className="dark:text-gray-100 hover:bg-skin-baseSideBarItemHover dark:hover:bg-skin-darkSideBarItemHover leading-7"
             >
               <Link
                 href={`/posts${related.url}`}

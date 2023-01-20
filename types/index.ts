@@ -61,3 +61,8 @@ export interface MDXPost {
   source: MDXRemoteSerializeResult<Record<string, unknown>>
   meta: PostMeta
 }
+
+export interface MonthsAndArticles {
+  month: string
+  articleNumber: number
+}
