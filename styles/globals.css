@@ -4,16 +4,25 @@
 
 @layer base {
   :root {
+    /* default theme */
     --color-text-base: #1f2937;
-    --color-text-dark: #e0e0e0;
     --color-bg-base: #ffffff;
     --color-bg-base-tag: #f5f5f5;
+    --color-bg-base-card: inherit;
     --color-bg-base-card-hover: #f5f5f5;
-    --color-bg-dark: #141414;
-    --color-border-base: #1f2937;
-    --color-border-dark: #e0e0e0;
+    --color-bg-base-sidebar-item-hover: #ebe9e9;
     --color-caret: #b4b4b4;
     --color-tilde: #137e8f; /* tilde color for commant prompt effect */
+
+    /* dark theme */
+    --color-text-dark: #e0e0e0;
+    --color-bg-dark: #141414;
+    --color-bg-dark-card: inherit;
+    --color-bg-dark-card-hover: #172b29;
+    --color-bg-dark-tag: #172b29;
+    --color-bg-dark-sidebar-item-hover: #172b29;
+    --color-border-base: #1f2937;
+    --color-border-dark: #e0e0e0;
   }
   * {
     transition: all 0.1s linear;

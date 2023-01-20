@@ -6,11 +6,11 @@ import { PostMeta } from 'types'
 const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
   return (
     <section>
-      <ul className="relative z-0 flex flex-col gap-6 w-full xl:mx-0">
+      <ul className="relative z-0 flex flex-col gap-6 w-full xl:mx-0 px-3">
         {posts.map(post => (
           <li
             key={post.slug}
-            className="relative flex flex-col px-1 hover:bg-skin-baseCardHover dark:hover:bg-opacity-5 [&>div>h2>a] dark:[&>div>h2>a] rounded-md"
+            className="relative flex flex-col px-3 bg-skin-baseCard hover:bg-skin-baseCardHover dark:bg-skin-darkCard dark:hover:bg-skin-darkCardHover [&>div>h2>a] dark:[&>div>h2>a] rounded-md"
           >
             <div className="z-10 flex flex-col gap-3">
               <h2 className="font-bold text-xl sm:text-2xl">
@@ -19,13 +19,13 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
               <p>
                 <Link href={`/posts/${post.slug}`}>{post.excerpt}</Link>
               </p>
-              <div className="flex flex-wrap items-center gap-[10px] text-sm mt-2">
+              <div className="flex flex-wrap items-center gap-2 text-sm mt-2">
                 <AiOutlineTags />
                 {post.tags.map(tag => (
                   <Link
                     href={`/tags/${tag}`}
                     key={tag}
-                    className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-gray-900 px-2 py-[2px] rounded hover:underline"
+                    className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-skin-darkTag px-2 py-px rounded hover:underline"
                   >
                     {tag}
                   </Link>

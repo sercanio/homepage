@@ -39,15 +39,22 @@ export const CreateArchive = ({ posts }: { posts: PostMeta[] }) => {
   return (
     <>
       {posts.length > 0 && (
-        <section className="flex-col justify-center h-max w-full xl:w-max p-5 hover:bg-skin-baseCardHover dark:hover:bg-opacity-5 rounded-md">
+        <section className="flex-col justify-center h-max w-full xl:w-max px-4 pt-4 pb-8 rounded-md">
           <div className="p-2">
             <strong className="uppercase font-bold px-2">archive</strong>
           </div>
           <hr className="border-t-2 dark:border-skin-dark mb-2 w-52 xl:mx-auto" />
-          <ul className="justify-center px-4 [&>li]:mx-1 [&>li]:my-2 [&>li]:cursor-pointer">
+          <ul className="justify-center ml-2">
             {uniqueYearsArray.map(year => (
-              <li key={Math.random()} onClick={handleArchiveClick}>
-                <Link href={`/archive/${year}`} className="hover:underline">
+              <li
+                key={Math.random()}
+                onClick={handleArchiveClick}
+                className="hover:bg-skin-baseSideBarItemHover dark:hover:bg-skin-darkSideBarItemHover px-2 py-1"
+              >
+                <Link
+                  href={`/archive/${year}`}
+                  className="hover:underline  cursor-pointer"
+                >
                   {`${year} (${articleNumberInYear(year)})`}
                 </Link>
               </li>

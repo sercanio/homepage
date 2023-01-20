@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Header = () => {
   return (
     <header className="bg-skin-base dark:bg-skin-dark color-transition">
-      <nav className="z-10 mb-1 max-w-5xl xl:max-w-5xl mx-auto px-[2.5px]">
+      <nav className="z-10 mb-1 max-w-5xl xl:max-w-5xl mx-auto px-3 xl:px-1">
         <h1 className="text-2xl sm:text-3xl font-bold">
           <Link href="/" className="flex items-center">
             <span className=" text-skin-primary">
@@ -13,9 +13,7 @@ const Header = () => {
               {'$'}
               &nbsp;
             </span>
-            <span className="animate-cursorBlink mb-1  text-skin-caret ">
-              |
-            </span>
+            <span className="animate-cursorBlink mb-1 text-skin-caret">|</span>
             <h1 className="sr-only">
               {/* eslint-disable-next-line react/no-unescaped-entities*/}
               Sercan Ateş's personal web logs.

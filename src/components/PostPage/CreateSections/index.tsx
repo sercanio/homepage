@@ -20,7 +20,7 @@ const CreateSections = ({ post }: { post: MDXPost }) => {
                 activeSection === heading.text
                   ? 'bg-gray-200 dark:bg-gray-800'
                   : ''
-              } dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-800 leading-7 `}
+              } dark:text-gray-100 hover:bg-skin-baseSideBarItemHover dark:hover:bg-skin-darkSideBarItemHover leading-7 `}
               style={{
                 paddingLeft: heading.level * 8
               }}
