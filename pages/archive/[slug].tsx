@@ -34,7 +34,7 @@ export default function ArchivePage({
       </Head>
       <h2 className="relative mx-auto px-1 mb-4">
         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
-          Posts from {slug}:
+          Posts from {slug} :
         </p>
       </h2>
       <HomePage posts={posts} filteredPosts={filteredPosts} />
