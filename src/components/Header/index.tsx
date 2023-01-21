@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="bg-skin-base dark:bg-skin-dark color-transition">
       <nav className="z-10 mb-1 max-w-5xl xl:max-w-5xl mx-auto px-3 xl:px-1">
-        <h1 className="text-2xl sm:text-3xl font-bold">
+        <h1 className="text-3xl font-bold">
           <Link href="/" className="flex items-center">
             <span className=" text-skin-primary">
               <span className=" text-skin-primary">sercan</span>
