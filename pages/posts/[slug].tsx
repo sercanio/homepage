@@ -51,11 +51,11 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 ))}
               </div>
             )}
-            <p className="md:absolute md:top-0 md:right-1 ml-2 md:ml-0 leading-10 text-sm text-gray-500 dark:text-gray-300">
+            <p className="md:absolute md:top-0 md:right-1 ml-2 md:ml-0 text-sm text-gray-500 dark:text-gray-300">
               {' '}
               {post.meta.date}
             </p>
-            <hr className="py-5 border-t-2" />
+            <hr className="py-2 border-t-2" />
             <MDXRemote {...post.source} components={{ YouTube, Image }} />
             <div className="flex gap-3 items-center mt-20">
               <p>Share :</p>
@@ -94,7 +94,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
           </div>
         </article>
         <aside
-          className="sticky top-0 flex flex-col gap-1 h-max"
+          className="sticky top-0 flex flex-col gap-1 h-max max-w-[280px]"
           style={{ contentVisibility: 'auto' }}
         >
           <CreateSections post={post} />

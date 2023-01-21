@@ -4,6 +4,8 @@ import { AiOutlineTags, AiOutlineCalendar } from 'react-icons/ai'
 import { PostMeta } from 'types'
 
 const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
   return (
     <section>
       <ul className="relative z-0 flex flex-col gap-6 w-full xl:mx-0 px-3">
@@ -12,14 +14,14 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
             key={post.slug}
             className="relative flex flex-col px-3 bg-skin-baseCard hover:bg-skin-baseCardHover dark:bg-skin-darkCard dark:hover:bg-skin-darkCardHover [&>div>h2>a] dark:[&>div>h2>a] rounded-md"
           >
-            <div className="z-10 flex flex-col gap-3">
+            <div className="z-10 flex flex-col gap-1">
               <h2 className="font-bold text-xl sm:text-2xl">
                 <Link href={`/posts/${post.slug}`}>{post.title}</Link>
               </h2>
               <p>
                 <Link href={`/posts/${post.slug}`}>{post.excerpt}</Link>
               </p>
-              <div className="flex flex-wrap items-center gap-2 text-sm mt-2">
+              <div className="flex flex-wrap items-center gap-2 text-sm">
                 <AiOutlineTags />
                 {post.tags.map(tag => (
                   <Link
@@ -31,11 +33,11 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
                   </Link>
                 ))}
               </div>
-              <div className="flex items-center gap-2 -mt-1">
+              <div className="flex items-center gap-2">
                 <AiOutlineCalendar className="opacity-70" />
-                <p className="leading-10 text-sm text-gray-500 dark:text-gray-300 mt-1">
+                <span className="leading-10 text-sm text-gray-500 dark:text-gray-300 mt-1">
                   {post.date}
-                </p>
+                </span>
               </div>
             </div>
           </li>

@@ -14,13 +14,6 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HomePage posts={posts} filteredPosts={posts} />
-      {/* <div className="flex flex-col xl:flex-row gap-1 xl:gap-4 h-full scroll-smooth justify-between">
-        <CreateArticleList posts={posts} />
-        <aside className="mr-4">
-          <CreateAllTags posts={posts} />
-          <CreateArchive posts={posts} />
-        </aside>
-      </div> */}
     </>
   )
 }

@@ -28,7 +28,11 @@ const CreateSections = ({ post }: { post: MDXPost }) => {
               <Link
                 href={`${post.meta.slug}/#${heading.text
                   .toLowerCase()
-                  .replace(/ /g, '-')}
+                  .replace(/ /g, '-') // replace space with '-'
+                  .replace(/[.,\/#!$%\^&\*;:"{}=\_`~()?]/g, '') // replace punctions excep '-' with empty string ''
+                  // this is because heading id does not accept punctiation like question mark
+                  // this can be edited later
+                  .replace(/\s{2,}/g, ' ')}
                   `}
                 key={heading.text}
                 className="-ml-2"
