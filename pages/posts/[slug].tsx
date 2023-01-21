@@ -51,7 +51,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 ))}
               </div>
             )}
-            <p className="md:absolute md:top-0 md:right-1 ml-2 md:ml-0 leading-10 text-sm text-gray-500 dark:text-gray-300">
+            <p className="md:absolute md:top-0 md:right-1 ml-2 md:ml-0 text-sm text-gray-500 dark:text-gray-300">
               {' '}
               {post.meta.date}
             </p>
