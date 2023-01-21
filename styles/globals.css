@@ -37,8 +37,9 @@
     @apply text-2xl font-bold leading-9 mt-4;
   }
   p {
-    @apply text-base my-4
+    @apply text-base my-4;
   }
+
   code {
     @apply my-3 rounded-md;
     counter-reset: line;

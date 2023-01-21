@@ -55,7 +55,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
               {' '}
               {post.meta.date}
             </p>
-            <hr className="py-5 border-t-2" />
+            <hr className="py-2 border-t-2" />
             <MDXRemote {...post.source} components={{ YouTube, Image }} />
             <div className="flex gap-3 items-center mt-20">
               <p>Share :</p>
