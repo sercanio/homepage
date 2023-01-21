@@ -4,6 +4,8 @@ import { AiOutlineTags, AiOutlineCalendar } from 'react-icons/ai'
 import { PostMeta } from 'types'
 
 const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
   return (
     <section>
       <ul className="relative z-0 flex flex-col gap-6 w-full xl:mx-0 px-3">
