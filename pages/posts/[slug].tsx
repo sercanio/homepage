@@ -94,7 +94,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
           </div>
         </article>
         <aside
-          className="sticky top-0 flex flex-col gap-1 h-max"
+          className="sticky top-0 flex flex-col gap-1 h-max max-w-[280px]"
           style={{ contentVisibility: 'auto' }}
         >
           <CreateSections post={post} />
