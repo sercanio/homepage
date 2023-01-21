@@ -31,11 +31,11 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
                   </Link>
                 ))}
               </div>
-              <div className="flex items-center gap-2 -mt-1">
+              <div className="flex items-center gap-2">
                 <AiOutlineCalendar className="opacity-70" />
-                <p className="leading-10 text-sm text-gray-500 dark:text-gray-300 mt-1">
+                <span className="leading-10 text-sm text-gray-500 dark:text-gray-300 mt-1">
                   {post.date}
-                </p>
+                </span>
               </div>
             </div>
           </li>
