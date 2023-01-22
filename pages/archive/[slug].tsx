@@ -29,7 +29,7 @@ export default function ArchivePage({
         <title>{`Blog Posts From ${slug} | Sercan Ateş`}</title>
         <meta
           name="description"
-          content={`Sercan Ateş's personal web logs about ${slug}`}
+          content={`Sercan Ateş's web logs from ${slug}`}
         />
       </Head>
       <p className="text-xl md:text-2xl font-bold px-[14px] xl:px-1 mb-4 mx-auto break-word">
