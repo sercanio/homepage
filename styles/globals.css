@@ -28,6 +28,11 @@
     transition: all 0.1s linear;
   }
 
+  html {
+    scroll-behavior: smooth !important;
+    scroll-padding: 1rem;
+  }
+
   h1,
   h2,
   h3,
