@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { AiOutlineTags, AiOutlineCalendar } from 'react-icons/ai'
-import { PostMeta } from 'types'
+import { PostMeta } from '@/types'
 
 const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
   posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())

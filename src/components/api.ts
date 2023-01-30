@@ -2,7 +2,7 @@ import path from 'path'
 import fs from 'fs'
 import glob from 'glob'
 import matter from 'gray-matter'
-import { Post } from '../../types'
+import { Post } from '@/types'
 
 const POST_PATH = path.join(process.cwd(), 'posts')
 export const getSlugs = (): string[] => {
