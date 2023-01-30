@@ -1,9 +1,6 @@
 import Head from 'next/head'
 import { PostMeta } from '@/types'
 import { getAllPosts } from '@/components/api'
-import CreateAllTags from '@/components/HomePage/CreateAllTags'
-import CreateArchive from '@/components/HomePage/CreateArchive'
-import CreateArticleList from '@/components/HomePage/CreateArticleList'
 import HomePage from '@/components/HomePage'
 export default function Home({ posts }: { posts: PostMeta[] }) {
   return (

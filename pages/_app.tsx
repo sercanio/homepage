@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Analytics } from '@vercel/analytics/react'
 import { Roboto } from '@next/font/google'
-import Layout from '../src/components/layout'
+import Layout from '@/components/layout'
 
 const roboto = Roboto({
   subsets: ['latin'],
