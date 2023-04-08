@@ -6,7 +6,7 @@ import { Post } from '@/types'
 
 const POST_PATH = path.join(process.cwd(), 'posts')
 export const getSlugs = (): string[] => {
-  const paths = glob.sync(`${POST_PATH}/*.mdx`.replace(/\\/g, '/'))
+  const paths = glob.sync(`${POST_PATH}/*.md`.replace(/\\/g, '/'))
   // because of the windows path, we need to replace the backslashes with forward slashes
   // on linux and mac, this is not necessary
   // this code is not tested on mac or linux
@@ -15,7 +15,7 @@ export const getSlugs = (): string[] => {
   return paths.map(path => {
     const parts = path.split('/')
     const filename = parts[parts.length - 1]
-    return filename.replace(/\.mdx$/, '')
+    return filename.replace(/\.md$/, '')
   })
 }
 
@@ -32,7 +32,7 @@ export const getAllPosts = () => {
 }
 
 export const getPostFromSlug = (slug: string): Post => {
-  const postPath = path.join(POST_PATH, `${slug}.mdx`)
+  const postPath = path.join(POST_PATH, `${slug}.md`)
   const source = fs.readFileSync(postPath, 'utf8')
   const { content, data } = matter(source)
 
