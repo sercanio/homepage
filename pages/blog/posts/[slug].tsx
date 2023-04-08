@@ -41,7 +41,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
             {post.meta.tags && (
               <div className="flex flex-wrap gap-2 my-4">
                 {post.meta.tags.map(tag => (
-                  <Link href={`/tags/${tag}`} key={tag}>
+                  <Link href={`/blog/tags/${tag}`} key={tag}>
                     <span
                       key={tag}
                       className="flex items-center text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-skin-darkTag hover:bg-inherit px-2 py-[2px] rounded hover:underline"

@@ -11,15 +11,6 @@ export default function ArchivePage({
   slug: string
   posts: PostMeta[]
 }) {
-  const capitalize = (str: string) => {
-    const strArr = str.split(' ')
-    const newStr = strArr
-      .map(word => {
-        return word.charAt(0).toUpperCase() + word.slice(1)
-      })
-      .join(' ')
-    return newStr
-  }
   const filteredPosts = posts.filter(
     post => post.date.split(',')[1].trim() === slug.trim()
   )

@@ -16,16 +16,16 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
           >
             <div className="z-10 flex flex-col gap-1">
               <h2 className="font-bold text-2xl">
-                <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+                <Link href={`/blog/posts/${post.slug}`}>{post.title}</Link>
               </h2>
               <p className="text-base">
-                <Link href={`/posts/${post.slug}`}>{post.excerpt}</Link>
+                <Link href={`/blog/posts/${post.slug}`}>{post.excerpt}</Link>
               </p>
               <div className="flex flex-wrap items-center gap-2 text-sm">
                 <AiOutlineTags />
                 {post.tags.map(tag => (
                   <Link
-                    href={`/tags/${tag}`}
+                    href={`/blog/tags/${tag}`}
                     key={tag}
                     className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-skin-darkTag px-2 py-px rounded hover:underline"
                   >
