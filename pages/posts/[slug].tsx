@@ -25,6 +25,7 @@ import YouTube from '@/components/YouTube/YouTube'
 import 'highlight.js/styles/a11y-dark.css'
 import CreateSections from '@/components/PostPage/CreateSections'
 import CreateRelatedArticles from '@/components/PostPage/CreateRelatedArticles'
+import Figure from '@/components/Figure'
 
 export default function PostPage({ post }: { post: MDXPost }) {
   return (
@@ -56,7 +57,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
               {post.meta.date}
             </p>
             <hr className="py-2 border-t-2" />
-            <MDXRemote {...post.source} components={{ YouTube, Image }} />
+            <MDXRemote
+              {...post.source}
+              components={{ YouTube, Image, Figure }}
+            />
             <div className="flex gap-3 items-center mt-20">
               <p>Share :</p>
               <PocketShareButton

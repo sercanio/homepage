@@ -66,3 +66,13 @@ export interface MonthsAndArticles {
   month: string
   articleNumber: number
 }
+
+export interface FigureTypes {
+  src: string
+  width: number
+  height: number
+  alt: string
+  quality?: number
+  caption: string
+  source: string
+}
