@@ -1,7 +1,7 @@
 import Link from 'next/link'
 const Footer = () => {
   return (
-    <footer className="w-full max-w-5xl mx-auto px-4 opacity-70">
+    <footer className="w-full mx-auto px-4 opacity-70 bg-stone-900 pt-8">
       <nav>
         <ul className="flex justify-center gap-4">
           <li>

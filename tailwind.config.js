@@ -55,13 +55,18 @@ module.exports = {
         typing: {
           '0%': { width: '0' },
           '100%': { width: '100%' }
+        },
+        marquee: {
+          '0%': { transform: 'translateX(-800%)' },
+          '100%': { transform: 'translateX(800%)' }
         }
       },
       animation: {
-        cursorBlink: 'cursorBlink 1.3s linear infinite'
+        cursorBlink: 'cursorBlink 1.3s linear infinite',
+        marquee: 'marquee 25s linear infinite'
       }
-    }
-  },
-  plugins: [],
-  mode: 'jit'
+    },
+    plugins: [],
+    mode: 'jit'
+  }
 }

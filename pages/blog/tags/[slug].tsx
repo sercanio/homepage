@@ -2,7 +2,7 @@ import type { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import { getAllPosts } from '@/components/api'
 import { PostMeta } from '@/types'
-import HomePage from '@/components/HomePage'
+import BlogHome from '@/components/BlogHome'
 
 export default function TagPage({
   slug,
@@ -35,7 +35,7 @@ export default function TagPage({
       <p className="text-xl md:text-2xl font-bold px-[14px] xl:px-1 mb-4 mx-auto break-word">
         Posts about <q>{slug}</q>:
       </p>
-      <HomePage posts={posts} filteredPosts={filteredPosts} />
+      <BlogHome posts={posts} filteredPosts={filteredPosts} />
     </>
   )
 }

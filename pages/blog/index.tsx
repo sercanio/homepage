@@ -1,16 +1,15 @@
 import Head from 'next/head'
 import { PostMeta } from '@/types'
 import { getAllPosts } from '@/components/api'
-import HomePage from '@/components/HomePage'
-export default function Home({ posts }: { posts: PostMeta[] }) {
+import BlogHome from '@/components/BlogHome'
+export default function Blog({ posts }: { posts: PostMeta[] }) {
   return (
     <>
       <Head>
         <title>Sercan Ateş | Web Logs</title>
         <meta name="description" content="Sercan Ateş's personal web logs." />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HomePage posts={posts} filteredPosts={posts} />
+      <BlogHome posts={posts} filteredPosts={posts} />
     </>
   )
 }
