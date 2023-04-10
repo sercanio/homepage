@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   darkMode: 'media',
   i18n: {
     locales: ['en'],
@@ -57,13 +58,13 @@ module.exports = {
           '100%': { width: '100%' }
         },
         marquee: {
-          '0%': { transform: 'translateX(-800%)' },
-          '100%': { transform: 'translateX(800%)' }
+          '0%': { transform: 'translateX(-20%)' },
+          '100%': { transform: 'translateX(100%)' }
         }
       },
       animation: {
         cursorBlink: 'cursorBlink 1.3s linear infinite',
-        marquee: 'marquee 25s linear infinite'
+        marquee: 'marquee 50s linear infinite'
       }
     },
     plugins: [],

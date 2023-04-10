@@ -7,7 +7,7 @@ const Layout = ({ children, className }: LayoutChildrenProps) => {
   return (
     <>
       <div
-        className={`${className} relative flex flex-col justify-center bg-skin-base dark:bg-skin-dark text-skin-base dark:text-skin-dark color-transition min-w-fit pt-1`}
+        className={`${className} relative flex flex-col justify-center bg-skin-base dark:bg-skin-dark text-skin-base dark:text-skin-dark color-transition pt-1`}
       >
         <Header />
         <Main>{children}</Main>

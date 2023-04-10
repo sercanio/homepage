@@ -31,6 +31,8 @@
   html {
     scroll-behavior: smooth !important;
     scroll-padding: 1rem;
+    width: 100vw;
+    height: 100vh;
   }
   body {
     background-color: #6969ef;
@@ -38,6 +40,9 @@
     background-image: linear-gradient(#45f766 1px, transparent 1px),
       linear-gradient(to right, #45f766 1px, #6969ef 1px);
     background-size: 16px 16px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden
   }
 
   h1,
