@@ -1,6 +1,8 @@
+import nodemailer from 'nodemailer'
 import { ContactFormTypes } from '@/types'
+import { env } from 'process'
 
-export default function handler(
+export default async function handler(
   req: { body: any },
   res: {
     status: (arg0: number) => {
@@ -10,28 +12,25 @@ export default function handler(
     }
   }
 ) {
-  // Get data submitted in request's body.
   const body = req.body
+  console.log(process.env.SMTP_USER)
 
-  // Optional logging to see the responses
-  // in the command line where next.js app is running.
-  console.log('body: ', body)
-
-  // Guard clause checks for first and last name,
-  // and returns early if they are not found
-  if (!body.firstName || !body.lastName) {
-    // Sends a HTTP bad request error code
-    return res.status(400).json({ data: 'First or last name not found' })
-  }
-
-  // Found the name.
-  // Sends a HTTP success code
-  // res.status(200).json({ data: `${body.first} ${body.last}` })
-  res.status(200).json({
-    data: {
-      firstName: body.firstName,
-      lastName: body.lastName,
-      email: body.email
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD
     }
   })
+
+  let info = await transporter.sendMail({
+    from: `"${body.firstName} ${body.lastName} 👻" <${body.email}>`,
+    to: process.env.SMTP_USER,
+    subject: 'sercan.io',
+    text: body.message,
+    html: `${body.message}<br/><br/><br/>Sent via sercan.io contact form.`
+  })
+  console.log('Message sent: %s', info.messageId)
+
+  res.status(200).json({ data: req.body })
 }

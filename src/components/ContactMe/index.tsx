@@ -7,6 +7,8 @@ const ContactMe = (): JSX.Element => {
   const emailRef = React.useRef<HTMLInputElement>(null)
   const messageRef = React.useRef<HTMLTextAreaElement>(null)
 
+  const [name, setName] = React.useState('')
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
@@ -30,12 +32,7 @@ const ContactMe = (): JSX.Element => {
     const response = await fetch(endpoint, options)
 
     const result = await response.json()
-
-    console.log(result)
-
-    alert(
-      `Is this your full name: ${result.data.firstName} ${result.data.lastName}`
-    )
+    setName(result.data.firstName)
     fnameRef.current!.value = ''
     lnameRef.current!.value = ''
     emailRef.current!.value = ''
@@ -45,16 +42,16 @@ const ContactMe = (): JSX.Element => {
   return (
     <section
       id="contact"
-      className="bg-gradient-to-br from-indigo-900 to-rose-900 flex flex-col gap-6 w-full px-8 pt-12 pb-24 mx-auto "
+      className="bg-gradient-to-br from-indigo-900 to-rose-900 flex flex-col w-full px-2 md:px-6 lg:px-8 pt-12 pb-24 mx-auto "
     >
-      <h2 className="text-gradient text-center text-3xl lg:text-5xl w-full">
+      <h2 className="text-gradient text-center text-4xl md:text-5xl w-full">
         Contact Me
       </h2>
       <form
         action="/api/contactform"
         method="post"
         onSubmit={handleSubmit}
-        className="flex flex-col items-center justify-center gap-7 max-w-2xl p-16 mx-auto text-xl text-blue-50 border-cyan-600 rounded-lg shadow-red-600 shadow-sm [&>div]:mx-auto [&>div]:flex [&>div]:flex-col [&>div]:items-start [&>div]:justify-center [&>div]:gap-1 [&>div]:w-full [&>div>*]:w-full [&>div>input]:border [&>div>input]:border-cyan-600 focus:[&>div>input]:border-blue-300 [&>div>input]:bg-inherit [&>div>input]:rounded-md border [&>div>input]:outline-none [&>div>input]:px-2 [&>div>input]:py-1 [&>div>input] [&>div>textarea]:border-cyan-600 focus:[&>div>textarea]:border-blue-300 [&>div>label]:ml-1"
+        className="flex flex-col items-center justify-center gap-7 max-w-2xl px-4 py-6 md:p-8 lg:p-16 mx-auto text-xl text-blue-50 rounded-lg [&>div]:mx-auto [&>div]:flex [&>div]:flex-col [&>div]:items-start [&>div]:justify-center [&>div]:gap-1 [&>div]:w-full [&>div>*]:w-full [&>div>input]:border [&>div>input]:border-cyan-600 focus:[&>div>input]:border-blue-300 [&>div>input]:bg-inherit [&>div>input]:rounded-md [&>div>input]:outline-none [&>div>input]:px-2 [&>div>input]:py-1 [&>div>input] [&>div>textarea]:border-cyan-600 focus:[&>div>textarea]:border-blue-300 [&>div>label]:ml-1"
       >
         <div>
           <label htmlFor="first">First Name*</label>
@@ -84,6 +81,9 @@ const ContactMe = (): JSX.Element => {
         <Button variant="" type="submit">
           Get in Touch
         </Button>
+        {name && (
+          <p className="text-gradient-hero">{`Thank you ${name}. Your message has sent to me.`}</p>
+        )}
       </form>
     </section>
   )
