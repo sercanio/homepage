@@ -42,7 +42,7 @@ const ContactMe = (): JSX.Element => {
   return (
     <section
       id="contact"
-      className="bg-gradient-to-br from-indigo-900 to-rose-900 flex flex-col w-full px-2 md:px-6 lg:px-8 pt-12 pb-24 mx-auto "
+      className="bg-gradient-to-br from-indigo-900 to-rose-900 flex flex-col w-full px-2 md:px-6 lg:px-8 pt-12 pb-24 max-w-[1920px] mx-auto "
     >
       <h2 className="text-gradient text-center text-4xl md:text-5xl w-full">
         Contact Me
