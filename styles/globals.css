@@ -36,9 +36,9 @@
   }
   body {
     @apply w-full h-full bg-skin-base dark:bg-skin-dark opacity-[92%] overflow-x-hidden;
-    background-image: linear-gradient(#45f766 1px, transparent 1px),
-      linear-gradient(to right, #45f766 1px, #6969ef 1px);
-    background-size: 12px 12px;
+    background-image: linear-gradient(#45f766ba 1px, transparent 1px),
+      linear-gradient(to right, #45f766ba 1px, #6969efba 1px);
+    background-size: 16px 16px;
   }
 
   h1,

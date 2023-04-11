@@ -1,6 +1,9 @@
+import Button from '@/components/Button'
+import ContactMe from '@/components/ContactMe'
 import TechStack from '@/components/TechStack'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -9,7 +12,7 @@ export default function Home() {
         <title>Sercan Ateş - Web Developer</title>
         <meta name="description" content="Sercan Ateş's personal website." />
       </Head>
-      <section className="flex flex-col w-full mt-14 sm:mt-24 md:mt-28">
+      <section className="flex flex-col w-full mt-14 sm:mt-24 md:mt-28 max-w-[1920px] mx-auto">
         <div className="flex flex-col justify-center items-center gap-20 px-8 sm:px-16 md:px-32 lg:px-64">
           <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gradient-hero text-center max-w-3xl">
             Hi! I&apos;m Sercan Ateş a Software Developer
@@ -36,6 +39,9 @@ export default function Home() {
               who can deliver modern and inclusive web design solutions.
               <span className="animate-cursorBlink">&nbsp;|</span>
             </p>
+            <Link href="#contact">
+              <Button variant="">Contact Me</Button>
+            </Link>
           </div>
         </div>
         <svg
@@ -87,6 +93,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <ContactMe />
     </>
   )
 }

@@ -14,7 +14,7 @@ const TechStack = () => {
           <g
             id="SVGRepo_tracerCarrier"
             strokeLinecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             <circle cx="16" cy="16" r="14" fill="#1794D4"></circle>
@@ -46,7 +46,7 @@ const TechStack = () => {
           <g
             id="SVGRepo_tracerCarrier"
             strokeLinecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             <path
@@ -96,7 +96,7 @@ const TechStack = () => {
           <g
             id="SVGRepo_tracerCarrier"
             strokeLinecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             <title>file_type_vscode</title>
@@ -127,7 +127,7 @@ const TechStack = () => {
           <g
             id="SVGRepo_tracerCarrier"
             strokeLinecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             <path
@@ -165,7 +165,7 @@ const TechStack = () => {
           <g
             id="SVGRepo_tracerCarrier"
             strokeLinecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             <title>SCSS</title>
@@ -192,7 +192,7 @@ const TechStack = () => {
           <g
             id="SVGRepo_tracerCarrier"
             strokeLinecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             <title>CSS3s</title>
@@ -253,7 +253,7 @@ const TechStack = () => {
           <g
             id="SVGRepo_tracerCarrier"
             strokeLinecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             <g>
@@ -343,7 +343,7 @@ const TechStack = () => {
           <g
             id="SVGRepo_tracerCarrier"
             strokeLinecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           ></g>
           <g id="SVGRepo_iconCarrier">
             <g>
