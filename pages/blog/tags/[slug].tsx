@@ -32,7 +32,7 @@ export default function TagPage({
           content={`Sercan Ateş's personal web logs about ${slug}`}
         />
       </Head>
-      <p className="text-xl md:text-2xl font-bold px-[14px] xl:px-1 mb-4 mx-auto break-word">
+      <p className="text-xl md:text-2xl font-bold px-[14px] xl:px-1 mx-auto break-word -mb-16 mt-20">
         Posts about <q>{slug}</q>:
       </p>
       <BlogHome posts={posts} filteredPosts={filteredPosts} />
