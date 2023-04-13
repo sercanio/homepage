@@ -31,12 +31,11 @@ export default function Home() {
               <span className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-600 via-violet-600 to-lime-400 absolute top-40 -left-16 opacity-60 z-0" />
             </div>
             <p className="leading-7 tracking-wide text-lg xl:text-xl text-center px-2">
-              I specialize in creating contemporary, resilient, and inclusive
-              Web user interfaces and design systems for enterprises. My
-              emphasis on responsive design, performance, and accessibility
-              ensures that the products I create are user-friendly and
-              accessible to all. If you&apos;re looking for a Front End Engineer
-              who can deliver modern and inclusive web design solutions.
+              I create result oriented and resilient web applications, user
+              interfaces and design systems for both enterprises and
+              individuals. I focus on responsiveness, accessibility and
+              performance on my digital products. You can contact me if you need
+              a web developer for your team.
               <span className="animate-cursorBlink">&nbsp;|</span>
             </p>
             <Link href="#contact">
