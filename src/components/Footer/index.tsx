@@ -4,17 +4,16 @@ const Footer = () => {
     <footer className="bg-gray-900 w-full max-w-[1920px] mx-auto pt-12 md:pt-20 lg:pt-24 pb-8">
       <div className="container mx-auto px-6 py-4 flex justify-between items-start gap-8 lg:gap-0 flex-wrap">
         <div className="self-end order-2 lg:order-first">
-          {/* <p className="text-gray-400">123 Main Street, Anytown USA 12345</p> */}
           <p className="text-sm text-gray-400 mb-2">
             Sercan Ateş © {new Date().getFullYear()} | All rights reserved
           </p>
         </div>
-        <div className="flex items-baseline gap-24 lg:gap-32 xl:gap-48 2xl:gap-64">
+        <div className="flex items-baseline gap-16 sm:gap-24 lg:gap-32 xl:gap-48 2xl:gap-64">
           <div className="flex flex-col gap-4">
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+            <h3 className="text-base sm:text-xl md:text-2xl ">
               Social Accounts
             </h3>
-            <div className="flex flex-col text-xl [&>a]:flex [&>a]:gap-2 [&>a]:items-center [&>a]:text-gray-400 hover:[&>a]:text-gray-100 [&>a]:py-2">
+            <div className="flex flex-col [&>a]:flex [&>a]:gap-2 [&>a]:items-center [&>a]:text-gray-400 hover:[&>a]:text-gray-100 [&>a]:py-2 text-base">
               <Link href="https://twitter.com/sercan_io">
                 <svg
                   stroke="currentColor"
@@ -78,10 +77,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-              Navigation
-            </h3>
-            <div className="flex flex-col text-xl [&>a]:text-gray-400 hover:[&>a]:text-gray-100 [&>a]:py-2">
+            <h3 className="text-base sm:text-xl md:text-2xl ">Navigation</h3>
+            <div className="flex flex-col text-base [&>a]:text-gray-400 hover:[&>a]:text-gray-100 [&>a]:py-2">
               <Link href="/">Home</Link>
               <Link href="/blog">Blog</Link>
               <Link href="#contact">Contact Form</Link>
