@@ -5,12 +5,14 @@ const Header = (): JSX.Element => {
     <header className="sticky -mt-1 top-0 z-50 color-transition pb-2 backdrop-blur-[7px] border-b border-gray-50 border-opacity-10">
       <nav className="flex justify-between items-center mb-1 max-w-5xl xl:max-w-5xl mx-auto px-3 xl:px-1">
         <h1 className="animate-scale text-gradient">
-          sercan.i
-          <span className="state">
-            <span className="ball-arc">
-              <span className="ball"></span>
+          <Link href="/">
+            sercan.i
+            <span className="state">
+              <span className="ball-arc">
+                <span className="ball"></span>
+              </span>
             </span>
-          </span>
+          </Link>
         </h1>
         <div className="flex items-center gap-8 pr-3">
           <h2 className="text-xl font-bold text-gradient">
