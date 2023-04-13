@@ -41,11 +41,13 @@ const ContactMe = (): JSX.Element => {
 
   return (
     <>
-      <video autoPlay muted loop className="mx-auto">
-        <source src="/video-example.webm" type="video/webm" />
-        <source src="videos/introducing.mp4" type="video/mp4" />
-        Sorry, your browser doesn&apos;t support videos.
-      </video>
+      <div className="bg-pattern max-w-[1920px]">
+        <video autoPlay muted loop className="mx-auto opacity-95">
+          <source src="/video-example.webm" type="video/webm" />
+          <source src="videos/introducing.mp4" type="video/mp4" />
+          Sorry, your browser doesn&apos;t support videos.
+        </video>
+      </div>
       <section
         id="contact"
         className=" bg-gradient-to-br from-indigo-900 to-rose-900 flex justify-evenly items-center gap-4 w-full px-2 md:px-6 lg:px-8 pt-12 pb-24 max-w-[1920px] mx-auto"

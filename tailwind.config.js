@@ -24,12 +24,15 @@ module.exports = {
         skin: {
           // default theme
           base: 'var(--color-bg-base)',
+          baseFooter: 'var(--color-bg-base-footer)',
           baseCard: 'var(--color-bg-base-card)',
           baseCardHover: 'var(--color-bg-base-card-hover)',
           baseTag: 'var(--color-bg-base-tag)',
           baseSideBarItemHover: 'var(--color-bg-base-sidebar-item-hover)',
+
           // dark theme
           dark: 'var(--color-bg-dark)',
+          darkFooter: 'var(--color-bg-dark-footer)',
           darkCard: 'var(--color-bg-dark-card)',
           darkCardHover: 'var(--color-bg-dark-card-hover)',
           darkTag: 'var(--color-bg-dark-tag)',

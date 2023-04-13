@@ -1,19 +1,19 @@
 import Link from 'next/link'
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 w-full max-w-[1920px] mx-auto pt-12 md:pt-20 lg:pt-24 pb-8">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-start gap-8 lg:gap-0 flex-wrap">
+    <footer className="w-full max-w-[1920px] mx-auto overflow-hidden">
+      <div className="flex justify-between items-start gap-8 lg:gap-0 flex-wrap bg-skin-baseFooter dark:bg-skin-darkFooter py-4 px-2 sm:px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-48 ">
         <div className="self-end order-2 lg:order-first">
-          <p className="text-sm text-gray-400 mb-2">
+          <p className="text-sm text-skin-base dark:text-skin-dark mb-2">
             Sercan Ateş © {new Date().getFullYear()} | All rights reserved
           </p>
         </div>
         <div className="flex items-baseline gap-16 sm:gap-24 lg:gap-32 xl:gap-48 2xl:gap-64">
           <div className="flex flex-col gap-4">
-            <h3 className="text-base sm:text-xl md:text-2xl ">
+            <h3 className="text-base sm:text-xl md:text-2xl text-skin-base dark:text-skin-dark">
               Social Accounts
             </h3>
-            <div className="flex flex-col [&>a]:flex [&>a]:gap-2 [&>a]:items-center [&>a]:text-gray-400 hover:[&>a]:text-gray-100 [&>a]:py-2 text-base">
+            <div className="flex flex-col [&>a]:flex [&>a]:gap-2 [&>a]:items-center [&>a]:text-skin-base dark:[&>a]:text-skin-dark hover:[&>a]:text-gray-900 dark:hover:[&>a]:text-gray-100 [&>a]:py-2 text-base">
               <Link href="https://twitter.com/sercan_io">
                 <svg
                   stroke="currentColor"
@@ -77,8 +77,10 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-base sm:text-xl md:text-2xl ">Navigation</h3>
-            <div className="flex flex-col text-base [&>a]:text-gray-400 hover:[&>a]:text-gray-100 [&>a]:py-2">
+            <h3 className="text-base sm:text-xl md:text-2xl text-skin-base dark:text-skin-dark">
+              Navigation
+            </h3>
+            <div className="flex flex-col text-base [&>a]:text-skin-base dark:[&>a]:text-skin-dark hover:[&>a]:text-gray-900 dark:hover:[&>a]:text-gray-100 [&>a]:py-2">
               <Link href="/">Home</Link>
               <Link href="/blog">Blog</Link>
               <Link href="#contact">Contact Form</Link>

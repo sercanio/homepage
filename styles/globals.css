@@ -7,6 +7,7 @@
     /* default theme */
     --color-text-base: #1f2937;
     --color-bg-base: #ffffff;
+    --color-bg-base-footer: #e4e4e4;
     --color-bg-base-tag: #f5f5f5;
     --color-bg-base-card: inherit;
     --color-bg-base-card-hover: #f5f5f5;
@@ -16,11 +17,12 @@
 
     /* dark theme */
     --color-text-dark: #e0e0e0;
-    --color-bg-dark: #141414;
+    --color-bg-dark: #190d2e;
+    --color-bg-dark-footer: #241147;
     --color-bg-dark-card: inherit;
-    --color-bg-dark-card-hover: #172b29;
-    --color-bg-dark-tag: #172b29;
-    --color-bg-dark-sidebar-item-hover: #172b29;
+    --color-bg-dark-card-hover: #22113f;
+    --color-bg-dark-tag: #2d1b4b;
+    --color-bg-dark-sidebar-item-hover: #2d1b4b;
     --color-border-base: #1f2937;
     --color-border-dark: #e0e0e0;
   }
@@ -35,10 +37,7 @@
     height: 100vh;
   }
   body {
-    @apply w-full h-full bg-skin-base dark:bg-skin-dark opacity-[92%] overflow-x-hidden;
-    background-image: linear-gradient(#45f766ba 1px, transparent 1px),
-      linear-gradient(to right, #45f766ba 1px, #6969efba 1px);
-    background-size: 16px 16px;
+    @apply w-full h-full overflow-x-hidden;
   }
 
   h1,
@@ -50,7 +49,7 @@
     @apply text-2xl font-bold leading-9 mt-4;
   }
   p {
-    @apply text-base my-4;
+    @apply text-base sm:text-lg my-4;
   }
 
   code {
@@ -81,6 +80,13 @@
   }
   .text-gradient {
     @apply hover:scale-[1.1];
+  }
+
+  .bg-pattern {
+    @apply w-full h-full  opacity-[92%] overflow-x-hidden;
+    background-image: linear-gradient(#45f766ba 1px, transparent 1px),
+      linear-gradient(to right, #45f766ba 1px, #6969ef00 1px);
+    background-size: 16px 16px;
   }
 }
 
