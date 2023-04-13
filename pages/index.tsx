@@ -13,11 +13,11 @@ export default function Home() {
         <meta name="description" content="Sercan Ateş's personal website." />
       </Head>
       <section className="flex flex-col w-full mt-14 sm:mt-24 md:mt-28 max-w-[1920px] mx-auto">
-        <div className="flex flex-col justify-center items-center gap-20 px-8 sm:px-16 md:px-32 lg:px-64">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gradient-hero text-center max-w-3xl">
+        <div className="flex flex-col justify-center items-center gap-20 px-0 sm:px-16 md:px-32 lg:px-64">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gradient-hero text-center max-w-3xl px-2">
             Hi! I&apos;m Sercan Ateş a Software Developer
           </h2>
-          <div className="flex flex-col gap-12 justify-between items-center max-w-3xl">
+          <div className="flex flex-col gap-8 justify-between items-center max-w-3xl overflow-x-clip">
             <div className="w-fit relative">
               <span className="w-20 h-20 rounded-full bg-gradient-to-br from-sky-600 via-violet-600 to-lime-400 absolute -top-10 -left-2 opacity-50 z-10" />
               <Image
@@ -30,7 +30,7 @@ export default function Home() {
               <span className="w-32 h-32 rounded-full bg-gradient-to-br from-sky-600 via-violet-600 to-lime-400 absolute top-24 -right-16 opacity-30 z-0" />
               <span className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-600 via-violet-600 to-lime-400 absolute top-40 -left-16 opacity-60 z-0" />
             </div>
-            <p className="leading-7 tracking-wide text-lg text-center">
+            <p className="leading-7 tracking-wide text-lg xl:text-xl text-center px-2">
               I specialize in creating contemporary, resilient, and inclusive
               Web user interfaces and design systems for enterprises. My
               emphasis on responsive design, performance, and accessibility
@@ -40,7 +40,9 @@ export default function Home() {
               <span className="animate-cursorBlink">&nbsp;|</span>
             </p>
             <Link href="#contact">
-              <Button variant="">Contact Me</Button>
+              <Button variant="" className="text-base: md:text-xl">
+                Contact Me
+              </Button>
             </Link>
           </div>
         </div>
