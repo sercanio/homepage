@@ -13,25 +13,6 @@ export const CreateArchive = ({ posts }: { posts: PostMeta[] }) => {
     return years.filter(element => element === year).length
   }
 
-  const articlePostedMonthsIn = (year: string) => {
-    const months: string[] = []
-    const monthsAndArticles: MonthsAndArticles[] = []
-    posts.map(post => {
-      if (post.date.split(',')[1].trim() === year)
-        months.push(post.date.split(' ')[0].trim())
-    })
-    const uniqueMonthsSet = new Set(months)
-    const uniqueMonthsArray = Array.from(uniqueMonthsSet)
-    uniqueMonthsArray.forEach(uniqueMonth => {
-      const monthArr = months.filter(month => month === uniqueMonth)
-      monthsAndArticles.push({
-        month: uniqueMonth,
-        articleNumber: monthArr.length
-      })
-    })
-    return monthsAndArticles
-  }
-
   const handleArchiveClick = (event: React.MouseEvent<HTMLLIElement>) => {
     const listItem = event.target as HTMLElement
   }
@@ -41,7 +22,9 @@ export const CreateArchive = ({ posts }: { posts: PostMeta[] }) => {
       {posts.length > 0 && (
         <section className="flex-col justify-center h-max w-full xl:w-max px-4 pt-4 pb-8 rounded-md">
           <div className="p-2">
-            <strong className="uppercase font-bold px-2">archive</strong>
+            <strong className="uppercase font-bold text-gradient-hero px-2">
+              archive
+            </strong>
           </div>
           <hr className="border-t-2 dark:border-skin-dark mb-2 w-52 xl:mx-auto" />
           <ul className="justify-center ml-2">
@@ -52,7 +35,7 @@ export const CreateArchive = ({ posts }: { posts: PostMeta[] }) => {
                 className="hover:bg-skin-baseSideBarItemHover dark:hover:bg-skin-darkSideBarItemHover px-2 py-1"
               >
                 <Link
-                  href={`/archive/${year}`}
+                  href={`/blog/archive/${year}`}
                   className="hover:underline  cursor-pointer"
                 >
                   {`${year} (${articleNumberInYear(year)})`}

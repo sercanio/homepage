@@ -7,7 +7,9 @@ const CreateRelatedArticles = ({ post }: { post: MDXPost }) => {
       {post.meta.related.length !== 0 && (
         <>
           <div className="p-2">
-            <strong className="uppercase font-bold px-2">Related</strong>
+            <strong className="uppercase font-bold text-gradient-hero px-2">
+              Related
+            </strong>
           </div>
           <hr className="border-t-1 xl:border-t-2 dark:border-skin-dark mb-2" />
         </>

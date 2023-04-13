@@ -34,14 +34,16 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <title>{post.meta.title}</title>
         <meta name="description" content={post.meta.title} />
       </Head>
-      <div className="flex flex-col xl:flex-row xl:gap-4 justify-center h-full scroll-smooth">
-        <article className="relative py-3 px-3 xl:px-1 h-full mx-auto xl:mx-0 flex-1">
-          <div className="relative z-10 flex-5 ">
-            <h2 className="text-3xl font-bold mb-4 mt-0">{post.meta.title}</h2>
+      <div className="flex flex-col xl:flex-row xl:gap-4 justify-center h-full scroll-smooth max-w-5xl mt-16 md:mt-20 md:mb-6 px-1">
+        <article className="relative px-3 xl:px-1 h-full mx-auto xl:mx-0 flex-1">
+          <div className="relative z-10 flex-5">
+            <h2 className="text-3xl font-bold text-gradient-hero mb-4 mt-0">
+              {post.meta.title}
+            </h2>
             {post.meta.tags && (
               <div className="flex flex-wrap gap-2 my-4">
                 {post.meta.tags.map(tag => (
-                  <Link href={`/tags/${tag}`} key={tag}>
+                  <Link href={`/blog/tags/${tag}`} key={tag}>
                     <span
                       key={tag}
                       className="flex items-center text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-skin-darkTag hover:bg-inherit px-2 py-[2px] rounded hover:underline"
@@ -52,7 +54,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 ))}
               </div>
             )}
-            <p className="md:absolute md:top-0 md:right-1 ml-2 md:ml-0 text-sm text-gray-500 dark:text-gray-300">
+            <p className="md:absolute md:top-0 md:right-1 ml-2 md:ml-0 text-base text-gray-500 dark:text-gray-300">
               {' '}
               {post.meta.date}
             </p>
@@ -61,7 +63,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
               {...post.source}
               components={{ YouTube, Image, Figure }}
             />
-            <div className="flex gap-3 items-center mt-20">
+            <div className="flex gap-3 items-center mt-6">
               <p>Share :</p>
               <PocketShareButton
                 url={`https://sercan.io/posts/${post.meta.slug}`}
@@ -94,11 +96,10 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 <TelegramIcon size={32} round />
               </TelegramShareButton>
             </div>
-            <hr className="pb-4 border-t-1 mt-3 -mb-2 hidden xl:block" />
           </div>
         </article>
         <aside
-          className="sticky top-0 flex flex-col gap-1 h-max max-w-[280px]"
+          className="sticky top-16 flex flex-col gap-1 h-max max-w-[280px]"
           style={{ contentVisibility: 'auto' }}
         >
           <CreateSections post={post} />

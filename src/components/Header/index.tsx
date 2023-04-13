@@ -1,25 +1,35 @@
 import Link from 'next/link'
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
-    <header className="bg-skin-base dark:bg-skin-dark color-transition">
-      <nav className="z-10 mb-1 max-w-5xl xl:max-w-5xl mx-auto px-3 xl:px-1">
-        <h1 className="text-3xl font-bold">
-          <Link href="/" className="flex items-center">
-            <span className=" text-skin-primary">
-              <span className=" text-skin-primary">sercan</span>
-              @web{':'}
-              <span className=" text-skin-tilde">~</span>
-              {'$'}
-              &nbsp;
+    <header className="sticky -mt-1 top-0 z-50 color-transition pb-2 backdrop-blur-[7px] border-b border-gray-50 border-opacity-10">
+      <nav className="flex justify-between items-center mb-1 max-w-5xl xl:max-w-5xl mx-auto px-3 xl:px-1">
+        <h1 className="animate-scale text-gradient">
+          <Link href="/">
+            sercan.i
+            <span className="state">
+              <span className="ball-arc">
+                <span className="ball"></span>
+              </span>
             </span>
-            <span className="animate-cursorBlink mb-1 text-skin-caret">|</span>
-            <h1 className="sr-only">
-              {/* eslint-disable-next-line react/no-unescaped-entities*/}
-              Sercan Ateş's personal web logs.
-            </h1>
           </Link>
         </h1>
+        <div className="flex items-center gap-8 pr-3">
+          <h2 className="text-xl font-bold text-gradient">
+            <Link href="/blog" className="flex items-center">
+              Blog
+            </Link>
+          </h2>
+          <h2 className="text-xl font-bold text-gradient">
+            <Link href="/" className="flex items-center">
+              Portfolio
+            </Link>
+          </h2>
+        </div>
+        <p className="sr-only">
+          {/* eslint-disable-next-line react/no-unescaped-entities*/}
+          Sercan Ateş's personal web logs.
+        </p>
       </nav>
     </header>
   )

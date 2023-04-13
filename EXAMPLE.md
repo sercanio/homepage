@@ -38,6 +38,17 @@ Facere debitis dicta facilis, incidunt nostrum quasi. Illo nemo voluptate qui eu
   quality={100}
 />
 
+<Figure
+  src="/images/earthquake/earthquake-map.jpeg"
+  width={1200}
+  height={1200}
+  alt="Map of Eastern Anatolian Fault and Earthquakes on it."
+  quality={85}
+  caption="Map of Eastern Anatolian Fault and Earthquakes on it."
+  source="https://www.volcanocafe.org/the-east-anatolian-fault/
+"
+/>
+
 Officia illum neque aliquam. Totam, rerum repellat quos obcaecati accusantium ullam voluptatum cum, expedita soluta, perspiciatis nesciunt ut id corrupti inventore quo eveniet asperiores eos illo ipsam exercitationem blanditiis voluptatibus!
 Voluptatibus non perferendis dolore quis et itaque expedita quisquam illo quod aliquid ipsa incidunt, necessitatibus quos consectetur ea harum dicta veritatis ipsam deleniti provident iusto, rerum sed dolor. Aspernatur, ipsa.
 Facere debitis dicta facilis, incidunt nostrum quasi. Illo nemo voluptate qui eum necessitatibus exercitationem aliquam odio vero quibusdam a impedit minima quo corporis, enim id natus suscipit saepe laudantium nihil!

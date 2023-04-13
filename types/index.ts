@@ -76,3 +76,14 @@ export interface FigureTypes {
   caption: string
   source: string
 }
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: string
+}
+
+export interface ContactFormTypes {
+  firstName: string
+  lastName: string
+  email: string
+}

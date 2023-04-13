@@ -7,10 +7,10 @@ const Layout = ({ children, className }: LayoutChildrenProps) => {
   return (
     <>
       <div
-        className={`${className} flex flex-col gap-12 justify-center bg-skin-base dark:bg-skin-dark text-skin-base dark:text-skin-dark color-transition min-w-fit pt-1`}
+        className={`${className} relative flex flex-col justify-center bg-skin-base dark:bg-skin-dark text-skin-base dark:text-skin-dark color-transition pt-1`}
       >
         <Header />
-        <Main className="max-w-5xl mx-auto">{children}</Main>
+        <Main>{children}</Main>
         <Footer />
       </div>
     </>
