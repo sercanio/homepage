@@ -9,7 +9,7 @@ const Footer = () => {
             Sercan Ateş © {new Date().getFullYear()} | All rights reserved
           </p>
         </div>
-        <div className="flex gap-24 lg:gap-32 xl:gap-48 2xl:gap-64">
+        <div className="flex items-baseline gap-24 lg:gap-32 xl:gap-48 2xl:gap-64">
           <div className="flex flex-col gap-4">
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
               Social Accounts
