@@ -42,7 +42,7 @@ const ContactMe = (): JSX.Element => {
   return (
     <>
       <div className="bg-pattern max-w-[1920px]">
-        <video autoPlay muted loop className="mx-auto opacity-95">
+        <video autoPlay muted loop playsInline className="mx-auto opacity-95">
           <source src="/video-example.webm" type="video/webm" />
           <source src="videos/introducing.mp4" type="video/mp4" />
           Sorry, your browser doesn&apos;t support videos.
