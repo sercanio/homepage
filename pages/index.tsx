@@ -95,6 +95,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="bg-pattern max-w-[1920px]">
+        <video autoPlay muted loop playsInline className="mx-auto opacity-95">
+          <source src="/video-example.webm" type="video/webm" />
+          <source src="videos/introducing.mp4" type="video/mp4" />
+          Sorry, your browser doesn&apos;t support videos.
+        </video>
+      </section>
       <ContactMe />
     </>
   )

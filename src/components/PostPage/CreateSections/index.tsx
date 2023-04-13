@@ -8,7 +8,9 @@ const CreateSections = ({ post }: { post: MDXPost }) => {
   return (
     <section className="px-4 pt-4 pb-8 hidden xl:block h-max">
       <div className="p-2">
-        <strong className="uppercase font-bold px-2">Sections</strong>
+        <strong className="uppercase font-bold text-gradient-hero px-2">
+          Sections
+        </strong>
       </div>
       <hr className="border-t-2 dark:border-skin-dark mb-2" />
       <ul className="p-2">
@@ -20,7 +22,7 @@ const CreateSections = ({ post }: { post: MDXPost }) => {
                 activeSection === heading.text
                   ? 'bg-gray-200 dark:bg-gray-800'
                   : ''
-              } dark:text-gray-100 hover:bg-skin-baseSideBarItemHover dark:hover:bg-skin-darkSideBarItemHover leading-7 `}
+              } dark:text-gray-100 hover:bg-skin-baseSideBarItemHover dark:hover:bg-skin-darkSideBarItemHover leading-`}
               style={{
                 paddingLeft: heading.level * 8
               }}

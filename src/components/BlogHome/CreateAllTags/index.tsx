@@ -12,7 +12,9 @@ export const CreateAllTags = ({ posts }: { posts: PostMeta[] }) => {
       {posts.length > 0 && (
         <section className="flex-col justify-center h-max w-full xl:w-max rounded-md px-4 pt-4 pb-8">
           <div className="p-2">
-            <strong className="uppercase font-bold px-2">all tags</strong>
+            <strong className="uppercase font-bold text-gradient-hero px-2">
+              all tags
+            </strong>
           </div>
           <hr className="border-t-2 dark:border-skin-dark mb-2 w-52 xl:mx-auto" />
           <ul className="justify-center px-2 [&>li]:mx-1 [&>li]:my-2 [&>li]:cursor-pointer">

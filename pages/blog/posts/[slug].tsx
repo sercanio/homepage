@@ -34,10 +34,12 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <title>{post.meta.title}</title>
         <meta name="description" content={post.meta.title} />
       </Head>
-      <div className="flex flex-col xl:flex-row xl:gap-4 justify-center h-full scroll-smooth max-w-5xl mt-20 px-1">
-        <article className="relative py-3 px-3 xl:px-1 h-full mx-auto xl:mx-0 flex-1">
+      <div className="flex flex-col xl:flex-row xl:gap-4 justify-center h-full scroll-smooth max-w-5xl mt-16 md:mt-20 md:mb-6 px-1">
+        <article className="relative px-3 xl:px-1 h-full mx-auto xl:mx-0 flex-1">
           <div className="relative z-10 flex-5">
-            <h2 className="text-3xl font-bold mb-4 mt-0">{post.meta.title}</h2>
+            <h2 className="text-3xl font-bold text-gradient-hero mb-4 mt-0">
+              {post.meta.title}
+            </h2>
             {post.meta.tags && (
               <div className="flex flex-wrap gap-2 my-4">
                 {post.meta.tags.map(tag => (
@@ -52,7 +54,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 ))}
               </div>
             )}
-            <p className="md:absolute md:top-0 md:right-1 ml-2 md:ml-0 text-sm text-gray-500 dark:text-gray-300">
+            <p className="md:absolute md:top-0 md:right-1 ml-2 md:ml-0 text-base text-gray-500 dark:text-gray-300">
               {' '}
               {post.meta.date}
             </p>
@@ -61,7 +63,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
               {...post.source}
               components={{ YouTube, Image, Figure }}
             />
-            <div className="flex gap-3 items-center mt-20">
+            <div className="flex gap-3 items-center mt-6">
               <p>Share :</p>
               <PocketShareButton
                 url={`https://sercan.io/posts/${post.meta.slug}`}
@@ -94,7 +96,6 @@ export default function PostPage({ post }: { post: MDXPost }) {
                 <TelegramIcon size={32} round />
               </TelegramShareButton>
             </div>
-            <hr className="pb-4 border-t-1 mt-3 -mb-2 hidden xl:block" />
           </div>
         </article>
         <aside

@@ -67,6 +67,10 @@
   article p a:hover {
     text-decoration: underline;
   }
+
+  article h2 {
+    @apply text-gradient-hero
+  }
 }
 
 @layer utilities {
