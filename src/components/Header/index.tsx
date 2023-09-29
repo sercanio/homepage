@@ -14,18 +14,6 @@ const Header = (): JSX.Element => {
             </span>
           </Link>
         </h1>
-        <div className="flex items-center gap-8 pr-3">
-          <h2 className="text-xl font-bold text-gradient">
-            <Link href="/blog" className="flex items-center">
-              Blog
-            </Link>
-          </h2>
-          <h2 className="text-xl font-bold text-gradient">
-            <Link href="/" className="flex items-center">
-              Portfolio
-            </Link>
-          </h2>
-        </div>
         <p className="sr-only">
           {/* eslint-disable-next-line react/no-unescaped-entities*/}
           Sercan Ateş's personal web logs.

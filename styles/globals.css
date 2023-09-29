@@ -12,12 +12,10 @@
     --color-bg-base-card: inherit;
     --color-bg-base-card-hover: #f5f5f5;
     --color-bg-base-sidebar-item-hover: #ebe9e9;
-    --color-caret: #b4b4b4;
-    --color-tilde: #137e8f; /* tilde color for commant prompt effect */
 
     /* dark theme */
     --color-text-dark: #e0e0e0;
-    --color-bg-dark: #190d2e;
+    --color-bg-dark: #120725;
     --color-bg-dark-footer: #241147;
     --color-bg-dark-card: inherit;
     --color-bg-dark-card-hover: #22113f;
@@ -37,7 +35,8 @@
     height: 100vh;
   }
   body {
-    @apply w-full h-full overflow-x-hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    @apply w-full h-full overflow-x-hidden bg-skin-base dark:bg-skin-dark;
   }
 
   h1,
@@ -69,7 +68,7 @@
   }
 
   article h2 {
-    @apply text-gradient-hero
+    @apply text-gradient-hero;
   }
 }
 

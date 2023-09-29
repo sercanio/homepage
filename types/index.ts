@@ -1,4 +1,5 @@
 import { MDXRemoteSerializeResult } from 'next-mdx-remote/dist/types'
+import React from 'react'
 
 export interface ThemeState {
   theme: string
@@ -12,12 +13,11 @@ export interface HomeProps {
   backgroundColor?: string
 }
 
-export interface LayoutChildrenProps {
+export interface IChildren {
   children: React.ReactNode
-  className?: string
 }
-export interface MainTypes {
-  children: React.ReactNode
+
+export interface MainTypes extends IChildren {
   className?: string
 }
 

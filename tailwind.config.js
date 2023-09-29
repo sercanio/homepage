@@ -15,9 +15,7 @@ module.exports = {
       textColor: {
         skin: {
           base: 'var(--color-text-base)',
-          dark: 'var(--color-text-dark)',
-          tilde: 'var(--color-tilde)',
-          caret: 'var(--color-caret)'
+          dark: 'var(--color-text-dark)'
         }
       },
       backgroundColor: {

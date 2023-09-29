@@ -35,7 +35,7 @@ export const CreateArchive = ({ posts }: { posts: PostMeta[] }) => {
                 className="hover:bg-skin-baseSideBarItemHover dark:hover:bg-skin-darkSideBarItemHover px-2 py-1"
               >
                 <Link
-                  href={`/blog/archive/${year}`}
+                  href={`/archive/${year}`}
                   className="hover:underline  cursor-pointer"
                 >
                   {`${year} (${articleNumberInYear(year)})`}
