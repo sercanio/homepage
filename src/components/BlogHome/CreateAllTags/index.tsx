@@ -21,7 +21,7 @@ export const CreateAllTags = ({ posts }: { posts: PostMeta[] }) => {
             {tagsArr.map(tag => (
               <li key={Math.random()}>
                 <Link
-                  href={`/blog/tags/${tag}`}
+                  href={`/tags/${tag}`}
                   key={tag}
                   className="flex items-center hover:bg-inherit text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-skin-darkTag px-2 py-[2px] rounded hover:underline w-max"
                 >

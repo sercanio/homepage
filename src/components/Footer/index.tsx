@@ -81,9 +81,7 @@ const Footer = () => {
               Navigation
             </h3>
             <nav className="flex flex-col [&>a]:flex [&>a]:gap-2 [&>a]:items-center [&>a]:text-skin-base dark:[&>a]:text-skin-dark hover:[&>a]:text-gray-900 dark:hover:[&>a]:text-gray-100 [&>a]:py-2 text-base">
-              <Link href="/">Portfolio</Link>
-              <Link href="/blog">Blog</Link>
-              <Link href="/#contact">Contact Form</Link>
+              <Link href="/">Home</Link>
             </nav>
           </section>
         </section>

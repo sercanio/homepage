@@ -16,10 +16,10 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
           >
             <div className="z-10 flex flex-col gap-1">
               <h2 className="font-bold text-2xl text-gradient-hero">
-                <Link href={`/blog/posts/${post.slug}`}>{post.title}</Link>
+                <Link href={`/posts/${post.slug}`}>{post.title}</Link>
               </h2>
               <p className="text-lg">
-                <Link href={`/blog/posts/${post.slug}`}>
+                <Link href={`/posts/${post.slug}`}>
                   {post.excerpt}
                   <span className="text-gradient-hero">&nbsp;Read more...</span>
                 </Link>
@@ -28,7 +28,7 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
                 <AiOutlineTags />
                 {post.tags.map(tag => (
                   <Link
-                    href={`/blog/tags/${tag}`}
+                    href={`/tags/${tag}`}
                     key={tag}
                     className="flex items-center dark:hover:opacity-80 text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-skin-darkTag px-2 py-px rounded hover:underline"
                   >
