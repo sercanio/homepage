@@ -14,6 +14,7 @@ import 'highlight.js/styles/a11y-dark.css'
 import CreateSections from '@/components/PostPage/CreateSections'
 import CreateRelatedArticles from '@/components/PostPage/CreateRelatedArticles'
 import Figure from '@/components/Figure'
+import { Bibliography } from 'react-bib'
 
 export default function PostPage({ post }: { post: MDXPost }) {
   return (
@@ -49,7 +50,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
             <hr className="py-2 border-t-2" />
             <MDXRemote
               {...post.source}
-              components={{ YouTube, Image, Figure }}
+              components={{ YouTube, Image, Figure, Bibliography }}
             />
             <div className="flex gap-3 items-center mt-6"></div>
           </div>
