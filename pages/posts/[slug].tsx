@@ -9,18 +9,6 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeHighlight from 'rehype-highlight'
 import { getPostFromSlug, getSlugs } from '@/components/api'
-import {
-  EmailShareButton,
-  EmailIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-  PocketShareButton,
-  PocketIcon,
-  TelegramShareButton,
-  TelegramIcon,
-  TwitterShareButton,
-  TwitterIcon
-} from 'next-share'
 import YouTube from '@/components/YouTube/YouTube'
 import 'highlight.js/styles/a11y-dark.css'
 import CreateSections from '@/components/PostPage/CreateSections'
@@ -43,7 +31,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
             {post.meta.tags && (
               <div className="flex flex-wrap gap-2 my-4">
                 {post.meta.tags.map(tag => (
-                  <Link href={`/blog/tags/${tag}`} key={tag}>
+                  <Link href={`/tags/${tag}`} key={tag}>
                     <span
                       key={tag}
                       className="flex items-center text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-skin-darkTag hover:bg-inherit px-2 py-[2px] rounded hover:underline"
@@ -63,39 +51,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
               {...post.source}
               components={{ YouTube, Image, Figure }}
             />
-            <div className="flex gap-3 items-center mt-6">
-              <p>Share :</p>
-              <PocketShareButton
-                url={`https://sercan.io/posts/${post.meta.slug}`}
-                title={post.meta.title}
-              >
-                <PocketIcon size={32} round />
-              </PocketShareButton>
-              <EmailShareButton
-                url={`https://sercan.io/posts/${post.meta.slug}`}
-                subject={`Blog Post: ${post.meta.title} - Sercan Ateş`}
-                body="Check out this blog post:"
-              >
-                <EmailIcon size={32} round />
-              </EmailShareButton>
-              <LinkedinShareButton
-                url={`https://sercan.io/posts/${post.meta.slug}`}
-              >
-                <LinkedinIcon size={32} round />
-              </LinkedinShareButton>
-              <TwitterShareButton
-                url={`https://sercan.io/posts/${post.meta.slug}`}
-                title={post.meta.title}
-              >
-                <TwitterIcon size={32} round />
-              </TwitterShareButton>
-              <TelegramShareButton
-                url={`https://sercan.io/posts/${post.meta.slug}`}
-                title={post.meta.title}
-              >
-                <TelegramIcon size={32} round />
-              </TelegramShareButton>
-            </div>
+            <div className="flex gap-3 items-center mt-6"></div>
           </div>
         </article>
         <aside

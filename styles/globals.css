@@ -12,8 +12,6 @@
     --color-bg-base-card: inherit;
     --color-bg-base-card-hover: #f5f5f5;
     --color-bg-base-sidebar-item-hover: #ebe9e9;
-    --color-caret: #b4b4b4;
-    --color-tilde: #137e8f; /* tilde color for commant prompt effect */
 
     /* dark theme */
     --color-text-dark: #e0e0e0;
@@ -37,6 +35,7 @@
     height: 100vh;
   }
   body {
+    font-family: Arial, Helvetica, sans-serif;
     @apply w-full h-full overflow-x-hidden;
   }
 
@@ -69,7 +68,7 @@
   }
 
   article h2 {
-    @apply text-gradient-hero
+    @apply text-gradient-hero;
   }
 }
 
