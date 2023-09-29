@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
     "analyze": "ANALYZE=true next build",
+    "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
     "postbuild": "next-sitemap"
