@@ -18,8 +18,8 @@ You may be the only person on the street who has a web page. Think about it, you
 
 <Image
   src="/images/why-and-how-i-build-this-blog/they-dont-know-i-have-a-webpage.jpg"
-  width={320}
-  height={320}
+  width={640}
+  height={640}
   alt={`An internet meme. A lonely guy stands in the corner in a house party, watches people and says in mind "They don't know I have a webpage"`}
   quality={75}
   className="mx-auto py-2"
