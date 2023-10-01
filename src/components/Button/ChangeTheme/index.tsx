@@ -18,14 +18,14 @@ const ChangeThemeButton = () => {
   }, [theme])
 
   const iconSize = 1.5
-  const lightThemeIconColor = '#fff'
-  const darkThemeIconColor = '#000'
+  const lightThemeIconColor = '#ffffff'
+  const darkThemeIconColor = '#000000'
 
   const LightThemeIcon = () => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill={`${lightThemeIconColor}`}
+        fill={lightThemeIconColor}
         width={`${iconSize}rem`}
         height={`${iconSize}rem`}
         viewBox="0 0 400 400"
@@ -113,7 +113,7 @@ const ChangeThemeButton = () => {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        fill={`${darkThemeIconColor}`}
+        fill={darkThemeIconColor}
         width={`${iconSize * 0.85}rem`}
         height={`${iconSize * 0.85}rem`}
         viewBox="0 0 400 400"

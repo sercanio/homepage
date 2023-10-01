@@ -45,19 +45,14 @@ module.exports = {
         }
       },
       keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(-20%)' },
-          '100%': { transform: 'translateX(100%)' }
-        },
         scale: {
-          '0%': { transform: 'scale(1), rotate(5deg)' },
-          '50%': { transform: 'scale(1.1) rotate(0)' },
-          '100%': { transform: 'scale(1) rotate(-5deg)' }
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.1)' },
+          '100%': { transform: 'scale(1)' }
         }
       },
       animation: {
-        marquee: 'marquee 50s linear infinite',
-        scale: 'scale 1s ease-in-out forwards'
+        scale: 'scale .5s ease-in-out forwards'
       }
     },
     plugins: [],
