@@ -26,7 +26,7 @@ export const CreateArchive = ({ posts }: { posts: PostMeta[] }) => {
               archive
             </strong>
           </div>
-          <hr className="border-t-2 dark:border-skin-dark mb-2 w-52 xl:mx-auto" />
+          <hr className="border-t-2 border-skin-base dark:border-skin-dark mb-2 w-52 xl:mx-auto" />
           <ul className="justify-center ml-2">
             {uniqueYearsArray.map(year => (
               <li

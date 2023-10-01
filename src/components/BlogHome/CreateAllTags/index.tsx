@@ -16,7 +16,7 @@ export const CreateAllTags = ({ posts }: { posts: PostMeta[] }) => {
               all tags
             </strong>
           </div>
-          <hr className="border-t-2 dark:border-skin-dark mb-2 w-52 xl:mx-auto" />
+          <hr className="border-t-2 border-skin-base dark:border-skin-dark mb-2 w-52 xl:mx-auto" />
           <ul className="justify-center px-2 [&>li]:mx-1 [&>li]:my-2 [&>li]:cursor-pointer">
             {tagsArr.map(tag => (
               <li key={Math.random()}>

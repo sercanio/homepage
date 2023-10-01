@@ -11,7 +11,7 @@ const CreateRelatedArticles = ({ post }: { post: MDXPost }) => {
               Related
             </strong>
           </div>
-          <hr className="border-t-1 xl:border-t-2 dark:border-skin-dark mb-2" />
+          <hr className="border-t-1 xl:border-t-2 border-skin-base dark:border-skin-dark mb-2" />
         </>
       )}
       <ul className="p-2">

@@ -87,3 +87,5 @@ export interface ContactFormTypes {
   lastName: string
   email: string
 }
+
+export type Theme = 'light' | 'dark'

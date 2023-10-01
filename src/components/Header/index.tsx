@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ChangeThemeButton from '@/components/Button/ChangeTheme'
 
 const Header = (): JSX.Element => {
   return (
@@ -14,6 +15,7 @@ const Header = (): JSX.Element => {
             </span>
           </Link>
         </h1>
+        <ChangeThemeButton />
         <p className="sr-only">
           {/* eslint-disable-next-line react/no-unescaped-entities*/}
           Sercan Ateş's personal web logs.

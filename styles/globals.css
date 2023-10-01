@@ -5,27 +5,24 @@
 @layer base {
   :root {
     /* default theme */
-    --color-text-base: #1f2937;
-    --color-bg-base: #ffffff;
+    --color-text-base: #01060c;
+    --color-bg-base: #efeefe;
     --color-bg-base-footer: #e4e4e4;
     --color-bg-base-tag: #f5f5f5;
     --color-bg-base-card: inherit;
     --color-bg-base-card-hover: #f5f5f5;
     --color-bg-base-sidebar-item-hover: #ebe9e9;
+    --color-border-base: #908e94;
 
     /* dark theme */
     --color-text-dark: #e0e0e0;
     --color-bg-dark: #120725;
-    --color-bg-dark-footer: #241147;
+    --color-bg-dark-footer: #180933;
     --color-bg-dark-card: inherit;
     --color-bg-dark-card-hover: #22113f;
     --color-bg-dark-tag: #2d1b4b;
-    --color-bg-dark-sidebar-item-hover: #2d1b4b;
-    --color-border-base: #1f2937;
-    --color-border-dark: #e0e0e0;
-  }
-  * {
-    transition: all 0.1s linear;
+    --color-bg-dark-sidebar-item-hover: #180933;
+    --color-border-dark: #efeefe;
   }
 
   html {
@@ -45,7 +42,7 @@
   h4,
   h5,
   h6 {
-    @apply text-2xl font-bold leading-9 mt-4;
+    @apply text-2xl font-bold leading-9 mt-4 text-gradient-hero dark:text-gradient-hero-dark;
   }
   p {
     @apply text-base sm:text-lg my-4;
@@ -68,7 +65,7 @@
   }
 
   article h2 {
-    @apply text-gradient-hero;
+    @apply text-gradient-hero dark:text-gradient-hero-dark;
   }
 }
 
@@ -79,10 +76,15 @@
 
   .text-gradient,
   .text-gradient-hero {
-    @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-500 to-green-500 inline-block text-transparent bg-clip-text;
+    @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-700 to-green-700 inline-block text-transparent bg-clip-text;
+
   }
   .text-gradient {
     @apply hover:scale-[1.1];
+  }
+
+  .text-gradient-hero-dark {
+    @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-500 to-green-500 inline-block text-transparent bg-clip-text;
   }
 
   .bg-pattern {
@@ -109,7 +111,7 @@
   animation: ball-y 4s;
   transform-origin: 50% 50%;
 
-  @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-500 to-green-500 inline-block text-transparent;
+  @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-700 to-green-700 inline-block text-transparent;
 }
 
 .state .ball-arc {
