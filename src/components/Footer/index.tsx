@@ -10,7 +10,7 @@ const Footer = () => {
         </section>
         <section className="flex items-baseline gap-16 sm:gap-24 lg:gap-32 xl:gap-48 2xl:gap-64">
           <section className="flex flex-col gap-4">
-            <h3 className="text-base sm:text-xl md:text-2xl text-skin-base dark:text-skin-dark">
+            <h3 className="text-base sm:text-xl md:text-2xl text-skin-base dark:text-skin-dark opacity-60">
               Social Accounts
             </h3>
             <nav className="flex flex-col [&>a]:flex [&>a]:gap-2 [&>a]:items-center [&>a]:text-skin-base dark:[&>a]:text-skin-dark hover:[&>a]:text-gray-900 dark:hover:[&>a]:text-gray-100 [&>a]:py-2 text-base">
@@ -77,7 +77,7 @@ const Footer = () => {
             </nav>
           </section>
           <section className="flex flex-col gap-4">
-            <h3 className="text-base sm:text-xl md:text-2xl text-skin-base dark:text-skin-dark">
+            <h3 className="text-base sm:text-xl md:text-2xl text-skin-base dark:text-skin-dark opacity-60">
               Navigation
             </h3>
             <nav className="flex flex-col [&>a]:flex [&>a]:gap-2 [&>a]:items-center [&>a]:text-skin-base dark:[&>a]:text-skin-dark hover:[&>a]:text-gray-900 dark:hover:[&>a]:text-gray-100 [&>a]:py-2 text-base">
