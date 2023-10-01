@@ -7,12 +7,17 @@ const ChangeThemeButton = () => {
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme')
     if (
-      storedTheme == 'dark' ||
+      storedTheme == 'dark' &&
       !document.documentElement.classList.contains('dark')
     ) {
       document.documentElement.classList.add('dark')
-    } else {
+    } else if (
+      storedTheme == 'light' &&
+      document.documentElement.classList.contains('dark')
+    ) {
       document.documentElement.classList.remove('dark')
+    } else {
+      document.documentElement.classList.add('dark')
     }
     setTheme((storedTheme as Theme) || 'dark')
   }, [theme])
