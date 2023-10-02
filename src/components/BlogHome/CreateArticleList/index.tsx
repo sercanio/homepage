@@ -8,7 +8,7 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
 
   return (
     <section>
-      <ul className="relative z-0 flex flex-col gap-6 w-full xl:mx-0 px-3">
+      <ul className="relative z-0 flex flex-col gap-6 w-full xl:mx-0 px-[2px] xl:pr-1">
         {posts.map(post => (
           <li
             key={post.slug}
