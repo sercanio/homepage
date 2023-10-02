@@ -211,7 +211,7 @@ const ChangeThemeButton = () => {
   }
 
   return (
-    <div className="mr-4 md:mr-6 lg:mr-8 pt-5">
+    <div className="mr-4 xl:mr-[305px] pt-5">
       <button onClick={toggleTheme} aria-label="Theme">
         {theme === 'light' ? <DarkThemeIcon /> : <LightThemeIcon />}
       </button>
