@@ -60,6 +60,10 @@
     @apply inline-block w-4 mr-8 text-right text-gray-400;
   }
 
+  article div ul  {
+    @apply w-[340px] 3xs:w-[360px] 2xs:w-[480px] xs:w-[576px] sm:w-[640px] md:w-[768px];
+  }
+
   article p a:hover {
     text-decoration: underline;
   }
@@ -71,7 +75,6 @@
   article hr {
     @apply my-2;
   }
-
 }
 
 @layer utilities {
@@ -82,7 +85,6 @@
   .text-gradient,
   .text-gradient-hero {
     @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-700 to-green-700 inline-block text-transparent bg-clip-text;
-
   }
   .text-gradient {
     @apply hover:scale-[1.1];
@@ -95,7 +97,7 @@
   .bg-pattern {
     @apply w-full h-full  opacity-[92%] overflow-x-hidden;
     background-image: linear-gradient(#45f766ba 1px, transparent 1px),
-    linear-gradient(to right, #45f766ba 1px, #6969ef00 1px);
+      linear-gradient(to right, #45f766ba 1px, #6969ef00 1px);
     background-size: 16px 16px;
   }
 }

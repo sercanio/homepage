@@ -89,4 +89,5 @@ So now, after a mandatory break, i am continue to enrich my knowledge.
 ---
 <Bibliography
   mode='print'
+  style={{ overflow: 'hidden', wordWrap: 'break-word'}}
 />
