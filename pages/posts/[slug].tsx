@@ -21,6 +21,12 @@ export default function PostPage({ post }: { post: MDXPost }) {
   return (
     <>
       <Head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="https://sercan.io" />
+        <meta name="twitter:creator" content="@sercanio" />
+        <meta name="twitter:title" content={post.meta.title} />
+        <meta name="twitter:description" content={post.meta.excerpt} />
+        <meta name="twitter:image" content="sercanio.com/images/author.jpg" />
         <title>{post.meta.title}</title>
         <meta name="description" content={post.meta.title} />
       </Head>
