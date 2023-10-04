@@ -15,6 +15,7 @@ import CreateSections from '@/components/PostPage/CreateSections'
 import CreateRelatedArticles from '@/components/PostPage/CreateRelatedArticles'
 import Figure from '@/components/Figure'
 import { Bibliography } from 'react-bib'
+import Spotify from '@/components/Spotify'
 
 export default function PostPage({ post }: { post: MDXPost }) {
   return (
@@ -50,7 +51,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
             <hr className="py-2 border-t-2 border-skin-base dark:border-skin-dark" />
             <MDXRemote
               {...post.source}
-              components={{ YouTube, Image, Figure, Bibliography }}
+              components={{ YouTube, Image, Figure, Bibliography, Spotify }}
             />
             <div className="flex gap-3 items-center mt-6"></div>
           </div>
