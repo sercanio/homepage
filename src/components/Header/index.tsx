@@ -7,7 +7,7 @@ const Header = (): JSX.Element => {
       <nav className="flex justify-between items-center mb-1 max-w-5xl xl:max-w-5xl mx-auto px-3 xl:px-2">
         <h1 className="animate-scale text-gradient">
           <Link href="/">
-            sercan.i
+            sercan.i<span className="sr-only">o</span>
             <span className="state">
               <span className="ball-arc">
                 <span className="ball"></span>
