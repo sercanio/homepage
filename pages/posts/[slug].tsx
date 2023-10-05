@@ -1,3 +1,4 @@
+import { lazy } from 'react'
 import type { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
@@ -10,12 +11,12 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeHighlight from 'rehype-highlight'
 import { getPostFromSlug, getSlugs } from '@/components/api'
 import YouTube from '@/components/YouTube/YouTube'
-import 'highlight.js/styles/a11y-dark.css'
 import CreateSections from '@/components/PostPage/CreateSections'
 import CreateRelatedArticles from '@/components/PostPage/CreateRelatedArticles'
 import Figure from '@/components/Figure'
 import { Bibliography } from 'react-bib'
 import Spotify from '@/components/Spotify'
+import 'highlight.js/styles/base16/mellow-purple.css'
 
 export default function PostPage({ post }: { post: MDXPost }) {
   return (

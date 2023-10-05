@@ -31,6 +31,7 @@
     width: 100vw;
     height: 100vh;
   }
+
   body {
     font-family: Arial, Helvetica, sans-serif;
     @apply w-full h-full overflow-x-hidden bg-skin-base dark:bg-skin-dark;
@@ -60,7 +61,7 @@
     @apply inline-block w-4 mr-8 text-right text-gray-400;
   }
 
-  article div ul  {
+  article div ul {
     @apply w-[340px] 3xs:w-[360px] 2xs:w-[480px] xs:w-[576px] sm:w-[640px] md:w-[768px];
   }
 
@@ -204,4 +205,30 @@
       'M 0,400 C 0,400 0,133 0,133 C 83.2248803827751,105.50717703349284 166.4497607655502,78.01435406698566 274,85 C 381.5502392344498,91.98564593301434 513.4258373205743,133.44976076555022 617,130 C 720.5741626794257,126.55023923444978 795.846889952153,78.1866028708134 883,83 C 970.153110047847,87.8133971291866 1069.1866028708134,145.80382775119617 1164,163 C 1258.8133971291866,180.19617224880383 1349.4066985645932,156.5980861244019 1440,133 C 1440,133 1440,400 1440,400 Z'
     );
   }
+}
+
+/* highlight.js mellow-purple.css background overrides for actual theme  */
+html:not(.dark) .hljs {
+  /* Your styles here */
+  background-color: #f3f3ff !important; /* Example background color for light mode */
+  color: black; /* Example text color for light mode */
+}
+
+html:not(.dark) *::selection {
+  /* Your styles here */
+  background-color: #c4c4cf !important; /* Example background color for light mode */
+  color: black; /*Example text color for light mode */
+}
+
+html:not(.dark) .hljs-comment {
+  color: #40027e;
+}
+
+html:not(.dark) .hljs-keyword,
+html:not(.dark)  .hljs-meta {
+  color: #ff0000;
+}
+
+html:not(.dark) .hljs-tag {
+  color: #660000;
 }
