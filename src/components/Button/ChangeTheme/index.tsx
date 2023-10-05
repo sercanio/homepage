@@ -6,20 +6,22 @@ const ChangeThemeButton = () => {
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme')
-    if (
-      storedTheme == 'dark' &&
-      !document.documentElement.classList.contains('dark')
-    ) {
-      document.documentElement.classList.add('dark')
-    } else if (
-      storedTheme == 'light' &&
-      document.documentElement.classList.contains('dark')
-    ) {
-      document.documentElement.classList.remove('dark')
+
+    if (storedTheme) {
+      if (storedTheme === 'dark') {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+      setTheme(storedTheme as Theme)
     } else {
+      // If there's no theme stored, use the default theme
+      const defaultTheme = 'dark' // Replace with your default theme
+      localStorage.setItem('theme', defaultTheme)
       document.documentElement.classList.add('dark')
+      setTheme(defaultTheme)
     }
-    setTheme((storedTheme as Theme) || 'dark')
   }, [theme])
 
   const iconSize = 1.5
