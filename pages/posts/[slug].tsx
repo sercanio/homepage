@@ -34,7 +34,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <meta name="description" content={post.meta.title} />
       </Head>
       <div className="flex flex-col xl:flex-row xl:gap-4 justify-center h-full scroll-smooth max-w-5xl mt-16 md:mt-20 md:mb-6 px-1">
-        <article className="relative px-3 xl:px-1 h-full mx-auto xl:mx-0 flex-1">
+        <article className="relative px-3 xl:px-1 h-full xl:mx-0 max-w-[720px]">
           <div className="relative z-10 flex-5">
             <h2 className="text-3xl font-bold text-gradient-hero dark:text-gradient-hero-dark mb-4 mt-0">
               {post.meta.title}
@@ -66,7 +66,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
           </div>
         </article>
         <aside
-          className="sticky top-16 flex flex-col gap-1 h-max max-w-[280px]"
+          className="sticky top-16 flex flex-col gap-1 h-max max-w-[320px]"
           style={{ contentVisibility: 'auto' }}
         >
           <CreateSections post={post} />
