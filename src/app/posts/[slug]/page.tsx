@@ -1,24 +1,50 @@
-import { lazy } from 'react'
-import type { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
-import { MDXRemote } from 'next-mdx-remote'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 import { serialize } from 'next-mdx-remote/serialize'
-import { MDXPost } from 'types'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeHighlight from 'rehype-highlight'
-import { getPostFromSlug, getSlugs } from '@/components/api'
+import { getPostFromSlug, getSlugs } from 'api'
 import YouTube from '@/components/YouTube/YouTube'
 import CreateSections from '@/components/PostPage/CreateSections'
 import CreateRelatedArticles from '@/components/PostPage/CreateRelatedArticles'
 import Figure from '@/components/Figure'
 import { Bibliography } from 'react-bib'
 import Spotify from '@/components/Spotify'
-import 'highlight.js/styles/base16/mellow-purple.css'
+// import 'highlight.js/styles/base16/mellow-purple.css'
 
-export default function PostPage({ post }: { post: MDXPost }) {
+export async function generateStaticParams() {
+  const paths = getSlugs().map(slug => ({ params: { slug } }))
+
+  // Result is not iterabla error may occur here
+  // return { paths, fallback: false }
+  // so changed to
+  return paths
+}
+
+async function getPost(params: { slug: string }) {
+  const { slug } = params as { slug: string }
+  const { content, meta } = getPostFromSlug(slug)
+  const mdxSource = await serialize(content, {
+    mdxOptions: {
+      rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+        rehypeHighlight
+      ]
+    }
+  })
+
+  return { post: { source: mdxSource, meta } }
+}
+
+export default async function Page({ params }: { params: { slug: string } }) {
+  const { post }: any = await getPost(params)
+  // const post =
+  console.log({ POOOOOOOOOSSSSSSSTTTTT: post })
+
   return (
     <>
       <Head>
@@ -42,7 +68,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
             </h2>
             {post.meta.tags && (
               <div className="flex flex-wrap gap-2 my-4">
-                {post.meta.tags.map(tag => (
+                {post.meta.tags.map((tag: any) => (
                   <Link href={`/tags/${tag}`} key={tag}>
                     <span
                       key={tag}
@@ -78,27 +104,27 @@ export default function PostPage({ post }: { post: MDXPost }) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { slug } = params as { slug: string }
-  const { content, meta } = getPostFromSlug(slug)
-  const mdxSource = await serialize(content, {
-    mdxOptions: {
-      rehypePlugins: [
-        rehypeSlug,
-        [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-        rehypeHighlight
-      ]
-    }
-  })
+// export const getStaticProps: GetStaticProps = async ({ params }) => {
+//   const { slug } = params as { slug: string }
+//   const { content, meta } = getPostFromSlug(slug)
+//   const mdxSource = await serialize(content, {
+//     mdxOptions: {
+//       rehypePlugins: [
+//         rehypeSlug,
+//         [rehypeAutolinkHeadings, { behavior: 'wrap' }],
+//         rehypeHighlight
+//       ]
+//     }
+//   })
 
-  return { props: { post: { source: mdxSource, meta } } }
-}
+//   return { props: { post: { source: mdxSource, meta } } }
+// }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getSlugs().map(slug => ({ params: { slug } }))
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const paths = getSlugs().map(slug => ({ params: { slug } }))
 
-  return {
-    paths,
-    fallback: false
-  }
-}
+//   return {
+//     paths,
+//     fallback: false
+//   }
+// }

@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Head from 'next/head'
 import { PostMeta } from '@/types'
-import { getAllPosts } from '@/components/api'
+import { getAllPosts } from 'api'
 import BlogHome from '@/components/BlogHome'
 
 export const metadata: Metadata = {
