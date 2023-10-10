@@ -18,7 +18,7 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
               <h2 className="font-bold text-2xl text-gradient-hero">
                 <Link href={`/posts/${post.slug}`}>{post.title}</Link>
               </h2>
-              <p className="text-lg">
+              <p className="text-base">
                 <Link href={`/posts/${post.slug}`}>
                   {post.excerpt}
                   <span className="text-gradient-hero">&nbsp;Read more...</span>

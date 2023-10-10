@@ -48,7 +48,7 @@
     @apply text-2xl font-bold leading-9 mt-4 text-gradient-hero dark:text-gradient-hero-dark;
   }
   p {
-    @apply text-base sm:text-lg my-4;
+    @apply text-lg my-4;
   }
 
   code {

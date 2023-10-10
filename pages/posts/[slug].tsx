@@ -46,7 +46,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
                   <Link href={`/tags/${tag}`} key={tag}>
                     <span
                       key={tag}
-                      className="flex items-center text-sm text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-skin-darkTag hover:bg-inherit px-2 py-[2px] rounded hover:underline"
+                      className="flex items-center text-md text-gray-700 dark:text-gray-100 bg-skin-baseTag dark:bg-skin-darkTag hover:bg-inherit px-2 py-[2px] rounded hover:underline"
                     >
                       {tag}
                     </span>
