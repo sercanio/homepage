@@ -23,9 +23,13 @@ export default function ArchivePage({
           content={`Sercan Ateş's web logs from ${slug}`}
         />
       </Head>
-      <p className="text-xl md:text-2xl font-bold px-[14px] xl:px-1 -mb-16 mt-20 mx-auto break-word">
-        Posts from {slug}
-      </p>
+      <div className="w-full max-w-5xl">
+        <div className="w-full max-w-3xl">
+          <p className="text-xl md:text-2xl font-bold px- [14px] xl:px-1 break-word -mb-16 mt-16 w-fit mx-auto">
+            Posts from {slug}
+          </p>
+        </div>
+      </div>
       <BlogHome posts={posts} filteredPosts={filteredPosts} />
     </>
   )
