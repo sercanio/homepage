@@ -15,9 +15,9 @@ excerpt: 2023 definetely going to be most unforgatable year in my life. The Eart
 
 ## What happened?
 
-At 04:17 in the morning on February 6, 2023, a massive earthquake struck in the provinces of Kahramanmaraş and Gaziantep in Türkiye.
+At 04:17 in the morning on February 6, 2023, a massive earthquake struck in the provinces of Kahramanmaraş and Gaziantep in Turkiye.
 
-On the night of the earthquake, I was asleep in my house in Hatay, the southernmost province of Türkiye, despite the sounds of heavy rain and thunder outside. I was first awakened by a steady but slow shaking. Since the electricity was cut off due to the heavy rain, the house was illuminated only by the lightning outside.
+On the night of the earthquake, I was asleep in my house in Hatay, the southernmost province of Turkiye, despite the sounds of heavy rain and thunder outside. I was first awakened by a steady but slow shaking. Since the electricity was cut off due to the heavy rain, the house was illuminated only by the lightning outside.
 
 First, I lay down on the side of my bed and pulled my head between my hands and my knees to my stomach. When the shaking lasted for a long time, I felt that I had to get out and stood up. While I was standing, the shaking stopped for a moment and then the ground began to shake with much greater displacement.
 
@@ -49,14 +49,14 @@ The first earthquake was magnitude 7.8<Bibliography
   src="/images/the-year-2023/earthquake-map-1.webp"
   width={640}
   height={640}
-  alt={"A map of Türkiye that shows Earthquake zones."}
-  caption={"Gaziantep and Kahramanmaraş are located in central southern Turkey, bordering Syria."}
+  alt={"A map of Turkiye that shows Earthquake zones."}
+  caption={"Gaziantep and Kahramanmaraş are located in central southern Turkiye, bordering Syria."}
   quality={75}
   className="mx-auto py-2"
   source={"https://www.dailymail.co.uk/sciencetech/article-11717995/Turkey-earthquake-map-Syria-Turkey-did-quake-hit.html"}
 />
 
-Over 50 thousand people dead in these Earthquakes in Türkiye<Bibliography
+Over 50 thousand people dead in these Earthquakes in Turkiye<Bibliography
   mode='input'
   num={5}
   source='https://www.aa.com.tr/en/turkiye/50-783-people-confirmed-dead-in-turkiye-earthquakes/2878735'
