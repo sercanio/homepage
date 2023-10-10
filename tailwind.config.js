@@ -78,6 +78,9 @@ module.exports = {
       },
       animation: {
         scale: 'scale .5s ease-in-out forwards'
+      },
+      transitionProperty: {
+        background: 'background-color'
       }
     },
     plugins: [],
