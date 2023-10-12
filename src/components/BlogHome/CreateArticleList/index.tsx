@@ -12,7 +12,7 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
         {posts.map(post => (
           <li
             key={post.slug}
-            className="relative flex flex-col px-3 bg-skin-baseCard hover:bg-skin-baseCardHover dark:bg-skin-darkCard dark:hover:bg-skin-darkCardHover [&>div>h2>a] dark:[&>div>h2>a] rounded-md transition-background duration-100"
+            className="relative flex flex-col pl-3 pr-1 bg-skin-baseCard hover:bg-skin-baseCardHover dark:bg-skin-darkCard dark:hover:bg-skin-darkCardHover [&>div>h2>a] dark:[&>div>h2>a] rounded-md transition-background duration-100"
           >
             <div className="z-10 flex flex-col gap-0">
               <h2 className="font-bold text-2xl text-gradient-hero">
