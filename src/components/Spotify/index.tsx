@@ -17,6 +17,7 @@ export default function Spotify({
 
   return (
     <iframe
+      title="Spotify Player"
       className={spotifyPlayerClass}
       src={`https://open.spotify.com/embed/track/${trackId}`}
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
