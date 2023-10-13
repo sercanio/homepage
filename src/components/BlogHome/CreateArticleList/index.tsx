@@ -21,7 +21,7 @@ const CreateArticleList = ({ posts }: { posts: PostMeta[] }) => {
               <p className="text-base">
                 <Link href={`/posts/${post.slug}`}>
                   {post.excerpt}
-                  <span className="underline">Read more...</span>
+                  &nbsp;<span className="underline">Read more...</span>
                 </Link>
               </p>
               <div className="flex flex-wrap items-center gap-2 text-sm">
