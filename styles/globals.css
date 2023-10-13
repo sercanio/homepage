@@ -16,11 +16,11 @@
 
     /* dark theme */
     --color-text-dark: #e0e0e0;
-    --color-bg-dark: #120725;
-    --color-bg-dark-footer: #180933;
+    --color-bg-dark: #1a202c;
+    --color-bg-dark-footer: #131821;
     --color-bg-dark-card: inherit;
-    --color-bg-dark-card-hover: #22113f;
-    --color-bg-dark-tag: #2d1b4b;
+    --color-bg-dark-card-hover: #292e3a;
+    --color-bg-dark-tag: #3e3847;
     --color-bg-dark-sidebar-item-hover: #180933;
     --color-border-dark: #efeefe;
 
