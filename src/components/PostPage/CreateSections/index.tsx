@@ -8,7 +8,7 @@ const CreateSections = ({ post }: { post: MDXPost }) => {
   return (
     <section className="px-4 pt-4 pb-8 hidden xl:block h-max">
       <div className="p-2">
-        <strong className="uppercase font-bold text-gradient-hero px-2">
+        <strong className="uppercase font-bold text-gradient-hero dark:text-gradient-hero-dark px-2">
           Sections
         </strong>
       </div>
