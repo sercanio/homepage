@@ -26,7 +26,7 @@ export default function TagPage({
   return (
     <>
       <Head>
-        <title>{`Articles About ${capitalize(slug)} | Sercan Ateş`}</title>
+        <title>{`Posts About ${capitalize(slug)} | Sercan Ateş`}</title>
         <meta
           name="description"
           content={`Sercan Ateş's personal web logs about ${slug}`}
@@ -34,8 +34,8 @@ export default function TagPage({
       </Head>
       <div className="w-full max-w-5xl">
         <div className="w-full max-w-3xl">
-          <p className="text-3xl font-bold px-3 xl:px-1 break-word -mb-8 md:-mb-16 mt-16 w-fit mx-auto text-gradient-hero dark:text-gradient-hero-dark">
-            Posts are tagged {slug}
+          <p className="text-3xl font-bold px-3 xl:px-1 break-word -mb-8 mt-16 w-fit mx-auto text-gradient-hero dark:text-gradient-hero-dark">
+            Posts with {slug} tag
           </p>
         </div>
       </div>
