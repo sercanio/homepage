@@ -35,7 +35,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <meta name="description" content={post.meta.title} />
       </Head>
       <div className="flex flex-col xl:flex-row xl:gap-4 justify-center h-full scroll-smooth max-w-5xl mt-16 md:mt-20 md:mb-6 px-1">
-        <article className="relative px-3 xl:px-1 h-full xl:mx-0 max-w-[750px]">
+        <article className="relative px-3 xl:px-1 h-full xl:mx-0 max-w-[720px]">
           <div className="relative z-10 flex-5">
             <h2 className="text-3xl font-bold text-gradient-hero dark:text-gradient-hero-dark mb-4 mt-0">
               {post.meta.title}
