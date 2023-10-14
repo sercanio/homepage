@@ -1,7 +1,7 @@
 import Link from 'next/link'
 const Footer = () => {
   return (
-    <footer className="w-full max-w-[1920px] mx-auto overflow-hidden">
+    <footer className="w-full max-w-[1920px] mx-auto mt-20 overflow-hidden">
       <section className="flex justify-between items-start gap-8 lg:gap-0 flex-wrap bg-skin-baseFooter dark:bg-skin-darkFooter py-4 pl-4 pr-2 sm:px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-48 ">
         <section className="self-end order-2 lg:order-first">
           <p className="text-sm text-skin-base dark:text-skin-dark mb-2">
