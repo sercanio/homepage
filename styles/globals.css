@@ -30,12 +30,10 @@
   html {
     scroll-behavior: smooth !important;
     scroll-padding: 1rem;
-    width: 100vw;
-    height: 100vh;
   }
 
   body {
-    @apply w-full h-full overflow-x-hidden bg-skin-base dark:bg-skin-dark;
+    @apply overflow-x-hidden bg-skin-base dark:bg-skin-dark;
   }
 
   h1,
