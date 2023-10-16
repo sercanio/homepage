@@ -25,7 +25,7 @@ const ChangeThemeButton = () => {
   }, [theme])
 
   const iconSize = 1.5
-  const lightThemeIconColor = '#c9fe55ca'
+  const lightThemeIconColor = '#72b900'
   const darkThemeIconColor = '#004162'
 
   const LightThemeIcon = () => {

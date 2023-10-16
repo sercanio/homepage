@@ -84,20 +84,18 @@
 
   .text-gradient,
   .text-gradient-hero {
-    @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-700 to-green-700 block text-transparent bg-clip-text;
+    @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-700 to-[#303018] block text-transparent bg-clip-text;
   }
   .text-gradient {
     @apply hover:scale-[1.1];
   }
 
   .text-gradient-hero-dark {
-    @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-500 to-green-500 block text-transparent bg-clip-text;
+    @apply bg-gradient-to-tr hover:bg-gradient-to-bl from-blue-500 to-[#b88c14] block text-transparent bg-clip-text;
   }
 
   .bg-pattern {
     @apply w-full h-full  opacity-[92%] overflow-x-hidden;
-    background-image: linear-gradient(#45f766ba 1px, transparent 1px),
-      linear-gradient(to right, #45f766ba 1px, #6969ef00 1px);
     background-size: 16px 16px;
   }
 }
@@ -224,7 +222,7 @@ html:not(.dark) .hljs-comment {
 }
 
 html:not(.dark) .hljs-keyword,
-html:not(.dark)  .hljs-meta {
+html:not(.dark) .hljs-meta {
   color: #ff0000;
 }
 
