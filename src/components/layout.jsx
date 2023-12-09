@@ -1,12 +1,14 @@
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
-import Main from '@/components/Main'
+import Header from './Header'
+import Main from './Main'
+import Footer from './Footer'
+
 import { Rubik } from '@next/font/google'
 
 const inter = Rubik({
   weight: '400',
   subsets: ['latin']
 })
+
 const Layout = ({ children }) => {
   return (
     <div

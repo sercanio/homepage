@@ -1,5 +1,6 @@
+import React from 'react'
 import Link from 'next/link'
-import ChangeThemeButton from '@/components/Button/ChangeTheme'
+import ChangeThemeButton from './../Button/ChangeTheme'
 
 const Header = () => {
   return (

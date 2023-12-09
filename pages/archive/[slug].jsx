@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { getAllPosts } from '@/components/api'
-import BlogHome from '@/components/BlogHome'
+import { getAllPosts } from './../../src/components/api'
+import BlogHome from './../../src/components/BlogHome'
 
 export default function ArchivePage({ slug, posts }) {
   const filteredPosts = posts.filter(

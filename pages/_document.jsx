@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { defaultTheme } from '@/constants'
+import { defaultTheme } from './../src/constants/index'
 
 export default function Document() {
   return (

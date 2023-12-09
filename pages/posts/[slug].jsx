@@ -7,15 +7,15 @@ import { serialize } from 'next-mdx-remote/serialize'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeHighlight from 'rehype-highlight'
-import { getPostFromSlug, getSlugs } from '@/components/api'
-import CreateSections from '@/components/PostPage/CreateSections'
-import CreateRelatedArticles from '@/components/PostPage/CreateRelatedArticles'
+import { getPostFromSlug, getSlugs } from './../../src/components/api'
+import CreateSections from './../../src/components/PostPage/CreateSections'
+import CreateRelatedArticles from './../../src/components/PostPage/CreateRelatedArticles'
 import { Bibliography } from 'react-bib'
 import 'highlight.js/styles/base16/mellow-purple.css'
 
-const Spotify = lazy(() => import('@/components/Spotify'))
-const YouTube = lazy(() => import('@/components/YouTube'))
-const Figure = lazy(() => import('@/components/Figure'))
+const Spotify = lazy(() => import('./../../src/components/Spotify'))
+const YouTube = lazy(() => import('./../../src/components/YouTube'))
+const Figure = lazy(() => import('./../../src/components/Figure'))
 
 export default function PostPage({ post }) {
   return (

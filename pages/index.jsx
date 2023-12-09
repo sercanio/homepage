@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { getAllPosts } from '@/components/api'
+import { getAllPosts } from './../src/components/api'
 import BlogHome from '../src/components/BlogHome'
 
 export default function Blog({ posts }) {
