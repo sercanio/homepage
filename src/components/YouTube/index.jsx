@@ -1,10 +1,4 @@
-export default function YouTube({
-  id,
-  className
-}: {
-  id: string
-  className?: string
-}) {
+export default function YouTube({ id, className }) {
   return (
     <iframe
       className={`mx-auto my-6 ${className}`}

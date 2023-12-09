@@ -1,9 +1,8 @@
-import React from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
-import { MDXPost } from '@/types'
 
-const CreateSections = ({ post }: { post: MDXPost }) => {
-  const [activeSection, setActiveSection] = React.useState<string | null>(null)
+const CreateSections = ({ post }) => {
+  const [activeSection, setActiveSection] = useState(null)
 
   return (
     <section className="px-4 pt-4 pb-8 hidden xl:block h-max">

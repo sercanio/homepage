@@ -1,24 +1,23 @@
 import { lazy } from 'react'
-import type { GetStaticProps, GetStaticPaths } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
 import Link from 'next/link'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
-import { MDXPost } from 'types'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeHighlight from 'rehype-highlight'
 import { getPostFromSlug, getSlugs } from '@/components/api'
-import YouTube from '@/components/YouTube/YouTube'
 import CreateSections from '@/components/PostPage/CreateSections'
 import CreateRelatedArticles from '@/components/PostPage/CreateRelatedArticles'
-import Figure from '@/components/Figure'
 import { Bibliography } from 'react-bib'
-import Spotify from '@/components/Spotify'
 import 'highlight.js/styles/base16/mellow-purple.css'
 
-export default function PostPage({ post }: { post: MDXPost }) {
+const Spotify = lazy(() => import('@/components/Spotify'))
+const YouTube = lazy(() => import('@/components/YouTube'))
+const Figure = lazy(() => import('@/components/Figure'))
+
+export default function PostPage({ post }) {
   return (
     <>
       <Head>
@@ -78,8 +77,8 @@ export default function PostPage({ post }: { post: MDXPost }) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { slug } = params as { slug: string }
+export const getStaticProps = async ({ params }) => {
+  const { slug } = params
   const { content, meta } = getPostFromSlug(slug)
   const mdxSource = await serialize(content, {
     mdxOptions: {
@@ -94,7 +93,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { post: { source: mdxSource, meta } } }
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const paths = getSlugs().map(slug => ({ params: { slug } }))
 
   return {

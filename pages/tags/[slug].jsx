@@ -1,19 +1,11 @@
-import type { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import { getAllPosts } from '@/components/api'
-import { PostMeta } from '@/types'
 import BlogHome from '@/components/BlogHome'
 
-export default function TagPage({
-  slug,
-  posts
-}: {
-  slug: string
-  posts: PostMeta[]
-}) {
+export default function TagPage({ slug, posts }) {
   const filteredPosts = posts.filter(post => post.tags.includes(slug))
 
-  const capitalize = (str: string) => {
+  const capitalize = str => {
     const strArr = str.split(' ')
     const newStr = strArr
       .map(word => {
@@ -44,8 +36,8 @@ export default function TagPage({
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { slug } = params as { slug: string }
+export const getStaticProps = async ({ params }) => {
+  const { slug } = params
   const posts = getAllPosts()
 
   return {
@@ -56,7 +48,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const posts = getAllPosts()
   const tags = new Set(posts.map(post => post.meta.tags).flat())
   const paths = Array.from(tags).map(tag => ({ params: { slug: tag } }))

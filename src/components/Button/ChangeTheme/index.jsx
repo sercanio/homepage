@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Theme } from 'types'
 
 const ChangeThemeButton = () => {
-  const [theme, setTheme] = useState<Theme>()
+  const [theme, setTheme] = useState()
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme')
@@ -14,7 +13,7 @@ const ChangeThemeButton = () => {
         document.documentElement.classList.remove('dark')
       }
 
-      setTheme(storedTheme as Theme)
+      setTheme(storedTheme)
     } else {
       // If there's no theme stored, use the default theme
       const defaultTheme = 'dark' // Replace with your default theme

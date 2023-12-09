@@ -1,12 +1,6 @@
 import classNames from 'classnames'
 
-export default function Spotify({
-  size,
-  link
-}: {
-  size: 'normal' | 'inline'
-  link: string
-}) {
+export default function Spotify({ size, link }) {
   const spotifyPlayerClass = classNames({
     'rounded-xl mx-auto': true,
     'h-[232px] w-[98%] my-8': size == 'normal',

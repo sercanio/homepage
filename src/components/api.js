@@ -2,10 +2,9 @@ import path from 'path'
 import fs from 'fs'
 import glob from 'glob'
 import matter from 'gray-matter'
-import { Post } from '@/types'
 
 const POST_PATH = path.join(process.cwd(), 'posts')
-export const getSlugs = (): string[] => {
+export const getSlugs = () => {
   const paths = glob.sync(`${POST_PATH}/*.md`.replace(/\\/g, '/'))
   // because of the windows path, we need to replace the backslashes with forward slashes
   // on linux and mac, this is not necessary
@@ -31,7 +30,7 @@ export const getAllPosts = () => {
   return posts
 }
 
-export const getPostFromSlug = (slug: string): Post => {
+export const getPostFromSlug = slug => {
   const postPath = path.join(POST_PATH, `${slug}.md`)
   const source = fs.readFileSync(postPath, 'utf8')
   const { content, data } = matter(source)

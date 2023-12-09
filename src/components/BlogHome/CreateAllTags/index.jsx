@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import { PostMeta } from '@/types'
 
-export const CreateAllTags = ({ posts }: { posts: PostMeta[] }) => {
+export const CreateAllTags = ({ posts }) => {
   const tempTagsArr = posts.map(post => post.tags).flat()
   const tagsSet = new Set(tempTagsArr)
   const tagsArr = Array.from(tagsSet)

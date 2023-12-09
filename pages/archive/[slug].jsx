@@ -1,16 +1,8 @@
-import type { GetStaticProps, GetStaticPaths } from 'next'
 import Head from 'next/head'
 import { getAllPosts } from '@/components/api'
-import { PostMeta } from '@/types'
 import BlogHome from '@/components/BlogHome'
 
-export default function ArchivePage({
-  slug,
-  posts
-}: {
-  slug: string
-  posts: PostMeta[]
-}) {
+export default function ArchivePage({ slug, posts }) {
   const filteredPosts = posts.filter(
     post => post.date.split(',')[1].trim() === slug.trim()
   )
@@ -35,8 +27,8 @@ export default function ArchivePage({
   )
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const { slug } = params as { slug: string }
+export const getStaticProps = async ({ params }) => {
+  const { slug } = params
 
   // const posts = getAllPosts().filter(
   //   post => post.meta.date.split(',')[1].trim() === slug.trim()
@@ -51,7 +43,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const posts = getAllPosts()
   const dates = new Set(posts.map(post => post.meta.date))
 
