@@ -12,23 +12,10 @@ const withMDX = require('@next/mdx')({
 })
 module.exports = withMDX({
   // Append the default value with md extensions
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx']
+  pageExtensions: ['js', 'jsx', 'md', 'mdx']
 })
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
 module.exports = withBundleAnalyzer({})
-
-// module.exports = {
-//   images: {
-//     remotePatterns: [
-//       {
-//         protocol: 'https',
-//         hostname: 'source.unsplash.com',
-//         port: '',
-//         pathname: '/random/**'
-//       }
-//     ]
-//   }
-// }

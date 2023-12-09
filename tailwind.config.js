@@ -6,10 +6,7 @@ module.exports = {
     locales: ['en'],
     defaultLocale: 'en'
   },
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './src/components/**/*.{js,ts,jsx,tsx}'
-  ],
+  content: ['./pages/**/*.{js,jsx}', './src/components/**/*.{js,jsx}'],
   theme: {
     extend: {
       screens: {
