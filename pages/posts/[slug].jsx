@@ -10,11 +10,12 @@ import rehypeHighlight from 'rehype-highlight'
 import { getPostFromSlug, getSlugs } from '@/components/api'
 import CreateSections from '@/components/PostPage/CreateSections'
 import CreateRelatedArticles from '@/components/PostPage/CreateRelatedArticles'
-import YouTube from '@/components/YouTube/YouTube'
-import Figure from '@/components/Figure'
-import { Bibliography } from 'react-bib'
-import Spotify from '@/components/Spotify'
 import 'highlight.js/styles/base16/mellow-purple.css'
+
+const Spotify = lazy(() => import('@/components/Spotify'))
+const YouTube = lazy(() => import('@/components/YouTube'))
+const Figure = lazy(() => import('@/components/Figure'))
+const { Bibliography } = lazy(() => import('react-bib'))
 
 export default function PostPage({ post }) {
   return (
