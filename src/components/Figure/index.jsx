@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FigureTypes } from 'types'
 
-export default function Figure(props: FigureTypes) {
+export default function Figure(props) {
   const { width, height, src, alt, quality, caption, source } = props
   const url = new URL(source)
   return (

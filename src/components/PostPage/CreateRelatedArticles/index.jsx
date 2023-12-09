@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { MDXPost } from '@/types'
 
-const CreateRelatedArticles = ({ post }: { post: MDXPost }) => {
+const CreateRelatedArticles = ({ post }) => {
   return (
     <section className="px-2 xl:px-4 pt-4 pb-8 xl:block h-max w-full max-w-5xl  mx-auto">
       {post.meta.related.length !== 0 && (

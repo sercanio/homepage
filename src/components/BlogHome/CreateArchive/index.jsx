@@ -1,20 +1,19 @@
 import Link from 'next/link'
 import React from 'react'
-import { MonthsAndArticles, PostMeta } from '@/types'
 
-export const CreateArchive = ({ posts }: { posts: PostMeta[] }) => {
+export const CreateArchive = ({ posts }) => {
   const years = posts
     .map(post => post.date.split(',')[1].trim())
     .sort((a, b) => +b - +a)
   const uniqueYearsSet = new Set(years)
   const uniqueYearsArray = Array.from(uniqueYearsSet)
 
-  const articleNumberInYear = (year: string) => {
+  const articleNumberInYear = year => {
     return years.filter(element => element === year).length
   }
 
-  const handleArchiveClick = (event: React.MouseEvent<HTMLLIElement>) => {
-    const listItem = event.target as HTMLElement
+  const handleArchiveClick = event => {
+    const listItem = event.target
   }
 
   return (

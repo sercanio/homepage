@@ -1,6 +1,4 @@
-import { MainTypes } from '@/types'
-
-const Main = ({ children, className }: MainTypes) => {
+const Main = ({ children, className }) => {
   return (
     <main
       className={`${className} flex flex-col items-center justify-start min-h-screen`}

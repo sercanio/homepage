@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import { PostMeta } from '@/types'
 import { getAllPosts } from '@/components/api'
-import BlogHome from '@/components/BlogHome'
+import BlogHome from '../src/components/BlogHome'
 
-export default function Blog({ posts }: { posts: PostMeta[] }) {
+export default function Blog({ posts }) {
   return (
     <>
       <Head>

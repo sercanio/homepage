@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import ChangeThemeButton from '@/components/Button/ChangeTheme'
 
-const Header = (): JSX.Element => {
+const Header = () => {
   return (
     <header className="sticky -mt-1 top-0 z-50 color-transition pb-2 backdrop-blur-[7px] border-b border-gray-50 border-opacity-10">
       <nav className="flex justify-between items-center mb-1 max-w-[750px] xl:max-w-5xl mx-auto px-3 xl:px-2">
